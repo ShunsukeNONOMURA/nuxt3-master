@@ -1,0 +1,17 @@
+version: '3.9'  # docker-composeのバージョン選択
+services:
+  nuxt:  # サービス名
+    build:  # Dockerfileの設定
+      context: .  # Dockerfileを置いているディレクトリ
+      dockerfile: Dockerfile  # Dockerfileのファイル名
+    working_dir: /project  # 作業ディレクトリを指定
+    volumes:
+      # - ./tmp:/app:cached # 一時作業ディレクトリをマウント
+      - ./project:/project:cached # 作成したプロジェクトをマウント
+      - ./.aws:/root/.aws # aws credentialsのマウント (必要に応じて利用)
+    tty: true  # コンテナを正常終了するのを防ぐ
+    # ports:
+    #   - 3000:3000  # 公開用のポート指定。ホスト側:コンテナ側 dev
+    #   - 24678:24678 # HMR用のポートを追加
+    network_mode: host
+    # command: yarn dev --host  # 開発環境実行コマンド
