@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets   = ["native", "rhel-openssl-3.0.x"] // lambda用にrhelを追加
+}
+
+datasource db {
+  provider = "sqlite"
+  //url      = env("DATABASE_URL")
+  url = "file:./dev.db?connection_limit=1"
+}
+
+model TUser {
+  userId String @id @map("user_id")
+  userName String @map("user_name")
+  userRoleId String @map("user_role_id")
+  userCreationDatetime DateTime @default(now()) @map("user_creation_datetime")
+  userUpdateDatetime DateTime @default(now()) @map("user_update_datetime")
+  @@map("t_user")
+}

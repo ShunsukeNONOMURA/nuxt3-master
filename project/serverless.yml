@@ -1,0 +1,42 @@
+service: nonomura-lambda-ssr-nuxt3
+frameworkVersion: '3'
+
+custom:
+  author: ${opt:author, "nonomura"}
+  stage: ${opt:stage, "dev"}
+  region: ${opt:region, "ap-northeast-1"}
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: ${self:custom.stage}
+  region: ${self:custom.region}
+  versionFunctions: false
+  logRetentionInDays: 3 # Cloudwatchのログ保存期間日数
+
+package:
+  patterns:
+    - '!**'
+    - '.output/**'
+    # - '.output/server/**' # nuxt run buildの出力ディレクトリのサーバーサイドのみを指定
+
+
+functions:
+  NuxtSsrCore:
+    name: ${self:custom.author}-nuxt-${self:custom.stage}
+    handler: '.output/server/index.handler'
+    url: true
+    events:
+      # - http: # REST API
+      #     method: ANY
+      #     path: /{proxy+}
+      - httpApi: # HTTP API
+          method: ANY
+          path: /{proxy+}
+      # - schedule: 
+      #     rate: rate(5 minutes) # 定期実行（コールド対策） 
+      #     input: # health check
+      #       resource: "/{proxy+}"
+      #       path: "/api/health"
+      #       httpMethod: "GET"
+      #       requestContext: {}
