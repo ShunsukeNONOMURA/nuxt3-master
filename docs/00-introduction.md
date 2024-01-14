@@ -1,11 +1,15 @@
 # このgitリポジトリについて
-nuxt3を用いてwebアプリケーションを構築するためのベースとするもの
+nuxt3を用いてwebアプリケーションを構築してサーバーレスデプロイするためのベースとするもの
 
 ## 基本方針
-- コンテナ環境において動作する
-- slsを用いてサーバーレスデプロイできる
+![](./00-servers.dio.png)
+
+- コンテナ環境において開発作業する
     - SPA構成を取りSSRしない
+    - Nitroでbuildする
+- slsを用いてサーバーレスデプロイできる
     - aws lambdaで関数URL化する
+    - api gatewayにエンドポイントを立ててアクセスできる
 - その他、開発に有用なツールをいくつか積んでおくこと
 
 ## 初回起動
@@ -47,3 +51,10 @@ yarn sls invoke local
 yarn sls deploy
 yarn sls deploy list
 yarn sls remove
+
+
+## ガイド
+[Nuxt3 Guide](https://nuxt.com/docs/guide)
+[Vite ガイド](https://ja.vitejs.dev/guide/)
+[Nitro Getting Started](https://nitro.unjs.io/guide/getting-started)
+[Serverless Framework Documentation](https://www.serverless.com/framework/docs)

@@ -241,10 +241,9 @@ yarn prisma migrate reset
 yarn prisma migrate dev --name init
 ```
 
-## 整理中
-prisma migration
-https://note.com/shift_tech/n/n800e789c6984
+参考：https://note.com/shift_tech/n/n800e789c6984
 
+## 整理中
 ```
 // vitest
 yarn add --D @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core
