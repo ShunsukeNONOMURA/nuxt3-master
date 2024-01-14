@@ -1,3 +1,6 @@
+# SLS outputs
+.serverless
+
 # Nuxt dev/build outputs
 .output
 .data

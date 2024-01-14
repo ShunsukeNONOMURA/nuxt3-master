@@ -1,4 +1,5 @@
 <template lang="pug">
+div {{ $t('domain.welcome') }}
 v-data-table-server(
     :headers="userHeaders"
     :items="users.items"

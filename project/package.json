@@ -11,6 +11,7 @@
     "typecheck": "nuxi typecheck"
   },
   "devDependencies": {
+    "@nuxtjs/i18n": "^8.0.0",
     "nuxt": "^3.9.0",
     "prisma": "^5.8.0",
     "pug": "^3.0.2",
@@ -26,5 +27,8 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@prisma/client": "^5.8.0"
+  },
+  "resolutions": {
+    "string-width": "4.2.3"
   }
 }

@@ -243,6 +243,42 @@ yarn prisma migrate dev --name init
 
 参考：https://note.com/shift_tech/n/n800e789c6984
 
+## i18n追加
+https://nuxt.com/modules/i18n
+```
+yarn add -D @nuxtjs/i18n@next
+```
+
+locales/ja.yml追加
+```
+domain:
+    welcome: ようこそ
+```
+
+nuxt.config.ts更新
+```
+export default defineNuxtConfig({
+  modules: [
+    // i18n
+    [
+      "@nuxtjs/i18n",
+      {
+        // デフォルト言語を除くすべてのルートにロケールプレフィックスを追加
+        strategy: 'prefix_except_default',
+        // 使用する言語
+        locales: [
+          { code: 'ja', file: 'ja.yml', iso: 'ja-JP' },
+  	    ],
+        // デフォルトの言語
+        defaultLocale: 'ja',
+        // 翻訳ファイルの置き場所
+        langDir: 'locales/',
+      }
+    ]
+  ],
+})
+```
+
 ## 整理中
 ```
 // vitest

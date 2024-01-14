@@ -1,6 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  // modules
+  modules: [
+    // i18n
+    [
+      "@nuxtjs/i18n",
+      {
+        // デフォルト言語を除くすべてのルートにロケールプレフィックスを追加
+        strategy: 'prefix_except_default',
+        // 使用する言語
+        locales: [
+          { code: 'ja', file: 'ja.yml', iso: 'ja-JP' },
+  	    ],
+        // デフォルトの言語
+        defaultLocale: 'ja',
+        // 翻訳ファイルの置き場所
+        langDir: 'locales/',
+      }
+    ]
+  ],
   // sls設定
   nitro: {
     preset: 'aws-lambda', // lambda用のビルド指定
