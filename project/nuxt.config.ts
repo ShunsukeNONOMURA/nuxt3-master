@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  // sls設定
   nitro: {
     preset: 'aws-lambda', // lambda用のビルド指定
     serveStatic: true, // lambdaからバイナリを直接払い出す指定
@@ -9,6 +10,7 @@ export default defineNuxtConfig({
     },
   },
   ssr: false,
+  // vuetify設定
   css: [
     "vuetify/lib/styles/main.sass",
     "@mdi/font/css/materialdesignicons.css"
@@ -16,11 +18,13 @@ export default defineNuxtConfig({
   build: {
       transpile: ["vuetify"]
   },
+  // nuxt設定
   vite: {
+      // env
       define: {
           "process.env.DEBUG": false
       },
-      // for HMR
+      // Hot Module Reload
       server: {
           watch: {
               usePolling: true

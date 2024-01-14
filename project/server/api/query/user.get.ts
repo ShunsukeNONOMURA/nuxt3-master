@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 
 export default defineEventHandler(async (event) => {
-    const query = getQuery(event)
+    const query: any = getQuery(event)
     const limit = parseInt(query.limit)
     const offset = parseInt(query.offset)
     const where = {}

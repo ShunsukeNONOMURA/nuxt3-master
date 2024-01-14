@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client'
 class UserRepository {
     static prisma = new PrismaClient()
 
-    static async find(userId) {
+    static async find(userId: string) {
         const user = await this.prisma.tUser.findUnique({
             where: {
                 userId
@@ -11,7 +11,7 @@ class UserRepository {
         })
         return user;
     }
-    static async delete(userId) {
+    static async delete(userId: string) {
         const prisma = new PrismaClient()
         const deleteUser = await prisma.tUser.delete({
             where: {
