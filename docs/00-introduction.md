@@ -20,6 +20,22 @@ cd nuxt3-master
 yarn install
 ```
 
+## 主要な導入ソフトウェア
+| ライブラリ | 用途 |
+| - | - |
+| docker | コンテナによる仮想環境 |
+| serverless | サーバーレス環境へのホスティング |
+| aws cli | awsコマンド操作 |
+| nuxt3 | フルスタックwebフレームワーク |
+| vuetify | マテリアルデザインコンポーネント |
+| i18n | 多言語対応 |
+| pug | テンプレートエンジン |
+| typescript | 静的型付け |
+| prisma | orm |
+| eslint | 静的解析ツール |
+| prettier | フォーマッター |
+| vitest | テスト |
+
 ## ディレクトリ構成
 components
 composables
@@ -29,11 +45,13 @@ pages
 server
 
 plugins
+prisma
 
 ## よく使う コマンド チートシート
 ### host環境
 docker compose run --rm nuxt bash
 git secrets --scan
+git status -uall
 git add .
 git commit -m 'comment'
 git push
@@ -42,6 +60,10 @@ git push
 yarn install
 yarn add -D {libname}
 yarn remove {libname}
+yarn prisma migrate reset
+yarn prisma migrate dev --name init
+yarn prisma generate
+yarn prisma studio
 yarn dev
 yarn nuxi typecheck
 yarn build
