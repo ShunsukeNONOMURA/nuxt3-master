@@ -1,7 +1,7 @@
 <template lang="pug">
-v-app-bar(density="compact" color="background" border flat)
-    v-container
-        slot
+v-app-bar(density='compact', color='background', border, flat)
+  v-container
+    slot
 //- v-toolbar(density="compact" color="background" border fixed)
 //-   slot
   //- v-container

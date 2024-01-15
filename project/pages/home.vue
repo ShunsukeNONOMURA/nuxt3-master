@@ -2,22 +2,20 @@
 div
   div {{ $t('domain.welcome') }}
   v-data-table-server(
-      :headers="userHeaders"
-      :items="users.items"
-      :items-length="users.total"
-      @update:options="onUserUpdate"
+    :headers='userHeaders',
+    :items='users.items',
+    :items-length='users.total',
+    @update:options='onUserUpdate'
   )
-      template(#[`item.userName`]="{ item }")
-          router-link(:to="`user/${item.userId}`") {{ item.userName }}
-      template(#[`item.actions`]="{ item }")
-          v-btn(
-            @click="onDeleteUser(item)"
-          ) delete
+    template(#[`item.userName`]='{ item }')
+      router-link(:to='`user/${item.userId}`') {{ item.userName }}
+    template(#[`item.actions`]='{ item }')
+      v-btn(@click='onDeleteUser(item)') delete
 
-  v-text-field(v-model="tmpUser.userId" label="userId")
-  v-text-field(v-model="tmpUser.userName" label="userName")
+  v-text-field(v-model='tmpUser.userId', label='userId')
+  v-text-field(v-model='tmpUser.userName', label='userName')
   //- v-text-field(v-model="tmpUser")
-  v-btn(@click="onCreateUser") create
+  v-btn(@click='onCreateUser') create
 </template>
 
 <script setup lang="ts">

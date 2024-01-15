@@ -1,6 +1,6 @@
 <template lang="pug">
 NuxtLayout
-    NuxtPage
+  NuxtPage
 </template>
 
 <script setup lang="ts"></script>
