@@ -1,6 +1,9 @@
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 
+import DateFnsAdapter from '@date-io/date-fns'
+import { ja } from 'date-fns/locale'
+
 // theme
 export const MAIN_THEME = 'mainTheme'
 export const mainTheme = {
@@ -39,6 +42,16 @@ const defaults = {
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
+    date: {
+      adapter: new DateFnsAdapter({
+        formats: {
+          year: 'yyyy年',
+          monthAndYear: 'yyyy年M月',
+          normalDateWithWeekday: 'M月d日(E)',
+        },
+        locale: ja,
+      }),
+    },
     ssr: false,
     defaults,
     theme: {

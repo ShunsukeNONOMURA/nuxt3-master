@@ -16,6 +16,8 @@ div
   v-text-field(v-model='tmpUser.userName', label='userName')
   //- v-text-field(v-model="tmpUser")
   v-btn(@click='onCreateUser') create
+
+  v-date-picker
 </template>
 
 <script setup lang="ts">

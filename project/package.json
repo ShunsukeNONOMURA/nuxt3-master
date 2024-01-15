@@ -41,8 +41,10 @@
     "vuetify": "^3.4.10"
   },
   "dependencies": {
+    "@date-io/date-fns": "^3.0.0",
     "@mdi/font": "^7.4.47",
-    "@prisma/client": "^5.8.0"
+    "@prisma/client": "^5.8.0",
+    "date-fns": "^3.2.0"
   },
   "resolutions": {
     "string-width": "4.2.3"

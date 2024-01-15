@@ -109,6 +109,33 @@ export default defineNuxtConfig({
 })
 ```
 
+### uetify3のVDatePickerの日本語化
+[Vuetify3のVDatePickerの日本語化](https://zenn.dev/iandcinc/articles/0a9cffe7012711)
+```
+yarn add @date-io/date-fns date-fns
+```
+
+```
+import DateFnsAdapter from '@date-io/date-fns'
+import { ja } from 'date-fns/locale'
+
+export default defineNuxtPlugin((nuxtApp) => {
+  const vuetify = createVuetify({
+    date: {
+      adapter: new DateFnsAdapter({
+        formats: {
+          year: 'yyyy年',
+          monthAndYear: 'yyyy年M月',
+          normalDateWithWeekday: 'M月d日(E)',
+        },
+        locale: ja,
+      }),
+    },
+  })
+  nuxtApp.vueApp.use(vuetify)
+})
+```
+
 ## pugの追加
 ```
 yarn add -D pug
