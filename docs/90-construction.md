@@ -317,13 +317,12 @@ trailingComma: 'es5'
 plugins: ['@prettier/plugin-pug']
 ```
 
-[Prettierの設定オプションについてまとめてみた](https://zenn.dev/rescuenow/articles/c07dd571dfe10f#vueindentscriptandstyle-script%E3%82%BF%E3%82%B0%E3%81%A8style%E3%82%BF%E3%82%B0%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88)
+- [Nuxt3系プロジェクトセットアップ手順](https://diary-shoone.hatenablog.com/entry/nuxt3)
+- [Prettierの設定オプションについてまとめてみた](https://zenn.dev/rescuenow/articles/c07dd571dfe10f#vueindentscriptandstyle-script%E3%82%BF%E3%82%B0%E3%81%A8style%E3%82%BF%E3%82%B0%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88)
+- [Prettier Plugin Pug Guide](https://prettier.github.io/plugin-pug/guide/)
 
 ## 整理中
 ```
 // vitest
 yarn add --D @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core
-
-// lint
-yarn add -D eslint eslint-plugin-vue @vue/eslint-config-typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin @eslint/create-config eslint-plugin-vue-pug
 ```
