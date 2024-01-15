@@ -1,3 +1,6 @@
+# test outputs
+coverage
+
 # SLS outputs
 .serverless
 
