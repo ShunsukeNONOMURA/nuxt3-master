@@ -284,20 +284,37 @@ export default defineNuxtConfig({
 yarn add -D @nuxtjs/eslint-config-typescript eslint
 yarn add -D eslint-plugin-vue eslint-plugin-vue-pug
 yarn add -D prettier eslint-config-prettier @vue/eslint-config-prettier
+yarn add -D @prettier/plugin-pug
 ```
 
 .eslintrc.ymlを作成
 ```
+root: true
+env: { node: true, es2021: true }
 extends:
+  - 'eslint:recommended'
   - '@nuxtjs/eslint-config-typescript'
-  - 'plugin:vue/vue3-recommended'
   - 'plugin:vue-pug/vue3-recommended'
+  - 'prettier'
+  - '@vue/prettier'
+parserOptions: { ecmaVersion: 'latest', sourceType: 'module' }
+plugins: ['vue', '@typescript-eslint']
 rules: {
-  # コンソールログの出力に関して
-  no-console: off, 
-  # 複合語のみコンポーネント名とするか
-  vue/multi-word-component-names: off
-}
+    # コンソールログの出力に関して
+    no-console: off,
+    # 複合語のみコンポーネント名とするか
+    vue/multi-word-component-names: off,
+  }
+```
+
+.prettierrc.ymlを作成
+```
+singleQuote: true
+semi: false
+tabWidth: 2
+vueIndentScriptAndStyle: true
+trailingComma: 'es5'
+plugins: ['@prettier/plugin-pug']
 ```
 
 [Prettierの設定オプションについてまとめてみた](https://zenn.dev/rescuenow/articles/c07dd571dfe10f#vueindentscriptandstyle-script%E3%82%BF%E3%82%B0%E3%81%A8style%E3%82%BF%E3%82%B0%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88)
