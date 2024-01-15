@@ -7,14 +7,14 @@ export const userStore = () => {
     const { data } = await useFetch(
       '/api/query/user',
       {
-          method: 'GET',
-          // body: {
-          //   user
-          // },
-          params: {
-              limit,
-              offset,
-          },
+        method: 'GET',
+        // body: {
+        //   user
+        // },
+        params: {
+          limit,
+          offset
+        }
       }
     )
     users.value = data.value.data.user
@@ -23,20 +23,20 @@ export const userStore = () => {
   // get 1 user
   const getUser = async (userId) => {
     const { data } = await useFetch(
-      `/api/user/${userId}`,
+      `/api/user/${userId}`
     )
     user.value = data.value.data.user
   }
 
   // create 1 user
   const createUser = async (user) => {
-    const { data } = useFetch(
-      `/api/user`,
+    const { data } = await useFetch(
+      '/api/user',
       {
         method: 'POST',
         body: {
           user
-        },
+        }
       }
     )
     console.log(data)
@@ -49,9 +49,10 @@ export const userStore = () => {
     const { data } = await useFetch(
       `/api/user/${user.userId}`,
       {
-        method: 'delete',
+        method: 'delete'
       }
     )
+    console.log(data)
   }
 
   return {
@@ -60,6 +61,6 @@ export const userStore = () => {
     queryUser,
     getUser,
     createUser,
-    deleteUser,
+    deleteUser
   }
 }

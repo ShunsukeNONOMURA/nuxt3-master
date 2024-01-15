@@ -8,10 +8,15 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "typecheck": "nuxi typecheck"
+    "typecheck": "nuxi typecheck",
+    "lint": "eslint \"./**/*.ts\" --ignore-path .gitignore ."
   },
   "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/i18n": "^8.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.20.1",
+    "eslint-plugin-vue-pug": "^0.6.1",
     "nuxt": "^3.9.0",
     "prisma": "^5.8.0",
     "pug": "^3.0.2",

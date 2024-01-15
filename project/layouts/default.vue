@@ -13,7 +13,7 @@ v-app
             )
         v-spacer
         v-menu(offset-y)
-            template(v-slot:activator="{ props }")
+            template(#activator="{ props }")
                 v-btn(v-bind="props" icon="mdi-account")
             v-list(nav)
                 v-list-item hoge
@@ -39,9 +39,8 @@ v-app
         | ver
 
 </template>
-    
+
 <script setup lang="ts">
 import { ref } from 'vue'
 const drawer = ref(false)
 </script>
-

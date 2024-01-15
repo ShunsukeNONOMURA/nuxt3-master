@@ -279,6 +279,26 @@ export default defineNuxtConfig({
 })
 ```
 
+## eslint追加
+```
+yarn add -D @nuxtjs/eslint-config-typescript eslint
+yarn add -D eslint-plugin-vue eslint-plugin-vue-pug
+```
+
+.eslintrc.ymlを作成
+```
+extends:
+  - '@nuxtjs/eslint-config-typescript'
+  - 'plugin:vue/vue3-recommended'
+  - 'plugin:vue-pug/vue3-recommended'
+rules: {
+  # コンソールログの出力に関して
+  no-console: off, 
+  # 複合語のみコンポーネント名とするか
+  vue/multi-word-component-names: off
+}
+```
+
 ## 整理中
 ```
 // vitest

@@ -1,11 +1,10 @@
-export default defineEventHandler(async () => {
-    return {
-        head: {
-            status: 'ok'
-        },
-        data: {
-          
-        }
+export default defineEventHandler(() => {
+  return {
+    head: {
+      status: 'ok'
+    },
+    data: {
+
     }
+  }
 })
-  
