@@ -7,5 +7,4 @@ v-app-bar(
     slot
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>

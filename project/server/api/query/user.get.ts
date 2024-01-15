@@ -14,22 +14,22 @@ export default defineEventHandler(async (event) => {
       where,
       take: limit,
       skip: offset,
-      orderBy
+      orderBy,
     }),
-    prisma.tUser.count({ where })
+    prisma.tUser.count({ where }),
   ])
 
   return {
     head: {
-      status: 'ok'
+      status: 'ok',
     },
     data: {
       user: {
         total,
-        items
+        items,
         // limit,
         // offset,
-      }
-    }
+      },
+    },
   }
 })

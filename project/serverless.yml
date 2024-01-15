@@ -20,7 +20,6 @@ package:
     - '.output/**'
     # - '.output/server/**' # nuxt run buildの出力ディレクトリのサーバーサイドのみを指定
 
-
 functions:
   NuxtSsrCore:
     name: ${self:custom.author}-nuxt-${self:custom.stage}
@@ -33,8 +32,8 @@ functions:
       - httpApi: # HTTP API
           method: ANY
           path: /{proxy+}
-      # - schedule: 
-      #     rate: rate(5 minutes) # 定期実行（コールド対策） 
+      # - schedule:
+      #     rate: rate(5 minutes) # 定期実行（コールド対策）
       #     input: # health check
       #       resource: "/{proxy+}"
       #       path: "/api/health"

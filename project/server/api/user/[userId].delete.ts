@@ -6,11 +6,11 @@ export default defineEventHandler(async (event) => {
 
   const deleteUser = await prisma.tUser.delete({
     where: {
-      userId
-    }
+      userId,
+    },
   })
 
   return {
-    data: { deleteUser }
+    data: { deleteUser },
   }
 })

@@ -4,41 +4,33 @@ export const userStore = () => {
 
   // query user
   const queryUser = async (limit, offset) => {
-    const { data } = await useFetch(
-      '/api/query/user',
-      {
-        method: 'GET',
-        // body: {
-        //   user
-        // },
-        params: {
-          limit,
-          offset
-        }
-      }
-    )
+    const { data } = await useFetch('/api/query/user', {
+      method: 'GET',
+      // body: {
+      //   user
+      // },
+      params: {
+        limit,
+        offset,
+      },
+    })
     users.value = data.value.data.user
   }
 
   // get 1 user
   const getUser = async (userId) => {
-    const { data } = await useFetch(
-      `/api/user/${userId}`
-    )
+    const { data } = await useFetch(`/api/user/${userId}`)
     user.value = data.value.data.user
   }
 
   // create 1 user
   const createUser = async (user) => {
-    const { data } = await useFetch(
-      '/api/user',
-      {
-        method: 'POST',
-        body: {
-          user
-        }
-      }
-    )
+    const { data } = await useFetch('/api/user', {
+      method: 'POST',
+      body: {
+        user,
+      },
+    })
     console.log(data)
   }
 
@@ -46,12 +38,9 @@ export const userStore = () => {
   const deleteUser = async (user) => {
     console.log(user)
     // 削除
-    const { data } = await useFetch(
-      `/api/user/${user.userId}`,
-      {
-        method: 'delete'
-      }
-    )
+    const { data } = await useFetch(`/api/user/${user.userId}`, {
+      method: 'delete',
+    })
     console.log(data)
   }
 
@@ -61,6 +50,6 @@ export const userStore = () => {
     queryUser,
     getUser,
     createUser,
-    deleteUser
+    deleteUser,
   }
 }

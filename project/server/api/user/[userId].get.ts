@@ -3,21 +3,21 @@ import { PrismaClient } from '@prisma/client'
 class UserRepository {
   static prisma = new PrismaClient()
 
-  static async find (userId: string) {
+  static async find(userId: string) {
     const user = await this.prisma.tUser.findUnique({
       where: {
-        userId
-      }
+        userId,
+      },
     })
     return user
   }
 
-  static async delete (userId: string) {
+  static async delete(userId: string) {
     const prisma = new PrismaClient()
     const deleteUser = await prisma.tUser.delete({
       where: {
-        userId
-      }
+        userId,
+      },
     })
     return deleteUser
   }
@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
 
   return {
     data: {
-      user
-    }
+      user,
+    },
   }
 })

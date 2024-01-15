@@ -13,8 +13,8 @@ export const mainTheme = {
     error: '#ef4444',
     info: '#3b82f6',
     success: '#22c55e',
-    warning: '#f59e0b'
-  }
+    warning: '#f59e0b',
+  },
 }
 
 // default
@@ -34,7 +34,7 @@ const defaults = {
     //     { value: 100, title: '100件' },
     //     // { value: -1, title: 'すべて' }
     // ]
-  }
+  },
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -44,17 +44,17 @@ export default defineNuxtPlugin((nuxtApp) => {
     theme: {
       defaultTheme: MAIN_THEME,
       themes: {
-        mainTheme
+        mainTheme,
         // mainDarkTheme,
       },
       // primary-darken-9 primary-lighten-9 までできるようにする
       variations: {
         colors: ['primary', 'secondary', 'accent'],
         lighten: 9,
-        darken: 9
-      }
+        darken: 9,
+      },
     },
-    components
+    components,
   })
 
   nuxtApp.vueApp.use(vuetify)

@@ -1,10 +1,8 @@
 export default defineEventHandler(() => {
   return {
     head: {
-      status: 'ok'
+      status: 'ok',
     },
-    data: {
-
-    }
+    data: {},
   }
 })

@@ -9,15 +9,19 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxi typecheck",
-    "lint": "eslint \"./**/*.ts\" --ignore-path .gitignore ."
+    "lint": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "lintfix": "prettier --write --list-different . && npm run lint -- --fix"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/i18n": "^8.0.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
     "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.20.1",
     "eslint-plugin-vue-pug": "^0.6.1",
     "nuxt": "^3.9.0",
+    "prettier": "^3.2.2",
     "prisma": "^5.8.0",
     "pug": "^3.0.2",
     "sass": "^1.69.7",

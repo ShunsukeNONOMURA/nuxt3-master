@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 
 class UserFactory {
-  create (userProps: any) {
+  create(userProps: any) {
     const user = userProps
     user.userRoleId = 'sample'
     return user
@@ -19,14 +19,14 @@ export default defineEventHandler(async (event) => {
 
   let data = {}
   const head = {
-    code: ''
+    code: '',
   }
   try {
     // 例外を throw する処理
     const createUser = await prisma.tUser.upsert({
       where: user,
       update: user,
-      create: user
+      create: user,
     })
     data = createUser
     head.code = 'S'
@@ -41,6 +41,6 @@ export default defineEventHandler(async (event) => {
 
   return {
     head,
-    data
+    data,
   }
 })

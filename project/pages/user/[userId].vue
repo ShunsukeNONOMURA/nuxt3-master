@@ -3,14 +3,14 @@ div {{ user }}
 </template>
 
 <script setup lang="ts">
-const route = useRoute()
-const userId = route.params.userId // パスパラメータ[id]の取得
+  const route = useRoute()
+  const userId = route.params.userId // パスパラメータ[id]の取得
 
-// const user = {
-//     userId,
-//     userName: `user ${userId}`
-// }
+  // const user = {
+  //     userId,
+  //     userName: `user ${userId}`
+  // }
 
-const { user, getUser } = userStore()
-getUser(userId)
+  const { user, getUser } = userStore()
+  getUser(userId)
 </script>

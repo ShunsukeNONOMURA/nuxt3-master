@@ -6,5 +6,4 @@ div
         v-card-text hogehoge
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>

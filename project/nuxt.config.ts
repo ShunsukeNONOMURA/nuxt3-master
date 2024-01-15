@@ -14,50 +14,50 @@ export default defineNuxtConfig({
           {
             code: 'ja',
             file: 'ja.yml',
-            iso: 'ja-JP'
-          }
+            iso: 'ja-JP',
+          },
         ],
         // デフォルトの言語
         defaultLocale: 'ja',
         // 翻訳ファイルの置き場所
-        langDir: 'locales/'
-      }
-    ]
+        langDir: 'locales/',
+      },
+    ],
   ],
   // sls設定
   nitro: {
     preset: 'aws-lambda', // lambda用のビルド指定
     serveStatic: true, // lambdaからバイナリを直接払い出す指定
     experimental: {
-      openAPI: true // swagger
-    }
+      openAPI: true, // swagger
+    },
   },
   ssr: false,
   // vuetify設定
   css: [
     'vuetify/lib/styles/main.sass',
-    '@mdi/font/css/materialdesignicons.css'
+    '@mdi/font/css/materialdesignicons.css',
   ],
   build: {
-    transpile: ['vuetify']
+    transpile: ['vuetify'],
   },
   // nuxt設定
   vite: {
     // env
     define: {
-      'process.env.DEBUG': false
+      'process.env.DEBUG': false,
     },
     // Hot Module Reload
     server: {
       watch: {
-        usePolling: true
-      }
-    }
+        usePolling: true,
+      },
+    },
   },
   components: [
     {
       path: '~/components',
-      pathPrefix: false // pathによるprefixを使用するか
-    }
-  ]
+      pathPrefix: false, // pathによるprefixを使用するか
+    },
+  ],
 })

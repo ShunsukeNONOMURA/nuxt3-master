@@ -21,44 +21,41 @@ div
 </template>
 
 <script setup lang="ts">
-const { users, queryUser, createUser, deleteUser } = userStore()
+  const { users, queryUser, createUser, deleteUser } = userStore()
 
-const userHeaders = [
-  {
-    title: 'ユーザID',
-    sortable: false,
-    key: 'userId'
-  },
-  {
-    title: 'ユーザ名',
-    sortable: false,
-    key: 'userName'
-  },
-  {
-    // title: t('case.action'),
-    title: '操作',
-    sortable: false,
-    key: 'actions'
+  const userHeaders = [
+    {
+      title: 'ユーザID',
+      sortable: false,
+      key: 'userId',
+    },
+    {
+      title: 'ユーザ名',
+      sortable: false,
+      key: 'userName',
+    },
+    {
+      // title: t('case.action'),
+      title: '操作',
+      sortable: false,
+      key: 'actions',
+    },
+  ]
+  // 取得
+  const onUserUpdate = ({ page, itemsPerPage, sortBy }) => {
+    const offset = (page - 1) * itemsPerPage
+    console.log(sortBy)
+    queryUser(itemsPerPage, offset)
   }
-]
-// 取得
-const onUserUpdate = ({ page, itemsPerPage, sortBy }) => {
-  const offset = (page - 1) * itemsPerPage
-  console.log(sortBy)
-  queryUser(
-    itemsPerPage,
-    offset
-  )
-}
 
-// 作成
-const tmpUser = ref({})
-const onCreateUser = () => {
-  createUser(tmpUser)
-}
+  // 作成
+  const tmpUser = ref({})
+  const onCreateUser = () => {
+    createUser(tmpUser)
+  }
 
-// 削除
-const onDeleteUser = (user) => {
-  deleteUser(user)
-}
+  // 削除
+  const onDeleteUser = (user) => {
+    deleteUser(user)
+  }
 </script>

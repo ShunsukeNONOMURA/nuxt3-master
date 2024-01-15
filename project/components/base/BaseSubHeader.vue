@@ -11,15 +11,15 @@ v-app-bar(density="compact" color="background" border flat)
 </template>
 
 <script lang="ts" setup>
-// const snackbar = ref(true)
+  // const snackbar = ref(true)
 </script>
 
 <style scoped>
-.sticky {
-  /* Safari */
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
-}
+  .sticky {
+    /* Safari */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  }
 </style>
