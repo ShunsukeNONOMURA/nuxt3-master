@@ -1,5 +1,7 @@
 import { PrismaClient } from '@prisma/client'
 
+
+
 export class UserFactory {
   static create(userProps: any) {
     const user = userProps
