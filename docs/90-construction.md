@@ -1,5 +1,6 @@
 # 構築記録
-このリポジトリを作成したときの手順についての記録。
+このリポジトリを作成したときの手順についての記録。  
+作業を羅列的に記述するに留める。
 
 ## nuxt3プロジェクトの作成
 ```
@@ -353,3 +354,4 @@ plugins: ['@prettier/plugin-pug']
 yarn add -D @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core
 yarn add -D @vitest/coverage-v8
 ```
+参考：https://nuxt.com/docs/getting-started/testing
