@@ -1,6 +1,6 @@
 <template lang="pug">
 v-app
-  base-header(app)
+  v-app-bar(app)
     v-app-bar-nav-icon(@click='drawer = !drawer')
     router-link(to='/')
       v-btn title
@@ -32,8 +32,8 @@ v-app
   v-main
     v-container
       NuxtPage
-  v-footer(app, absolute, flat, color='primary')
-    | ver
+  v-footer(app)
+    | {{ $config.public.env }} {{ $config.public.version }}
 </template>
 
 <script setup lang="ts">

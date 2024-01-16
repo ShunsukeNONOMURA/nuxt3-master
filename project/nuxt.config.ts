@@ -60,4 +60,11 @@ export default defineNuxtConfig({
       pathPrefix: false, // pathによるprefixを使用するか
     },
   ],
+  // env
+  runtimeConfig: {
+    public: {
+      version: '',
+      env: '',
+    },
+  },
 })

@@ -22,22 +22,32 @@ export const mainTheme = {
 
 // default
 const defaults = {
-  // VAppBar: {
-  //   flat: true,
-  //   color: 'primary',
-  // },
+  VAppBar: {
+    density: 'compact',
+    flat: true,
+    color: 'primary',
+  },
+  VFooter: {
+    absolute: true,
+    flat: true,
+    color: 'primary',
+  },
+  VBtn: {
+    variant: 'outlined',
+    style: 'text-transform: none',
+  },
   VDataTableServer: {
-    // locale:"ja-jp",
-    itemsPerPageText: "1ページあたりの表示数",
+    noDataText: 'データがありません。',
+    itemsPerPageText: '1ページあたりの表示数',
     itemsPerPageOptions: [
-        { value: 5, title: '5件' },
-        { value: 10, title: '10件' },
-        { value: 25, title: '25件' },
-        { value: 50, title: '50件' },
-        { value: 100, title: '100件' },
-        // { value: -1, title: 'すべて' }
+      { value: 5, title: '5件' },
+      { value: 10, title: '10件' },
+      { value: 25, title: '25件' },
+      { value: 50, title: '50件' },
+      { value: 100, title: '100件' },
+      // { value: -1, title: 'すべて' }
     ],
-    pageText: "{0}-{1} 件 / {2} 件中"
+    pageText: '{0}-{1} 件 / {2} 件中',
   },
 }
 

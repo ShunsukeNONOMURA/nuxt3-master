@@ -1,2 +1,6 @@
 domain:
   welcome: ようこそ
+  user:
+    userId: ユーザID
+    userName: ユーザ名
+    userRole: ユーザロール

@@ -25,6 +25,7 @@ export const userStore = () => {
 
   // create 1 user
   const createUser = async (user) => {
+    // console.log(user)
     const { data } = await useFetch('/api/user', {
       method: 'POST',
       body: {
