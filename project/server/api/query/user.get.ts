@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import { UserService } from '~/apps'
 
 export default defineEventHandler(async (event) => {
   const query: any = getQuery(event)
@@ -7,17 +7,7 @@ export default defineEventHandler(async (event) => {
   const where = {}
   const orderBy = {}
 
-  const prisma = new PrismaClient()
-
-  const [items, total] = await Promise.all([
-    prisma.tUser.findMany({
-      where,
-      take: limit,
-      skip: offset,
-      orderBy,
-    }),
-    prisma.tUser.count({ where }),
-  ])
+  const [items, total] = await UserService.query(where, limit, offset, orderBy)
 
   return {
     head: {

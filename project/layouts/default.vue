@@ -33,7 +33,7 @@ v-app
     v-container
       NuxtPage
   v-footer(app)
-    | {{ $config.public.env }} {{ $config.public.version }}
+    | VERSION {{ $config.public.env }} {{ $config.public.version }}
 </template>
 
 <script setup lang="ts">

@@ -1,14 +1,9 @@
-import { PrismaClient } from '@prisma/client'
+import { UserRepository } from '~/apps'
+
 export default defineEventHandler(async (event) => {
-  const prisma = new PrismaClient()
-
   const userId = event.context.params.userId
-
-  const deleteUser = await prisma.tUser.delete({
-    where: {
-      userId,
-    },
-  })
+  const deleteUser = await UserRepository.delete(userId)
+  // const deletedUser = await UserRepository.delete(userId)
 
   return {
     data: { deleteUser },
