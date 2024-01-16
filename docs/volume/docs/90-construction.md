@@ -110,13 +110,13 @@ export default defineNuxtConfig({
 })
 ```
 
-### uetify3のVDatePickerの日本語化
+### vuetify3のVDatePickerの日本語化
 [Vuetify3のVDatePickerの日本語化](https://zenn.dev/iandcinc/articles/0a9cffe7012711)
 ```
 yarn add @date-io/date-fns date-fns
 ```
 
-```
+```ts
 import DateFnsAdapter from '@date-io/date-fns'
 import { ja } from 'date-fns/locale'
 
@@ -135,6 +135,27 @@ export default defineNuxtPlugin((nuxtApp) => {
   })
   nuxtApp.vueApp.use(vuetify)
 })
+```
+
+### v-data-table系の日本語化
+createVuetifyする際に下記のようなdefaultを指定する。
+
+```ts
+const defaults = {
+  VDataTableServer: {
+    noDataText: 'データがありません。',
+    itemsPerPageText: '1ページあたりの表示数',
+    itemsPerPageOptions: [
+      { value: 5, title: '5件' },
+      { value: 10, title: '10件' },
+      { value: 25, title: '25件' },
+      { value: 50, title: '50件' },
+      { value: 100, title: '100件' },
+      // { value: -1, title: 'すべて' }
+    ],
+    pageText: '{0}-{1} 件 / {2} 件中',
+  },
+}
 ```
 
 ## pugの追加
