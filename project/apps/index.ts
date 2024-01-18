@@ -1,6 +1,21 @@
 import { PrismaClient } from '@prisma/client'
 
+// import { ValueObject } from './core'
 
+// class UserId extends ValueObject<string, 'UserId'> {
+//   constructor(value: string) {
+//     super(value);
+//   }
+// }
+
+// const uid1 = new UserId('1')
+// const uid12 = new UserId('1')
+// const uid2 = new UserId(2)
+
+// console.log(uid1 == uid1)
+// console.log(uid1 == uid12)
+// console.log(uid1)
+// console.log(uid2)
 
 export class UserFactory {
   static create(userProps: any) {
@@ -33,27 +48,10 @@ export class UserRepository {
   }
 
   static async store(user) {
-    let data = {}
-    const head = {
-      code: '',
-    }
-    try {
-      // 例外を throw する処理
-      const createUser = await this.prisma.tUser.upsert({
-        where: user,
-        update: user,
-        create: user,
-      })
-      data = createUser
-      head.code = 'S'
-    } catch (e: unknown) {
-      if (e instanceof Error) {
-        console.error(e.message)
-      }
-      head.code = 'E'
-    }
-    console.log(head)
-    return data
+    const createdUser = await this.prisma.tUser.create({
+      data: user,
+    })
+    return createdUser
   }
 }
 
@@ -61,7 +59,7 @@ export class UserService {
   static prisma = new PrismaClient()
 
   static async query(where, limit, offset, orderBy) {
-    const [items, total] = await Promise.all([
+    const [items, total, aggs] = await Promise.all([
       this.prisma.tUser.findMany({
         where,
         take: limit,
@@ -69,7 +67,12 @@ export class UserService {
         orderBy,
       }),
       this.prisma.tUser.count({ where }),
+      this.prisma.tUser.groupBy({
+        by: ['userRoleId'],
+        where,
+        _count: true,
+      }),
     ])
-    return [items, total]
+    return [items, total, aggs]
   }
 }

@@ -7,7 +7,12 @@ export default defineEventHandler(async (event) => {
   const where = {}
   const orderBy = {}
 
-  const [items, total] = await UserService.query(where, limit, offset, orderBy)
+  const [items, total, aggs] = await UserService.query(
+    where,
+    limit,
+    offset,
+    orderBy
+  )
 
   return {
     head: {
@@ -19,6 +24,7 @@ export default defineEventHandler(async (event) => {
         items,
         // limit,
         // offset,
+        aggs,
       },
     },
   }

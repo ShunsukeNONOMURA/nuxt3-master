@@ -31,6 +31,7 @@ export const userStore = () => {
       body: {
         user,
       },
+      watch: false,
     })
     console.log(data)
   }
@@ -41,6 +42,7 @@ export const userStore = () => {
     // 削除
     const { data } = await useFetch(`/api/user/${user.userId}`, {
       method: 'delete',
+      watch: false,
     })
     console.log(data)
   }
