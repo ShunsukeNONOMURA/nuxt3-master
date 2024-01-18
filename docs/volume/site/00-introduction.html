@@ -14,7 +14,7 @@
         <link rel="prev" href="index.html">
       
       
-        <link rel="next" href="90-construction.html">
+        <link rel="next" href="20-api.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
@@ -59,7 +59,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo">
   
     
     
@@ -326,6 +326,21 @@
   
   
     <li class="md-nav__item">
+      <a href="20-api.html" class="md-nav__link">
+        API設計
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="90-construction.html" class="md-nav__link">
         構築記録
       </a>
@@ -560,33 +575,132 @@ layouts
 middleware
 pages
 server</p>
+<p>tests</p>
 <p>plugins
 prisma</p>
 <h2 id="_5">よく使う コマンド チートシート<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <h3 id="host">host環境<a class="headerlink" href="#host" title="Permanent link">&para;</a></h3>
-<p>docker compose run --rm nuxt bash
-git secrets --scan
-git status -uall
-git add .
-git commit -m 'comment'
-git push</p>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker compose run --rm nuxt bash</td>
+<td></td>
+</tr>
+<tr>
+<td>git secrets --scan</td>
+<td></td>
+</tr>
+<tr>
+<td>git status -uall</td>
+<td></td>
+</tr>
+<tr>
+<td>git add .</td>
+<td></td>
+</tr>
+<tr>
+<td>git commit -m 'comment'</td>
+<td></td>
+</tr>
+<tr>
+<td>git push</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id="_6">コンテナ環境<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>yarn install
-yarn add -D {libname}
-yarn remove {libname}
-yarn prisma migrate reset
-yarn prisma migrate dev --name init
-yarn prisma generate
-yarn prisma studio
-yarn dev
-yarn nuxi typecheck
-yarn build
-yarn generate
-yarn sls plugin install
-yarn sls invoke local
-yarn sls deploy
-yarn sls deploy list
-yarn sls remove</p>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yarn install</td>
+<td></td>
+</tr>
+<tr>
+<td libname="libname">yarn add -D</td>
+<td></td>
+</tr>
+<tr>
+<td libname="libname">yarn remove</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn prisma format</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn prisma migrate reset</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn prisma migrate dev --name init</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn prisma generate</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn prisma studio</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn dev</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn nuxi typecheck</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn vitest</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn vitest run --coverage</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn build</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn generate</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn sls plugin install</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn sls invoke local</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn sls deploy</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn sls deploy list</td>
+<td></td>
+</tr>
+<tr>
+<td>yarn sls remove</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="_7">ガイド<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><a href="https://nuxt.com/docs/guide">Nuxt3 Guide</a>
 <a href="https://ja.vitejs.dev/guide/">Vite ガイド</a>
