@@ -1,4 +1,4 @@
-site_name: Sample MkDocs
+site_name: Nuxt3 Master
 # mkdocsをルートとする
 site_url: http://0.0.0.0/mkdocs
 theme:
