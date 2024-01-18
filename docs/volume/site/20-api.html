@@ -469,7 +469,7 @@
     subgraph "システム"
         User((ユーザー))
         subgraph "ユーザ管理"
-            QueryUser[ユーザ問い合わせ]
+            QueryUser[ユーザ問い合わせ（検索、集計）]
             GetUser[ユーザを一人取得]
             CreateUser[ユーザを作成]
             DeleteUser[ユーザを削除]
@@ -499,15 +499,19 @@
 </code></pre></p>
 <h2 id="javascript">サーバーサイドJavascriptのメリット・デメリット<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h2>
 <ul>
-<li>フロントエンドの知識や実装を応用しやすい</li>
+<li>フロントエンドの知識や実装を応用しやすい<ul>
 <li>歴史経緯からフロントエンドではjavascriptの利用が求められる</li>
 <li>もともとPythonでバックエンド書いているが、堅牢なコードを書こうとするほど学習時間が分散してしまうので、学習コストを削減したい。</li>
-<li>Python独自のライブラリが使えない</li>
+</ul>
+</li>
+<li>Python独自のライブラリが使えない<ul>
 <li>とはいえ、大抵のライブラリは揃っているはず</li>
 <li><a href="https://www.prisma.io/">ORM：prisma</a></li>
 <li><a href="https://www.npmjs.com/package/@opensearch-project/opensearch">検索エンジン：opensearch</a></li>
 <li><a href="https://pytorch.org/docs/stable/jit.html">機械学習：PyTorch</a></li>
 <li><a href="https://js.langchain.com/docs/get_started/installation">LLM：langchain</a></li>
+</ul>
+</li>
 </ul>
 
 
