@@ -376,3 +376,17 @@ yarn add -D @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core
 yarn add -D @vitest/coverage-v8
 ```
 参考：https://nuxt.com/docs/getting-started/testing
+
+## lodash 追加
+```
+yarn add -D nuxt-lodash
+```
+
+nuxt.config.ts を更新
+```
+export default defineNuxtConfig({
+  modules: ["nuxt-lodash"],
+});
+```
+
+[nuxt lodash](https://nuxt.com/modules/lodash)

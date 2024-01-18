@@ -49,30 +49,36 @@ prisma
 
 ## よく使う コマンド チートシート
 ### host環境
-docker compose run --rm nuxt bash
-git secrets --scan
-git status -uall
-git add .
-git commit -m 'comment'
-git push
+| コマンド | 動作 |
+| - | - |
+| docker compose run --rm nuxt bash | |
+| git secrets --scan | |
+| git status -uall | |
+| git add . | |
+| git commit -m 'comment' | |
+| git push | |
 
 ### コンテナ環境
-yarn install
-yarn add -D {libname}
-yarn remove {libname}
-yarn prisma migrate reset
-yarn prisma migrate dev --name init
-yarn prisma generate
-yarn prisma studio
-yarn dev
-yarn nuxi typecheck
-yarn build
-yarn generate
-yarn sls plugin install
-yarn sls invoke local
-yarn sls deploy
-yarn sls deploy list
-yarn sls remove
+| コマンド | 動作 |
+| - | - |
+| yarn install | |
+| yarn add -D {libname} | |
+| yarn remove {libname} | |
+| yarn prisma migrate reset | |
+| yarn prisma migrate dev --name init | |
+| yarn prisma generate | |
+| yarn prisma studio | |
+| yarn dev | |
+| yarn nuxi typecheck | |
+| yarn vitest | |
+| yarn vitest run --coverage | |
+| yarn build | |
+| yarn generate | |
+| yarn sls plugin install | |
+| yarn sls invoke local | |
+| yarn sls deploy | |
+| yarn sls deploy list | |
+| yarn sls remove | |
 
 
 ## ガイド

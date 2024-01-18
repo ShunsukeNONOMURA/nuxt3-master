@@ -14,3 +14,23 @@
 | 404 Not Found | 見つからない |
 | 500 Internal Server Error | 何らかのサーバ内で起きたエラー |
 
+
+## Usecase
+```mermaid
+graph TB
+    subgraph "システム"
+        User((ユーザー))
+        subgraph "ユーザ管理"
+            QueryUser[ユーザ問い合わせ]
+            GetUser[ユーザを一人取得]
+            CreateUser[ユーザを作成]
+            DeleteUser[ユーザを削除]
+        end
+    end
+    User --> QueryUser
+    User --> GetUser
+    User --> CreateUser
+    User --> DeleteUser
+```
+
+## ER図

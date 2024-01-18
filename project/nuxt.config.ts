@@ -3,6 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   // modules
   modules: [
+    // lodash
+    'nuxt-lodash',
     // i18n
     [
       '@nuxtjs/i18n',

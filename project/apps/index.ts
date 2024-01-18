@@ -1,21 +1,14 @@
 import { PrismaClient } from '@prisma/client'
 
-// import { ValueObject } from './core'
+import { ValueObject } from './core'
 
-// class UserId extends ValueObject<string, 'UserId'> {
-//   constructor(value: string) {
-//     super(value);
-//   }
-// }
+export class UserId extends ValueObject<string, 'UserId'> {
+  // constructor(value: string) {
+  //   super(value)
+  // }
 
-// const uid1 = new UserId('1')
-// const uid12 = new UserId('1')
-// const uid2 = new UserId(2)
-
-// console.log(uid1 == uid1)
-// console.log(uid1 == uid12)
-// console.log(uid1)
-// console.log(uid2)
+  validate() {}
+}
 
 export class UserFactory {
   static create(userProps: any) {
