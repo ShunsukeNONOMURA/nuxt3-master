@@ -44,6 +44,8 @@ middleware
 pages
 server
 
+tests
+
 plugins
 prisma
 
@@ -64,6 +66,7 @@ prisma
 | yarn install | |
 | yarn add -D {libname} | |
 | yarn remove {libname} | |
+| yarn prisma format | |
 | yarn prisma migrate reset | |
 | yarn prisma migrate dev --name init | |
 | yarn prisma generate | |

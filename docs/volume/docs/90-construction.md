@@ -292,6 +292,18 @@ yarn prisma migrate dev --name init
 
 参考：https://note.com/shift_tech/n/n800e789c6984
 
+### ER図出力
+```
+yarn add -D prisma-erd-generator @mermaid-js/mermaid-cli
+```
+
+schema.prisma に追記
+```
+generator erd {
+  provider = "prisma-erd-generator"
+}
+```
+
 ## i18n追加
 https://nuxt.com/modules/i18n
 ```

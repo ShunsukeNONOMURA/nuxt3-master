@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   const userId = event.context.params.userId
 
   const deleteUser = await UserRepository.find(userId)
-  if (deleteUser != null) {
+  if (deleteUser == null) {
     console.log('not found')
   }
 

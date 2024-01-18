@@ -1,22 +1,39 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+generator erd {
+  provider = "prisma-erd-generator"
+  output   = "./erd.md"
+}
+
 generator client {
-  provider = "prisma-client-js"
-  binaryTargets   = ["native", "rhel-openssl-3.0.x"] // lambda用にrhelを追加
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"] // lambda用にrhelを追加
 }
 
 datasource db {
   provider = "sqlite"
   //url      = env("DATABASE_URL")
-  url = "file:./dev.db?connection_limit=1"
+  url      = "file:./dev.db?connection_limit=1"
 }
 
 model TUser {
-  userId String @id @map("user_id")
-  userName String @map("user_name")
-  userRoleId String @map("user_role_id")
+  userId               String   @id @map("user_id")
+  userName             String   @map("user_name")
+  userRoleId           String   @map("user_role_id")
   userCreationDatetime DateTime @default(now()) @map("user_creation_datetime")
-  userUpdateDatetime DateTime @default(now()) @map("user_update_datetime")
+  userUpdateDatetime   DateTime @default(now()) @map("user_update_datetime")
+
+  userRole MUserRole @relation(fields: [userRoleId], references: [userRoleId])
+
   @@map("t_user")
+}
+
+model MUserRole {
+  userRoleId   String @id @map("user_role_id")
+  userRoleName String @map("user_role_name")
+
+  tUser TUser[]
+
+  @@map("m_user_role")
 }

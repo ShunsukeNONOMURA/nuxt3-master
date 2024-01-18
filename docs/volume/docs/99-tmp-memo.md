@@ -34,3 +34,9 @@ url = xxx&connection_limit=1
 
 ## 参考資料
 - [【DDD入門】TypeScript × ドメイン駆動設計ハンズオン](https://zenn.dev/yamachan0625/books/ddd-hands-on)
+
+## Lodashインポート時のファイルサイズを削減
+[Lodashインポート時のファイルサイズを削減する](https://qiita.com/ykhirao/items/c3f35373267798447dba)
+```
+import get from "lodash/get
+```

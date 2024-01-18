@@ -3,22 +3,22 @@ import { expect, test } from 'vitest'
 
 // import {UserId} from '~/apps'
 
+import isEqual from 'lodash/isEqual'
 import { UserId } from '../apps'
 
-import { isEqual } from 'lodash'
 export class BookId {
-  private readonly _value: string;
+  private readonly _value: string
 
   constructor(value: string) {
-    this._value = value;
+    this._value = value
   }
 
   equals(other: BookId): boolean {
-   return isEqual(this._value, other._value);
+    return isEqual(this._value, other._value)
   }
 
   get value(): string {
-    return this._value;
+    return this._value
   }
 }
 

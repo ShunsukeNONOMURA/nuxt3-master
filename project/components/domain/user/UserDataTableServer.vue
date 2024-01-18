@@ -20,6 +20,11 @@ v-data-table-server(:headers='userHeaders')
       key: 'userName',
     },
     {
+      title: t('domain.user.userRoleId'),
+      sortable: false,
+      key: 'userRoleId',
+    },
+    {
       // title: t('case.action'),
       title: '操作',
       sortable: false,
