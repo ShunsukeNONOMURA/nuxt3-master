@@ -1,3 +1,6 @@
 # nuxt3
 再構築中
-https://shunsukenonomura.github.io/nuxt3-master/volume/site/
+
+https://shunsukenonomura.github.io/nuxt3-master/docs/volume/site/
+
+https://shunsukenonomura.github.io/nuxt3-master/docs/project/coverage/
