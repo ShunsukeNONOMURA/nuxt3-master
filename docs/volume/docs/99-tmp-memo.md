@@ -1,10 +1,4 @@
 # 一時メモ
-vitest
-https://nuxt.com/docs/getting-started/testing
-```
-yarn add -D @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core
-```
-
 Nuxt-plotly
 https://nuxt.com/modules/nuxt-plotly
 ```
@@ -40,3 +34,6 @@ url = xxx&connection_limit=1
 ```
 import get from "lodash/get
 ```
+
+## メモ
+なんちゃってアジャイル

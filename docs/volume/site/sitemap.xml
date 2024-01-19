@@ -2,32 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://0.0.0.0/mkdocs/index.html</loc>
-         <lastmod>2024-01-18</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/00-introduction.html</loc>
-         <lastmod>2024-01-18</lastmod>
+         <lastmod>2024-01-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://0.0.0.0/mkdocs/10-design.html</loc>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/20-api.html</loc>
-         <lastmod>2024-01-18</lastmod>
+         <lastmod>2024-01-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://0.0.0.0/mkdocs/30-schedule.html</loc>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/90-construction.html</loc>
-         <lastmod>2024-01-18</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/91-construction-error-note.html</loc>
-         <lastmod>2024-01-18</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/99-tmp-memo.html</loc>
-         <lastmod>2024-01-18</lastmod>
+         <lastmod>2024-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
