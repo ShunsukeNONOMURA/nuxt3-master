@@ -55,6 +55,11 @@ const defaults = {
     ],
     pageText: '{0}-{1} 件 / {2} 件中',
   },
+  VDatePicker: {
+    title: '日付を選択',
+    header: '日付を入力',
+    hideHeader: true,
+  },
 }
 
 export default defineNuxtPlugin((nuxtApp) => {

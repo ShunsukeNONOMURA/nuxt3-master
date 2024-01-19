@@ -22,12 +22,12 @@ v-app
         )
   v-navigation-drawer(v-model='drawer')
     v-list(nav, density='compact')
-      v-list-item(prepend-icon='mdi-home', title='home', to='/home')
-      v-list-item(prepend-icon='mdi-cog', title='setting', to='/setting')
       v-list-item(
-        prepend-icon='mdi-information',
-        title='information',
-        to='/information'
+        v-for='(value, key) in drawerList',
+        :key='key',
+        :prepend-icon='value.prependIcon',
+        :title='value.title',
+        :to='value.to'
       )
   v-main
     v-container
@@ -39,4 +39,27 @@ v-app
 <script setup lang="ts">
   import { ref } from 'vue'
   const drawer = ref(false)
+
+  const drawerList = [
+    {
+      prependIcon: 'mdi-home',
+      title: 'home',
+      to: '/home',
+    },
+    {
+      prependIcon: 'mdi-cog',
+      title: 'setting',
+      to: '/setting',
+    },
+    {
+      prependIcon: 'mdi-information',
+      title: 'information',
+      to: '/information',
+    },
+    {
+      prependIcon: 'mdi-help-circle',
+      title: 'manual',
+      to: '/manual',
+    },
+  ]
 </script>

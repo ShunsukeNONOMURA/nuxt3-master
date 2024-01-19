@@ -1,1 +1,167 @@
-{"result":[{"scriptId":"674","url":"file:///project/tests/sum.test.ts","functions":[{"functionName":"","ranges":[{"startOffset":0,"endOffset":3533,"count":1}],"isBlockCoverage":true},{"functionName":"","ranges":[{"startOffset":13,"endOffset":3533,"count":1}],"isBlockCoverage":true},{"functionName":"<instance_members_initializer>","ranges":[{"startOffset":503,"endOffset":716,"count":2}],"isBlockCoverage":true},{"functionName":"BookId","ranges":[{"startOffset":530,"endOffset":579,"count":2}],"isBlockCoverage":true},{"functionName":"equals","ranges":[{"startOffset":582,"endOffset":670,"count":1}],"isBlockCoverage":true},{"functionName":"get value","ranges":[{"startOffset":673,"endOffset":714,"count":0}],"isBlockCoverage":false},{"functionName":"get","ranges":[{"startOffset":811,"endOffset":833,"count":0}],"isBlockCoverage":false},{"functionName":"","ranges":[{"startOffset":889,"endOffset":1327,"count":1}],"isBlockCoverage":true}]},{"scriptId":"765","url":"file:///project/apps/index.ts","functions":[{"functionName":"","ranges":[{"startOffset":0,"endOffset":6333,"count":1}],"isBlockCoverage":true},{"functionName":"","ranges":[{"startOffset":13,"endOffset":6333,"count":1}],"isBlockCoverage":true},{"functionName":"validate","ranges":[{"startOffset":613,"endOffset":629,"count":3}],"isBlockCoverage":true},{"functionName":"get","ranges":[{"startOffset":726,"endOffset":748,"count":3}],"isBlockCoverage":true},{"functionName":"create","ranges":[{"startOffset":781,"endOffset":877,"count":0}],"isBlockCoverage":false},{"functionName":"get","ranges":[{"startOffset":979,"endOffset":1006,"count":0}],"isBlockCoverage":false},{"functionName":"<static_initializer>","ranges":[{"startOffset":1035,"endOffset":1091,"count":1}],"isBlockCoverage":true},{"functionName":"find","ranges":[{"startOffset":1102,"endOffset":1243,"count":0}],"isBlockCoverage":false},{"functionName":"delete","ranges":[{"startOffset":1253,"endOffset":1460,"count":0}],"isBlockCoverage":false},{"functionName":"store","ranges":[{"startOffset":1470,"endOffset":1599,"count":0}],"isBlockCoverage":false},{"functionName":"get","ranges":[{"startOffset":1704,"endOffset":1734,"count":0}],"isBlockCoverage":false},{"functionName":"<static_initializer>","ranges":[{"startOffset":1760,"endOffset":1816,"count":1}],"isBlockCoverage":true},{"functionName":"query","ranges":[{"startOffset":1827,"endOffset":2237,"count":0}],"isBlockCoverage":false},{"functionName":"get","ranges":[{"startOffset":2339,"endOffset":2366,"count":0}],"isBlockCoverage":false}]},{"scriptId":"772","url":"file:///project/apps/core.ts","functions":[{"functionName":"","ranges":[{"startOffset":0,"endOffset":1861,"count":1}],"isBlockCoverage":true},{"functionName":"","ranges":[{"startOffset":13,"endOffset":1861,"count":1}],"isBlockCoverage":true},{"functionName":"<instance_members_initializer>","ranges":[{"startOffset":292,"endOffset":567,"count":3}],"isBlockCoverage":true},{"functionName":"ValueObject","ranges":[{"startOffset":355,"endOffset":430,"count":3}],"isBlockCoverage":true},{"functionName":"get value","ranges":[{"startOffset":433,"endOffset":474,"count":1}],"isBlockCoverage":true},{"functionName":"equals","ranges":[{"startOffset":477,"endOffset":565,"count":1}],"isBlockCoverage":true},{"functionName":"get","ranges":[{"startOffset":667,"endOffset":694,"count":1}],"isBlockCoverage":true}]}]}
+{
+  "result": [
+    {
+      "scriptId": "674",
+      "url": "file:///project/tests/sum.test.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 3533, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 3533, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "<instance_members_initializer>",
+          "ranges": [{ "startOffset": 503, "endOffset": 716, "count": 2 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "BookId",
+          "ranges": [{ "startOffset": 530, "endOffset": 579, "count": 2 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "equals",
+          "ranges": [{ "startOffset": 582, "endOffset": 670, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "get value",
+          "ranges": [{ "startOffset": 673, "endOffset": 714, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 811, "endOffset": 833, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 889, "endOffset": 1327, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "765",
+      "url": "file:///project/apps/index.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 6333, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 6333, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "validate",
+          "ranges": [{ "startOffset": 613, "endOffset": 629, "count": 3 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 726, "endOffset": 748, "count": 3 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "create",
+          "ranges": [{ "startOffset": 781, "endOffset": 877, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 979, "endOffset": 1006, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "<static_initializer>",
+          "ranges": [{ "startOffset": 1035, "endOffset": 1091, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "find",
+          "ranges": [{ "startOffset": 1102, "endOffset": 1243, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "delete",
+          "ranges": [{ "startOffset": 1253, "endOffset": 1460, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "store",
+          "ranges": [{ "startOffset": 1470, "endOffset": 1599, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 1704, "endOffset": 1734, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "<static_initializer>",
+          "ranges": [{ "startOffset": 1760, "endOffset": 1816, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "query",
+          "ranges": [{ "startOffset": 1827, "endOffset": 2237, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 2339, "endOffset": 2366, "count": 0 }],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "772",
+      "url": "file:///project/apps/core.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 1861, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 1861, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "<instance_members_initializer>",
+          "ranges": [{ "startOffset": 292, "endOffset": 567, "count": 3 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "ValueObject",
+          "ranges": [{ "startOffset": 355, "endOffset": 430, "count": 3 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "get value",
+          "ranges": [{ "startOffset": 433, "endOffset": 474, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "equals",
+          "ranges": [{ "startOffset": 477, "endOffset": 565, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 667, "endOffset": 694, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    }
+  ]
+}

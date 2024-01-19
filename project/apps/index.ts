@@ -19,7 +19,7 @@ export class UserId extends ValueObject<string, 'UserId'> {
 export class UserFactory {
   static create(userProps: any) {
     const user = userProps
-    user.userRoleId = '99'
+    // user.userRoleId = '99'
     return user
   }
 }
