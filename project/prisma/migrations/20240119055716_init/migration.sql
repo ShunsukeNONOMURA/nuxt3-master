@@ -13,6 +13,3 @@ CREATE TABLE "m_user_role" (
     "user_role_id" TEXT NOT NULL PRIMARY KEY,
     "user_role_name" TEXT NOT NULL
 );
-
--- CreateIndex
-CREATE UNIQUE INDEX "t_user_user_role_id_key" ON "t_user"("user_role_id");

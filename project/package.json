@@ -33,7 +33,7 @@
     "nuxt-lodash": "^2.5.3",
     "playwright-core": "^1.40.1",
     "prettier": "^3.2.2",
-    "prisma": "^5.8.0",
+    "prisma": "^5.8.1",
     "prisma-erd-generator": "^1.11.2",
     "pug": "^3.0.2",
     "sass": "^1.69.7",
