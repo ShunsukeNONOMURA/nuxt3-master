@@ -3,6 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   // modules
   modules: [
+    // plotly
+    'nuxt-plotly',
     // lodash
     'nuxt-lodash',
     // i18n
@@ -54,6 +56,9 @@ export default defineNuxtConfig({
       watch: {
         usePolling: true,
       },
+    },
+    optimizeDeps: {
+      include: ['plotly.js-dist-min'],
     },
   },
   components: [

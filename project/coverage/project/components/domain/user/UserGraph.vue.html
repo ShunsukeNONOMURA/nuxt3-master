@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for project/components/domain/user/UserDataTableServer.vue</title>
+    <title>Code coverage report for project/components/domain/user/UserGraph.vue</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">project/components/domain/user</a> UserDataTableServer.vue</h1>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">project/components/domain/user</a> UserGraph.vue</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/45</span>
+                <span class='fraction'>0/34</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/45</span>
+                <span class='fraction'>0/34</span>
             </div>
         
             
@@ -97,29 +97,7 @@
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
 <a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a>
-<a name='L42'></a><a href='#L42'>42</a>
-<a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -154,49 +132,38 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >&lt;template lang="pug"&gt;</span></span></span>
-<span class="cstat-no" title="statement not covered" >v-data-table-server(:headers='userHeaders')</span>
-<span class="cstat-no" title="statement not covered" >  template(#[`item.userName`]='{ item }')</span>
-<span class="cstat-no" title="statement not covered" >    router-link(:to='`user/${item.userId}`') {{ item.userName }}</span>
-<span class="cstat-no" title="statement not covered" >  template(#[`item.actions`]='{ item }')</span>
-<span class="cstat-no" title="statement not covered" >    delete-icon-button(size='small', @click='deleteUser(item)') delete</span>
+<span class="cstat-no" title="statement not covered" >nuxt-plotly(</span>
+<span class="cstat-no" title="statement not covered" >  :data='pieChart.data',</span>
+<span class="cstat-no" title="statement not covered" >  :layout='pieChart.layout',</span>
+<span class="cstat-no" title="statement not covered" >  :config='pieChart.config',</span>
+<span class="cstat-no" title="statement not covered" >  style='width: 100%'</span>
+<span class="cstat-no" title="statement not covered" >)</span>
 <span class="cstat-no" title="statement not covered" >&lt;/template&gt;</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >&lt;script setup lang="ts"&gt;</span>
-<span class="cstat-no" title="statement not covered" >  const { t } = useI18n()</span>
-<span class="cstat-no" title="statement not covered" >  const userHeaders = [</span>
-<span class="cstat-no" title="statement not covered" >    {</span>
-<span class="cstat-no" title="statement not covered" >      title: t('domain.user.userId'),</span>
-<span class="cstat-no" title="statement not covered" >      sortable: false,</span>
-<span class="cstat-no" title="statement not covered" >      key: 'userId',</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="cstat-no" title="statement not covered" >    {</span>
-<span class="cstat-no" title="statement not covered" >      title: t('domain.user.userName'),</span>
-<span class="cstat-no" title="statement not covered" >      sortable: false,</span>
-<span class="cstat-no" title="statement not covered" >      key: 'userName',</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="cstat-no" title="statement not covered" >    {</span>
-<span class="cstat-no" title="statement not covered" >      title: t('domain.user.userRoleId'),</span>
-<span class="cstat-no" title="statement not covered" >      sortable: false,</span>
-<span class="cstat-no" title="statement not covered" >      key: 'userRoleId',</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="cstat-no" title="statement not covered" >    {</span>
-<span class="cstat-no" title="statement not covered" >      // title: t('case.action'),</span>
-<span class="cstat-no" title="statement not covered" >      title: '操作',</span>
-<span class="cstat-no" title="statement not covered" >      sortable: false,</span>
-<span class="cstat-no" title="statement not covered" >      key: 'actions',</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="cstat-no" title="statement not covered" >  ]</span>
-<span class="cstat-no" title="statement not covered" >  // 削除</span>
-<span class="cstat-no" title="statement not covered" >  interface Emits {</span>
-<span class="cstat-no" title="statement not covered" >    // 関数名, 引数の型, 返り値の型</span>
-<span class="cstat-no" title="statement not covered" >    (e: 'deleteUser', v: null): void</span>
+<span class="cstat-no" title="statement not covered" >  // const { t } = useI18n()</span>
+<span class="cstat-no" title="statement not covered" >  // const data0 = [</span>
+<span class="cstat-no" title="statement not covered" >  //     {</span>
+<span class="cstat-no" title="statement not covered" >  //         values: [19, 26, 55],</span>
+<span class="cstat-no" title="statement not covered" >  //         labels: ["Residential", "Non-Residential", "Utility"],</span>
+<span class="cstat-no" title="statement not covered" >  //         type: "pie",</span>
+<span class="cstat-no" title="statement not covered" >  //     },</span>
+<span class="cstat-no" title="statement not covered" >  // ];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const config0 = { scrollZoom: true, displayModeBar: true }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const layout0 = {</span>
+<span class="cstat-no" title="statement not covered" >    title: '[layout0] Pie Chart on `PieChart.client.vue`',</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" >  const emits = defineEmits&lt;Emits&gt;()</span>
-<span class="cstat-no" title="statement not covered" >  const deleteUser = (user) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    // console.log(user)</span>
-<span class="cstat-no" title="statement not covered" >    // this.$emit('deleteUser', user)</span>
-<span class="cstat-no" title="statement not covered" >    emits('deleteUser', user)</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const pieChart = reactive({</span>
+<span class="cstat-no" title="statement not covered" >    changeDataNo: 1,</span>
+<span class="cstat-no" title="statement not covered" >    // data: data0,</span>
+<span class="cstat-no" title="statement not covered" >    changeConfigNo: 1,</span>
+<span class="cstat-no" title="statement not covered" >    config: config0,</span>
+<span class="cstat-no" title="statement not covered" >    changeLayoutNo: 1,</span>
+<span class="cstat-no" title="statement not covered" >    layout: layout0,</span>
+<span class="cstat-no" title="statement not covered" >  })</span>
 <span class="cstat-no" title="statement not covered" >&lt;/script&gt;</span>
 &nbsp;</pre></td></tr></table></pre>
 

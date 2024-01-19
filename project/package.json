@@ -32,6 +32,7 @@
     "happy-dom": "^13.1.4",
     "nuxt": "^3.9.0",
     "nuxt-lodash": "^2.5.3",
+    "nuxt-plotly": "^1.0.13",
     "playwright-core": "^1.40.1",
     "prettier": "^3.2.2",
     "prisma": "^5.8.1",

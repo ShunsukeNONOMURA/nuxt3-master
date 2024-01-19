@@ -5,6 +5,13 @@ export const userStore = () => {
     items: [],
     total: 0,
   })
+  const userAggs: Ref<any> = ref([
+    {
+      values: [],
+      labels: [],
+      type: 'pie',
+    },
+  ])
 
   // query user
   const queryUser = async (limit, offset) => {
@@ -27,6 +34,16 @@ export const userStore = () => {
     // console.log(users.value)
     // console.log(data.value.data.user)
     users.value = data.value.data.user
+
+    const aggs = data.value?.data.user.aggs
+
+    userAggs.value = [
+      {
+        values: aggs.map((i) => i._count),
+        labels: aggs.map((i) => i.userRoleId),
+        type: 'pie',
+      },
+    ]
   }
 
   // get 1 user
@@ -62,6 +79,7 @@ export const userStore = () => {
   return {
     user,
     users,
+    userAggs,
     queryUser,
     getUser,
     createUser,

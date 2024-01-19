@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/72</span>
+                <span class='fraction'>0/74</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/72</span>
+                <span class='fraction'>0/74</span>
             </div>
         
             
@@ -135,7 +135,11 @@
 <a name='L70'></a><a href='#L70'>70</a>
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -219,6 +223,8 @@
 <span class="cstat-no" title="statement not covered" >    @delete-user='onDeleteUser'</span>
 <span class="cstat-no" title="statement not covered" >  )</span>
 <span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  user-graph(:data='userAggs')</span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  v-text-field(v-model='tmpUser.userId', label='userId')</span>
 <span class="cstat-no" title="statement not covered" >  v-text-field(v-model='tmpUser.userName', label='userName')</span>
 <span class="cstat-no" title="statement not covered" >  v-select(v-model='tmpUser.userRoleId', label='userRoleId', :items='items')</span>
@@ -230,7 +236,7 @@
 <span class="cstat-no" title="statement not covered" >&lt;/template&gt;</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >&lt;script setup lang="ts"&gt;</span>
-<span class="cstat-no" title="statement not covered" >  const { users, queryUser, createUser, deleteUser } = userStore()</span>
+<span class="cstat-no" title="statement not covered" >  const { users, userAggs, queryUser, createUser, deleteUser } = userStore()</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  // 取得</span>
 <span class="cstat-no" title="statement not covered" >  const onUpdateUser = ({ page, itemsPerPage, sortBy }) =&gt; {</span>
@@ -254,6 +260,16 @@
 <span class="cstat-no" title="statement not covered" >  // import {UserRoleId} from '~/apps'</span>
 <span class="cstat-no" title="statement not covered" >  // tmpUser.userRoleId = items[0].value</span>
 <span class="cstat-no" title="statement not covered" >  // 作成</span>
+<span class="cstat-no" title="statement not covered" >  const items = [</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >      title: 'admin',</span>
+<span class="cstat-no" title="statement not covered" >      value: '00',</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >      title: 'guest',</span>
+<span class="cstat-no" title="statement not covered" >      value: '99',</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+<span class="cstat-no" title="statement not covered" >  ]</span>
 <span class="cstat-no" title="statement not covered" >  const tmpUser = ref({</span>
 <span class="cstat-no" title="statement not covered" >    userRoleId: items[1].value,</span>
 <span class="cstat-no" title="statement not covered" >  })</span>
@@ -265,16 +281,6 @@
 <span class="cstat-no" title="statement not covered" >  //   Left: 3,</span>
 <span class="cstat-no" title="statement not covered" >  // } as const</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  // const items = [</span>
-<span class="cstat-no" title="statement not covered" >  //   {</span>
-<span class="cstat-no" title="statement not covered" >  //     title: 'admin',</span>
-<span class="cstat-no" title="statement not covered" >  //     value: '00',</span>
-<span class="cstat-no" title="statement not covered" >  //   },</span>
-<span class="cstat-no" title="statement not covered" >  //   {</span>
-<span class="cstat-no" title="statement not covered" >  //     title: 'guest',</span>
-<span class="cstat-no" title="statement not covered" >  //     value: '99',</span>
-<span class="cstat-no" title="statement not covered" >  //   },</span>
-<span class="cstat-no" title="statement not covered" >  // ]</span>
 <span class="cstat-no" title="statement not covered" >  // type Position = (typeof Position)[keyof typeof Position]</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  // console.log(Position)</span>
@@ -286,7 +292,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-01-19T08:33:47.211Z
+                at 2024-01-19T09:12:51.177Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

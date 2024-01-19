@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="http://0.0.0.0/mkdocs/20-api.html">
+        <link rel="canonical" href="http://0.0.0.0/mkdocs/20-architecture.html">
       
       
         <link rel="prev" href="10-design.html">
@@ -257,7 +257,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="20-api.html" class="md-nav__link md-nav__link--active">
+      <a href="20-architecture.html" class="md-nav__link md-nav__link--active">
         API設計
       </a>
       
@@ -292,27 +292,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#usecase" class="md-nav__link">
-    Usecase
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#er" class="md-nav__link">
-    ER図
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#javascript" class="md-nav__link">
-    サーバーサイドJavascriptのメリット・デメリット
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -330,7 +309,7 @@
   
     <li class="md-nav__item">
       <a href="30-schedule.html" class="md-nav__link">
-        30 schedule
+        スケジュール
       </a>
     </li>
   
@@ -423,27 +402,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#usecase" class="md-nav__link">
-    Usecase
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#er" class="md-nav__link">
-    ER図
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#javascript" class="md-nav__link">
-    サーバーサイドJavascriptのメリット・デメリット
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -494,56 +452,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="usecase">Usecase<a class="headerlink" href="#usecase" title="Permanent link">&para;</a></h2>
-<p>ユースケース</p>
-<pre class="mermaid"><code>graph TB
-    subgraph "システム"
-        User((ユーザー))
-        subgraph "ユーザ管理"
-            QueryUser[ユーザを問い合わせ]
-            GetUser[ユーザを一人取得]
-            CreateUser[ユーザを作成]
-            DeleteUser[ユーザを削除]
-        end
-    end
-    User --&gt; QueryUser
-    User --&gt; GetUser
-    User --&gt; CreateUser
-    User --&gt; DeleteUser</code></pre>
-<h2 id="er">ER図<a class="headerlink" href="#er" title="Permanent link">&para;</a></h2>
-<p>prisma-erd-generator で生成
-<pre class="mermaid"><code>erDiagram
-
-  "m_user_role" {
-    String user_role_id "🗝️"
-    String user_role_name 
-    }
-
-
-  "t_user" {
-    String user_id "🗝️"
-    String user_name 
-    String user_role_id 
-    DateTime user_creation_datetime 
-    DateTime user_update_datetime 
-    }
-</code></pre></p>
-<h2 id="javascript">サーバーサイドJavascriptのメリット・デメリット<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h2>
-<ul>
-<li>フロントエンドの知識や実装を応用しやすい<ul>
-<li>歴史経緯からフロントエンドではjavascriptの利用が求められる</li>
-<li>もともとPythonでバックエンド書いているが、堅牢なコードを書こうとするほど学習時間が分散してしまうので、学習コストを削減したい。</li>
-</ul>
-</li>
-<li>Python独自のライブラリが使えない<ul>
-<li>とはいえ、大抵のライブラリは揃っているはず</li>
-<li><a href="https://www.prisma.io/">ORM：prisma</a></li>
-<li><a href="https://www.npmjs.com/package/@opensearch-project/opensearch">検索エンジン：opensearch</a></li>
-<li><a href="https://pytorch.org/docs/stable/jit.html">機械学習：PyTorch</a></li>
-<li><a href="https://js.langchain.com/docs/get_started/installation">LLM：langchain</a></li>
-</ul>
-</li>
-</ul>
 
 
 

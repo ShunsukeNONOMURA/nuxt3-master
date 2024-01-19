@@ -402,3 +402,25 @@ export default defineNuxtConfig({
 ```
 
 [nuxt lodash](https://nuxt.com/modules/lodash)
+
+## nuxt-plotly 追加
+```
+yarn add -D nuxt-plotly
+```
+
+nuxt.config.ts を編集
+```
+export default defineNuxtConfig({
+  /**
+   * Add nuxt-plotly module
+   */
+  modules: ["nuxt-plotly"],
+  vite: {
+    optimizeDeps: {
+      include: ["plotly.js-dist-min"],
+    },
+  },
+});
+```
+
+https://nuxt.com/modules/nuxt-plotly

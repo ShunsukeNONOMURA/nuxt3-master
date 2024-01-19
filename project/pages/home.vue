@@ -10,6 +10,8 @@ div
     @delete-user='onDeleteUser'
   )
 
+  user-graph(:data='userAggs')
+
   v-text-field(v-model='tmpUser.userId', label='userId')
   v-text-field(v-model='tmpUser.userName', label='userName')
   v-select(v-model='tmpUser.userRoleId', label='userRoleId', :items='items')
@@ -21,7 +23,7 @@ div
 </template>
 
 <script setup lang="ts">
-  const { users, queryUser, createUser, deleteUser } = userStore()
+  const { users, userAggs, queryUser, createUser, deleteUser } = userStore()
 
   // 取得
   const onUpdateUser = ({ page, itemsPerPage, sortBy }) => {
@@ -45,6 +47,16 @@ div
   // import {UserRoleId} from '~/apps'
   // tmpUser.userRoleId = items[0].value
   // 作成
+  const items = [
+    {
+      title: 'admin',
+      value: '00',
+    },
+    {
+      title: 'guest',
+      value: '99',
+    },
+  ]
   const tmpUser = ref({
     userRoleId: items[1].value,
   })
@@ -56,16 +68,6 @@ div
   //   Left: 3,
   // } as const
 
-  // const items = [
-  //   {
-  //     title: 'admin',
-  //     value: '00',
-  //   },
-  //   {
-  //     title: 'guest',
-  //     value: '99',
-  //   },
-  // ]
   // type Position = (typeof Position)[keyof typeof Position]
 
   // console.log(Position)
