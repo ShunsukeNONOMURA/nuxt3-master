@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/58</span>
+                <span class='fraction'>0/70</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/58</span>
+                <span class='fraction'>0/70</span>
             </div>
         
             
@@ -121,7 +121,31 @@
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -181,10 +205,20 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >export const userStore = () =&gt; {</span></span></span>
 <span class="cstat-no" title="statement not covered" >  const user: Ref&lt;any&gt; = ref({})</span>
-<span class="cstat-no" title="statement not covered" >  const users: Ref&lt;any&gt; = ref({})</span>
+<span class="cstat-no" title="statement not covered" >  const users: Ref&lt;any&gt; = ref({</span>
+<span class="cstat-no" title="statement not covered" >    loading: true,</span>
+<span class="cstat-no" title="statement not covered" >    items: [],</span>
+<span class="cstat-no" title="statement not covered" >    total: 0,</span>
+<span class="cstat-no" title="statement not covered" >  })</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  // query user</span>
 <span class="cstat-no" title="statement not covered" >  const queryUser = async (limit, offset) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    // users.value = {</span>
+<span class="cstat-no" title="statement not covered" >    //   loading: false,</span>
+<span class="cstat-no" title="statement not covered" >    //   items: [{}],</span>
+<span class="cstat-no" title="statement not covered" >    //   total: 1,</span>
+<span class="cstat-no" title="statement not covered" >    // }</span>
+<span class="cstat-no" title="statement not covered" >    // users.value.loading = true</span>
 <span class="cstat-no" title="statement not covered" >    const { data } = await useFetch('/api/query/user', {</span>
 <span class="cstat-no" title="statement not covered" >      method: 'GET',</span>
 <span class="cstat-no" title="statement not covered" >      // body: {</span>
@@ -195,6 +229,8 @@
 <span class="cstat-no" title="statement not covered" >        offset,</span>
 <span class="cstat-no" title="statement not covered" >      },</span>
 <span class="cstat-no" title="statement not covered" >    })</span>
+<span class="cstat-no" title="statement not covered" >    // console.log(users.value)</span>
+<span class="cstat-no" title="statement not covered" >    // console.log(data.value.data.user)</span>
 <span class="cstat-no" title="statement not covered" >    users.value = data.value.data.user</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
@@ -244,7 +280,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-01-18T05:41:20.913Z
+                at 2024-01-19T08:33:47.211Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

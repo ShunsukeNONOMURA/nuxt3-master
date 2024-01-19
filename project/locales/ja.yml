@@ -1,6 +1,10 @@
+vuetify:
+  vDataTable:
+    pageText: '{0}-{1} 件 / {2} 件中'
 domain:
   welcome: ようこそ
   user:
     userId: ユーザID
     userName: ユーザ名
     userRole: ユーザロール
+    userRoleId: ユーザロールID

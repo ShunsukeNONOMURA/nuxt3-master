@@ -3,7 +3,7 @@ v-data-table-server(:headers='userHeaders')
   template(#[`item.userName`]='{ item }')
     router-link(:to='`user/${item.userId}`') {{ item.userName }}
   template(#[`item.actions`]='{ item }')
-    delete-icon-button(@click='deleteUser(item)') delete
+    delete-icon-button(size='small', @click='deleteUser(item)') delete
 </template>
 
 <script setup lang="ts">

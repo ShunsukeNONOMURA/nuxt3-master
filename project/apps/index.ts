@@ -2,6 +2,12 @@ import { PrismaClient } from '@prisma/client'
 
 import { ValueObject } from './core'
 
+const UserRoleId = {
+  admin: '00',
+  guest: '99',
+}
+export type UserRoleId = (typeof UserRoleId)[keyof typeof UserRoleId]
+
 export class UserId extends ValueObject<string, 'UserId'> {
   // constructor(value: string) {
   //   super(value)

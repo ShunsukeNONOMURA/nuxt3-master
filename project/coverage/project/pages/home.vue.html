@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/43</span>
+                <span class='fraction'>0/72</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/43</span>
+                <span class='fraction'>0/72</span>
             </div>
         
             
@@ -106,7 +106,65 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -155,15 +213,18 @@
 <span class="cstat-no" title="statement not covered" >  user-data-table-server(</span>
 <span class="cstat-no" title="statement not covered" >    :items='users.items',</span>
 <span class="cstat-no" title="statement not covered" >    :items-length='users.total',</span>
-<span class="cstat-no" title="statement not covered" >    density,</span>
+<span class="cstat-no" title="statement not covered" >    :loading='users.loading',</span>
+<span class="cstat-no" title="statement not covered" >    density='compact',</span>
 <span class="cstat-no" title="statement not covered" >    @update:options='onUpdateUser',</span>
 <span class="cstat-no" title="statement not covered" >    @delete-user='onDeleteUser'</span>
 <span class="cstat-no" title="statement not covered" >  )</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  v-text-field(v-model='tmpUser.userId', label='userId')</span>
 <span class="cstat-no" title="statement not covered" >  v-text-field(v-model='tmpUser.userName', label='userName')</span>
-<span class="cstat-no" title="statement not covered" >  //- v-text-field(v-model="tmpUser")</span>
+<span class="cstat-no" title="statement not covered" >  v-select(v-model='tmpUser.userRoleId', label='userRoleId', :items='items')</span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  v-btn(@click='onCreateUser') create</span>
+<span class="cstat-no" title="statement not covered" >  div {{ tmpUser }}</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  v-date-picker</span>
 <span class="cstat-no" title="statement not covered" >&lt;/template&gt;</span>
@@ -178,8 +239,6 @@
 <span class="cstat-no" title="statement not covered" >    queryUser(itemsPerPage, offset)</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  // 作成</span>
-<span class="cstat-no" title="statement not covered" >  const tmpUser = ref({})</span>
 <span class="cstat-no" title="statement not covered" >  // const tmpUser = {}</span>
 <span class="cstat-no" title="statement not covered" >  const onCreateUser = () =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    // console.log(tmpUser)</span>
@@ -191,6 +250,34 @@
 <span class="cstat-no" title="statement not covered" >    // console.log(user)</span>
 <span class="cstat-no" title="statement not covered" >    deleteUser(user)</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  // import {UserRoleId} from '~/apps'</span>
+<span class="cstat-no" title="statement not covered" >  // tmpUser.userRoleId = items[0].value</span>
+<span class="cstat-no" title="statement not covered" >  // 作成</span>
+<span class="cstat-no" title="statement not covered" >  const tmpUser = ref({</span>
+<span class="cstat-no" title="statement not covered" >    userRoleId: items[1].value,</span>
+<span class="cstat-no" title="statement not covered" >  })</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  // const Position = {</span>
+<span class="cstat-no" title="statement not covered" >  //   Top: 0,</span>
+<span class="cstat-no" title="statement not covered" >  //   Right: 1,</span>
+<span class="cstat-no" title="statement not covered" >  //   Bottom: 2,</span>
+<span class="cstat-no" title="statement not covered" >  //   Left: 3,</span>
+<span class="cstat-no" title="statement not covered" >  // } as const</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  // const items = [</span>
+<span class="cstat-no" title="statement not covered" >  //   {</span>
+<span class="cstat-no" title="statement not covered" >  //     title: 'admin',</span>
+<span class="cstat-no" title="statement not covered" >  //     value: '00',</span>
+<span class="cstat-no" title="statement not covered" >  //   },</span>
+<span class="cstat-no" title="statement not covered" >  //   {</span>
+<span class="cstat-no" title="statement not covered" >  //     title: 'guest',</span>
+<span class="cstat-no" title="statement not covered" >  //     value: '99',</span>
+<span class="cstat-no" title="statement not covered" >  //   },</span>
+<span class="cstat-no" title="statement not covered" >  // ]</span>
+<span class="cstat-no" title="statement not covered" >  // type Position = (typeof Position)[keyof typeof Position]</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  // console.log(Position)</span>
 <span class="cstat-no" title="statement not covered" >&lt;/script&gt;</span>
 &nbsp;</pre></td></tr></table></pre>
 
@@ -199,7 +286,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-01-18T05:41:20.913Z
+                at 2024-01-19T08:33:47.211Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

@@ -37,3 +37,6 @@ import get from "lodash/get
 
 ## メモ
 なんちゃってアジャイル
+
+## Vuetify: Invalid prop: custom validator check failed for prop
+[Vuetify: Invalid prop: custom validator check failed for prop "value"エラーが発生する](https://qiita.com/Sicut_study/items/ed41eb541cb6a8eef410)

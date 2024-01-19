@@ -1,9 +1,19 @@
 export const userStore = () => {
   const user: Ref<any> = ref({})
-  const users: Ref<any> = ref({})
+  const users: Ref<any> = ref({
+    loading: true,
+    items: [],
+    total: 0,
+  })
 
   // query user
   const queryUser = async (limit, offset) => {
+    // users.value = {
+    //   loading: false,
+    //   items: [{}],
+    //   total: 1,
+    // }
+    // users.value.loading = true
     const { data } = await useFetch('/api/query/user', {
       method: 'GET',
       // body: {
@@ -14,6 +24,8 @@ export const userStore = () => {
         offset,
       },
     })
+    // console.log(users.value)
+    // console.log(data.value.data.user)
     users.value = data.value.data.user
   }
 

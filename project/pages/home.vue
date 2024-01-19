@@ -4,15 +4,18 @@ div
   user-data-table-server(
     :items='users.items',
     :items-length='users.total',
-    density,
+    :loading='users.loading',
+    density='compact',
     @update:options='onUpdateUser',
     @delete-user='onDeleteUser'
   )
 
   v-text-field(v-model='tmpUser.userId', label='userId')
   v-text-field(v-model='tmpUser.userName', label='userName')
-  //- v-text-field(v-model="tmpUser")
+  v-select(v-model='tmpUser.userRoleId', label='userRoleId', :items='items')
+
   v-btn(@click='onCreateUser') create
+  div {{ tmpUser }}
 
   v-date-picker
 </template>
@@ -27,8 +30,6 @@ div
     queryUser(itemsPerPage, offset)
   }
 
-  // 作成
-  const tmpUser = ref({})
   // const tmpUser = {}
   const onCreateUser = () => {
     // console.log(tmpUser)
@@ -40,4 +41,32 @@ div
     // console.log(user)
     deleteUser(user)
   }
+
+  // import {UserRoleId} from '~/apps'
+  // tmpUser.userRoleId = items[0].value
+  // 作成
+  const tmpUser = ref({
+    userRoleId: items[1].value,
+  })
+
+  // const Position = {
+  //   Top: 0,
+  //   Right: 1,
+  //   Bottom: 2,
+  //   Left: 3,
+  // } as const
+
+  // const items = [
+  //   {
+  //     title: 'admin',
+  //     value: '00',
+  //   },
+  //   {
+  //     title: 'guest',
+  //     value: '99',
+  //   },
+  // ]
+  // type Position = (typeof Position)[keyof typeof Position]
+
+  // console.log(Position)
 </script>

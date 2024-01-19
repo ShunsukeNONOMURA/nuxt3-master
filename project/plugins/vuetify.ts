@@ -36,8 +36,14 @@ const defaults = {
     variant: 'outlined',
     style: 'text-transform: none',
   },
+  VSelect: {
+    variant: 'outlined',
+  },
   VDataTableServer: {
+    loadingText: '読込中',
+    // headerText: 'a',
     noDataText: 'データがありません。',
+    // noResultsText: 'a',
     itemsPerPageText: '1ページあたりの表示数',
     itemsPerPageOptions: [
       { value: 5, title: '5件' },
