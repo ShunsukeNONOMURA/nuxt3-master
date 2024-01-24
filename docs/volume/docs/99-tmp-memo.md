@@ -40,3 +40,26 @@ import get from "lodash/get
 
 ## Vuetify: Invalid prop: custom validator check failed for prop
 [Vuetify: Invalid prop: custom validator check failed for prop "value"エラーが発生する](https://qiita.com/Sicut_study/items/ed41eb541cb6a8eef410)
+
+# minIO
+S3互換のローカルストレージサーバー
+
+```
+version: '3.9'
+
+services:
+  minio:
+    image: minio/minio:RELEASE.2022-10-08T20-11-00Z
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=minio
+      - MINIO_ROOT_PASSWORD=minio123
+    entrypoint: sh
+    command: -c "/opt/bin/minio server /export --address :9000 --console-address :9001"
+    volumes:
+      - ./docker/minio/data:/export
+```
+
