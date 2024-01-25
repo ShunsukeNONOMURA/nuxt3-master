@@ -226,6 +226,21 @@
   
   
     <li class="md-nav__item">
+      <a href="01-project-management.html" class="md-nav__link">
+        プロジェクトマネジメント
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="10-design.html" class="md-nav__link">
         デザイン
       </a>
@@ -243,21 +258,6 @@
     <li class="md-nav__item">
       <a href="20-architecture.html" class="md-nav__link">
         API設計
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="30-schedule.html" class="md-nav__link">
-        スケジュール
       </a>
     </li>
   
@@ -516,6 +516,40 @@
 <p>なんちゃってアジャイル</p>
 <h2 id="vuetify-invalid-prop-custom-validator-check-failed-for-prop">Vuetify: Invalid prop: custom validator check failed for prop<a class="headerlink" href="#vuetify-invalid-prop-custom-validator-check-failed-for-prop" title="Permanent link">&para;</a></h2>
 <p><a href="https://qiita.com/Sicut_study/items/ed41eb541cb6a8eef410">Vuetify: Invalid prop: custom validator check failed for prop "value"エラーが発生する</a></p>
+<h1 id="minio">minIO<a class="headerlink" href="#minio" title="Permanent link">&para;</a></h1>
+<p>S3互換のローカルストレージサーバー</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>version: &#39;3.9&#39;
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>services:
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>  minio:
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    image: minio/minio:RELEASE.2022-10-08T20-11-00Z
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    container_name: minio
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    ports:
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>      - &quot;9000:9000&quot;
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>      - &quot;9001:9001&quot;
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    environment:
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>      - MINIO_ROOT_USER=minio
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>      - MINIO_ROOT_PASSWORD=minio123
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>    entrypoint: sh
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>    command: -c &quot;/opt/bin/minio server /export --address :9000 --console-address :9001&quot;
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>    volumes:
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>      - ./docker/minio/data:/export
+</code></pre></div></td></tr></table></div>
 
 
 
