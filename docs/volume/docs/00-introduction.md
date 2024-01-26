@@ -21,20 +21,20 @@ yarn install
 ```
 
 ## 主要な導入ソフトウェア
-| ライブラリ | 用途 |
-| - | - |
-| docker | コンテナによる仮想環境 |
+| ライブラリ | 用途                             |
+| ---------- | -------------------------------- |
+| docker     | コンテナによる仮想環境           |
 | serverless | サーバーレス環境へのホスティング |
-| aws cli | awsコマンド操作 |
-| nuxt3 | フルスタックwebフレームワーク |
-| vuetify | マテリアルデザインコンポーネント |
-| i18n | 多言語対応 |
-| pug | テンプレートエンジン |
-| typescript | 静的型付け |
-| prisma | orm |
-| eslint | 静的解析ツール |
-| prettier | フォーマッター |
-| vitest | テスト |
+| aws cli    | awsコマンド操作                  |
+| nuxt3      | フルスタックwebフレームワーク    |
+| vuetify    | マテリアルデザインコンポーネント |
+| i18n       | 多言語対応                       |
+| pug        | テンプレートエンジン             |
+| typescript | 静的型付け                       |
+| prisma     | orm                              |
+| eslint     | 静的解析ツール                   |
+| prettier   | フォーマッター                   |
+| vitest     | テスト                           |
 
 ## ディレクトリ構成
 components
@@ -91,12 +91,16 @@ prisma
 [Serverless Framework Documentation](https://www.serverless.com/framework/docs)
 
 ## サーバーサイドJavascriptのメリット・デメリット
-- フロントエンドの知識や実装を応用しやすい
-    - 歴史経緯からフロントエンドではjavascriptの利用が求められる
-    - もともとPythonでバックエンド書いているが、堅牢なコードを書こうとするほど学習時間が分散してしまうので、学習コストを削減したい。
-- Python独自のライブラリが使えない
-    - とはいえ、大抵のライブラリは揃っているはず
+- Webフロントエンドの知識や実装をバックエンドに応用しやすい
+    - 歴史的経緯からWebフロントエンドでは結局javascriptの知識が求められる
+    - 別言語でバックエンド書くと学習時間が分散してしまうので学習コストの削減をしたい
+    - typescriptで作成したデータ型等を流用したい
+    - 命名規則を統一できる
+        - RDB間はprismaを使うとマッピングで対応できる
+- 他言語独自のライブラリが使えない
+    - とはいえ、大抵のライブラリはjsに揃っているはず
     - [ORM：prisma](https://www.prisma.io/)
     - [検索エンジン：opensearch](https://www.npmjs.com/package/@opensearch-project/opensearch)
-    - [機械学習：PyTorch](https://pytorch.org/docs/stable/jit.html)
+    - [AWS:AWS SDK for JavaScript](https://aws.amazon.com/jp/sdk-for-javascript/)
     - [LLM：langchain](https://js.langchain.com/docs/get_started/installation)
+    - [機械学習：PyTorch](https://pytorch.org/docs/stable/jit.html)

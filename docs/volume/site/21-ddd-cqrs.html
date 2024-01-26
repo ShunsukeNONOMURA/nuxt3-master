@@ -8,18 +8,20 @@
       
       
       
-        <link rel="canonical" href="http://0.0.0.0/mkdocs/99-tmp-memo.html">
+        <link rel="canonical" href="http://0.0.0.0/mkdocs/21-ddd-cqrs.html">
       
       
-        <link rel="prev" href="91-construction-error-note.html">
+        <link rel="prev" href="20-api.html">
       
+      
+        <link rel="next" href="90-construction.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>一時メモ - Nuxt3 Master</title>
+        <title>DDD + CQRS - Nuxt3 Master</title>
       
     
     
@@ -67,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#ddd-cqrs" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              一時メモ
+              DDD + CQRS
             
           </span>
         </div>
@@ -269,11 +271,61 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="21-ddd-cqrs.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          DDD + CQRS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="21-ddd-cqrs.html" class="md-nav__link md-nav__link--active">
         DDD + CQRS
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    オニオンアーキテクチャ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cqrs" class="md-nav__link">
+    CQRS
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -314,96 +366,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          一時メモ
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="99-tmp-memo.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="99-tmp-memo.html" class="md-nav__link">
         一時メモ
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#indent" class="md-nav__link">
-    indent
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prisma-case" class="md-nav__link">
-    prisma case統一
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connection_limit1" class="md-nav__link">
-    connection_limitを1にする
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    参考資料
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lodash" class="md-nav__link">
-    Lodashインポート時のファイルサイズを削減
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    メモ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vuetify-invalid-prop-custom-validator-check-failed-for-prop" class="md-nav__link">
-    Vuetify: Invalid prop: custom validator check failed for prop
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -437,50 +404,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#indent" class="md-nav__link">
-    indent
+  <a href="#_1" class="md-nav__link">
+    オニオンアーキテクチャ
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prisma-case" class="md-nav__link">
-    prisma case統一
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#connection_limit1" class="md-nav__link">
-    connection_limitを1にする
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    参考資料
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lodash" class="md-nav__link">
-    Lodashインポート時のファイルサイズを削減
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    メモ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vuetify-invalid-prop-custom-validator-check-failed-for-prop" class="md-nav__link">
-    Vuetify: Invalid prop: custom validator check failed for prop
+  <a href="#cqrs" class="md-nav__link">
+    CQRS
   </a>
   
 </li>
@@ -500,71 +432,42 @@
                   
 
 
-<h1 id="_1">一時メモ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Nuxt-plotly
-<a href="https://nuxt.com/modules/nuxt-plotly">https://nuxt.com/modules/nuxt-plotly</a>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>yarn add -D nuxt-plotly
-</code></pre></div></td></tr></table></div></p>
-<p>opensearch JavaScript client
-<a href="https://opensearch.org/docs/latest/clients/javascript/index/">https://opensearch.org/docs/latest/clients/javascript/index/</a>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>yarn add @opensearch-project/opensearch
-</code></pre></div></td></tr></table></div></p>
-<p>prisma lambda sqlite</p>
-<h2 id="indent">indent<a class="headerlink" href="#indent" title="Permanent link">&para;</a></h2>
-<p><a href="https://ics.media/entry/10234/">https://ics.media/entry/10234/</a>
-<a href="https://maku.blog/p/avssq37/">https://maku.blog/p/avssq37/</a>
-一般的にはスペース2つ</p>
-<h2 id="prisma-case">prisma case統一<a class="headerlink" href="#prisma-case" title="Permanent link">&para;</a></h2>
-<p>prisma-case-format</p>
-<h2 id="connection_limit1">connection_limitを1にする<a class="headerlink" href="#connection_limit1" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/databases-connections">https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/databases-connections</a></p>
-<p>url = xxx&amp;connection_limit=1</p>
-<h2 id="_2">参考資料<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h1 id="ddd-cqrs">DDD + CQRS<a class="headerlink" href="#ddd-cqrs" title="Permanent link">&para;</a></h1>
+<p><img alt="" src="21-ddd-cqrs.dio.png" /></p>
+<p>DDD(Domain Driven Design)とはドメインモデルを中心としたソフトウェア設計手法のことである。<br />
+いくつか派生があるが、概ね下記のような特徴がある。</p>
 <ul>
-<li><a href="https://zenn.dev/yamachan0625/books/ddd-hands-on">【DDD入門】TypeScript × ドメイン駆動設計ハンズオン</a></li>
+<li>モデル、サービス、アプリケーション、プレゼンテーションのような層を持つ構造であること<ul>
+<li>派生により常にこの4層構造での名称ではないことに注意</li>
 </ul>
-<h2 id="lodash">Lodashインポート時のファイルサイズを削減<a class="headerlink" href="#lodash" title="Permanent link">&para;</a></h2>
-<p><a href="https://qiita.com/ykhirao/items/c3f35373267798447dba">Lodashインポート時のファイルサイズを削減する</a>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>import get from &quot;lodash/get
-</code></pre></div></td></tr></table></div></p>
-<h2 id="_3">メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>なんちゃってアジャイル</p>
-<h2 id="vuetify-invalid-prop-custom-validator-check-failed-for-prop">Vuetify: Invalid prop: custom validator check failed for prop<a class="headerlink" href="#vuetify-invalid-prop-custom-validator-check-failed-for-prop" title="Permanent link">&para;</a></h2>
-<p><a href="https://qiita.com/Sicut_study/items/ed41eb541cb6a8eef410">Vuetify: Invalid prop: custom validator check failed for prop "value"エラーが発生する</a></p>
-<h1 id="minio">minIO<a class="headerlink" href="#minio" title="Permanent link">&para;</a></h1>
-<p>S3互換のローカルストレージサーバー</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>version: &#39;3.9&#39;
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>services:
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>  minio:
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    image: minio/minio:RELEASE.2022-10-08T20-11-00Z
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    container_name: minio
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    ports:
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>      - &quot;9000:9000&quot;
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>      - &quot;9001:9001&quot;
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    environment:
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>      - MINIO_ROOT_USER=minio
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a>      - MINIO_ROOT_PASSWORD=minio123
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>    entrypoint: sh
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a>    command: -c &quot;/opt/bin/minio server /export --address :9000 --console-address :9001&quot;
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a>    volumes:
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a>      - ./docker/minio/data:/export
-</code></pre></div></td></tr></table></div>
+</li>
+<li>外側から内側に向けた一方通行の依存関係になっている<ul>
+<li>プレゼン -&gt; アプリ -&gt; サービス -&gt; モデル</li>
+</ul>
+</li>
+<li>DIP:Dependency Inversion Principle<ul>
+<li>原典のレイヤードアーキテクチャではDIPを使うことを提示していない</li>
+</ul>
+</li>
+</ul>
+<p>本実装では制約のバランスが良いオニオンアーキテクチャを採用する。<br />
+また、更新系についてDDDはよく機能するが、参照系に対して実装に悩む場面が多い。<br />
+そこで、CQRS(コマンドクエリ責務分離)を用いて参照系の実装の仕組みと分離することとした。  </p>
+<h2 id="_1">オニオンアーキテクチャ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>DDDの派生の中でオニオンアーキテクチャを利用するものとする。</p>
+<p><img alt="" src="21-ddd-cqrs-onion.dio.png" /></p>
+<ul>
+<li>presentation</li>
+<li>usecase</li>
+<li>domain<ul>
+<li>domain service</li>
+<li>domain model</li>
+</ul>
+</li>
+<li>infrastructure</li>
+</ul>
+<h2 id="cqrs">CQRS<a class="headerlink" href="#cqrs" title="Permanent link">&para;</a></h2>
+<p>CQRSは「情報の参照に使用するモデルと更新に使用するモデルに異なるものを使用する」アーキテクチャを指す。</p>
 
 
 

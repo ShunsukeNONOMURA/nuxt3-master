@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="http://0.0.0.0/mkdocs/20-architecture.html">
+        <link rel="canonical" href="http://0.0.0.0/mkdocs/20-api.html">
       
       
         <link rel="prev" href="10-design.html">
       
       
-        <link rel="next" href="90-construction.html">
+        <link rel="next" href="21-ddd-cqrs.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
@@ -272,7 +272,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="20-architecture.html" class="md-nav__link md-nav__link--active">
+      <a href="20-api.html" class="md-nav__link md-nav__link--active">
         API設計
       </a>
       
@@ -307,10 +307,52 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uri-uniformed-resource-identifier" class="md-nav__link">
+    URI (Uniformed Resource Identifier)
+  </a>
+  
+    <nav class="md-nav" aria-label="URI (Uniformed Resource Identifier)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP メソッド操作例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="21-ddd-cqrs.html" class="md-nav__link">
+        DDD + CQRS
+      </a>
     </li>
   
 
@@ -402,6 +444,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#uri-uniformed-resource-identifier" class="md-nav__link">
+    URI (Uniformed Resource Identifier)
+  </a>
+  
+    <nav class="md-nav" aria-label="URI (Uniformed Resource Identifier)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP メソッド操作例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -418,6 +487,13 @@
 
 
 <h1 id="api">API設計<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
+<p>REST(REpresentational State Transfer) API として設計することを目指す。</p>
+<ul>
+<li>統一インターフェース</li>
+<li>アドレス可能性</li>
+<li>接続性</li>
+<li>ステートレス性</li>
+</ul>
 <h2 id="api-code">API Code<a class="headerlink" href="#api-code" title="Permanent link">&para;</a></h2>
 <h2 id="html-status-code">html status code<a class="headerlink" href="#html-status-code" title="Permanent link">&para;</a></h2>
 <p>4xx Client Error
@@ -452,6 +528,101 @@
 </tr>
 </tbody>
 </table>
+<h2 id="uri-uniformed-resource-identifier">URI (Uniformed Resource Identifier)<a class="headerlink" href="#uri-uniformed-resource-identifier" title="Permanent link">&para;</a></h2>
+<p>覚えやすく、どんな機能を持つURIなのかがひと目でわかるルールに統一されていることが望ましい</p>
+<ul>
+<li>短くて入力しやすい<ul>
+<li>長い場合、不要な情報があったり、重複するものがあったりするかも</li>
+</ul>
+</li>
+<li>名詞を用いる</li>
+<li>バージョン番号が含まれている<ul>
+<li>hostname/api/{version}/collection</li>
+</ul>
+</li>
+<li>命名規則（ケース）は特に決まっていない<ul>
+<li>開発言語に寄せるのがシンプル</li>
+<li><a href="https://developers.google.com/youtube/v3/docs?hl=ja">youtube data apiはキャメルケース</a></li>
+</ul>
+</li>
+<li>クエリやタスクはどうするか？</li>
+</ul>
+<p>リソースを示す構成は概ね下記のようなパターン</p>
+<table>
+<thead>
+<tr>
+<th>リソース</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/collection</td>
+<td>特定のコレクション</td>
+</tr>
+<tr>
+<td>/collection/{id}</td>
+<td>特定のコレクションの中の一つ</td>
+</tr>
+<tr>
+<td>/collection/{id}/collection</td>
+<td>特定のコレクションの中の一つが持つコレクション</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http">HTTP メソッド操作例<a class="headerlink" href="#http" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>リソース</th>
+<th>POST</th>
+<th>GET</th>
+<th>PUT</th>
+<th>DELETE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/user</td>
+<td>新しいユーザを作成</td>
+<td>すべてのユーザを取得</td>
+<td>ユーザを一括更新</td>
+<td>すべてのユーザを削除</td>
+</tr>
+<tr>
+<td>/user/1</td>
+<td>エラー</td>
+<td>ユーザ 1 の詳細を取得</td>
+<td>ユーザ 1 の詳細を更新 (顧客 1 が存在する場合)</td>
+<td>ユーザ 1 を削除</td>
+</tr>
+<tr>
+<td>/user/1/order</td>
+<td>ユーザ 1 の新しい注文を作成</td>
+<td>ユーザ 1 のすべての注文を取得</td>
+<td>ユーザ1 の注文を一括更新</td>
+<td>ユーザ 1 のすべての注文を削除</td>
+</tr>
+<tr>
+<td>/order</td>
+<td>新しい注文を作成</td>
+<td>すべての注文を取得</td>
+<td>注文を一括更新</td>
+<td>すべての注文を削除</td>
+</tr>
+<tr>
+<td>/order/1</td>
+<td>エラー</td>
+<td>注文 1 の詳細を取得</td>
+<td>注文 1 の詳細を更新</td>
+<td>注文 1 を削除</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/ja-jp/azure/architecture/best-practices/api-design#define-api-operations-in-terms-of-http-methods">HTTP メソッドに関する API 操作の定義</a></li>
+</ul>
 
 
 

@@ -6,6 +6,7 @@
 ```mermaid
 graph TB
     subgraph "システム"
+        Admin((管理者))
         User((ユーザー))
         subgraph "ユーザ管理"
             QueryUser[ユーザを問い合わせる]
@@ -16,11 +17,25 @@ graph TB
     end
     User --> QueryUser
     User --> GetUser
-    User --> CreateUser
-    User --> DeleteUser
+    Admin --> QueryUser
+    Admin --> GetUser
+    Admin --> CreateUser
+    Admin --> DeleteUser
 ```
 
 ### ユースケース記述
+| 項目             | 概要 |
+| ---------------- | ---- |
+| ユースケース名   |      |
+| 概要             |      |
+| アクター         |      |
+| 事前条件         |      |
+| 事後条件         |      |
+| 基本フロー       |      |
+| 代替フロー       |      |
+| 例外フロー       |      |
+| サブユースケース |      |
+| 備考             |      |
 
 ## IAD（情報設計）
 
@@ -51,7 +66,8 @@ erDiagram
 
 ## Intaraction Design
 
-### シーケンス図
+## シーケンス図
+### ユーザ取得
 ```mermaid
 %% Settings
 sequenceDiagram

@@ -363,8 +363,23 @@
   
   
     <li class="md-nav__item">
-      <a href="20-architecture.html" class="md-nav__link">
+      <a href="20-api.html" class="md-nav__link">
         API設計
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="21-ddd-cqrs.html" class="md-nav__link">
+        DDD + CQRS
       </a>
     </li>
   
@@ -752,17 +767,23 @@ prisma</p>
 <a href="https://www.serverless.com/framework/docs">Serverless Framework Documentation</a></p>
 <h2 id="javascript">サーバーサイドJavascriptのメリット・デメリット<a class="headerlink" href="#javascript" title="Permanent link">&para;</a></h2>
 <ul>
-<li>フロントエンドの知識や実装を応用しやすい<ul>
-<li>歴史経緯からフロントエンドではjavascriptの利用が求められる</li>
-<li>もともとPythonでバックエンド書いているが、堅牢なコードを書こうとするほど学習時間が分散してしまうので、学習コストを削減したい。</li>
+<li>Webフロントエンドの知識や実装をバックエンドに応用しやすい<ul>
+<li>歴史的経緯からWebフロントエンドでは結局javascriptの知識が求められる</li>
+<li>別言語でバックエンド書くと学習時間が分散してしまうので学習コストの削減をしたい</li>
+<li>typescriptで作成したデータ型等を流用したい</li>
+<li>命名規則を統一できる<ul>
+<li>RDB間はprismaを使うとマッピングで対応できる</li>
 </ul>
 </li>
-<li>Python独自のライブラリが使えない<ul>
-<li>とはいえ、大抵のライブラリは揃っているはず</li>
+</ul>
+</li>
+<li>他言語独自のライブラリが使えない<ul>
+<li>とはいえ、大抵のライブラリはjsに揃っているはず</li>
 <li><a href="https://www.prisma.io/">ORM：prisma</a></li>
 <li><a href="https://www.npmjs.com/package/@opensearch-project/opensearch">検索エンジン：opensearch</a></li>
-<li><a href="https://pytorch.org/docs/stable/jit.html">機械学習：PyTorch</a></li>
+<li><a href="https://aws.amazon.com/jp/sdk-for-javascript/">AWS:AWS SDK for JavaScript</a></li>
 <li><a href="https://js.langchain.com/docs/get_started/installation">LLM：langchain</a></li>
+<li><a href="https://pytorch.org/docs/stable/jit.html">機械学習：PyTorch</a></li>
 </ul>
 </li>
 </ul>
