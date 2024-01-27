@@ -21,13 +21,19 @@ DDDの派生の中でオニオンアーキテクチャを利用するものと�
 
 ![](./21-ddd-cqrs-onion.dio.png)
 
-- presentation
-- usecase
-- domain
-    - domain service
-    - domain model
-- infrastructure
+- Presentation
+    - エンドポイント定義
+    - Http Requestで渡された値とApplicationそうに渡す値のマッピング
+- UseCase
+    - ユースケースの実現
+    - Value Object, Entityの生成、仕様、永続化依頼
+- Domain
+    - Repository の Interface
+    - Value Object, Entity, Domain Serviceの定義
+- Infrastructure
+    - Repository の Implement
 
 ## CQRS
-CQRSは「情報の参照に使用するモデルと更新に使用するモデルに異なるものを使用する」アーキテクチャを指す。
+CQRSは**情報の参照に使用するモデルと更新に使用するモデルに異なるものを使用する**アーキテクチャを指す。
+
 
