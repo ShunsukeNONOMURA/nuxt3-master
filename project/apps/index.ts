@@ -61,6 +61,13 @@ export class UserService {
     const [items, total, aggs] = await Promise.all([
       this.prisma.tUser.findMany({
         where,
+        include: { 
+          userRole: {
+            select:{
+              userRoleName:true
+            }
+          },
+        },
         take: limit,
         skip: offset,
         orderBy,

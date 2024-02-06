@@ -1,9 +1,4 @@
 # 一時メモ
-Nuxt-plotly
-https://nuxt.com/modules/nuxt-plotly
-```
-yarn add -D nuxt-plotly
-```
 
 opensearch JavaScript client
 https://opensearch.org/docs/latest/clients/javascript/index/
