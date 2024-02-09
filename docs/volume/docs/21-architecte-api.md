@@ -14,15 +14,15 @@ REpresentational State Transferの略。
 ### RESTの4原則
 HTTPを設計した中心人物であるRoy Fielding氏が2000年に提唱した「RESTの4原則」というものがあり、これを満たすものを「RESTfulなシステム」と呼んだりする。  
 
-- 統一インターフェース
+- 統一インターフェース（The Uniform Interface）
     - HTTPメソッドでJSON形式であるなど
-- アドレス可能性
+- アドレス可能性（Addressability）
     - URIでリソース情報を表現する
-- 接続性
+- 接続性（Links and Connectedness）
     - 情報にはハイパーリンクを含めることができる
     - 情報Aが持つ情報Bの詳細についてリンクからたどれる
-- ステートレス性
-    - セッション管理しない
+- ステートレス性（Statelessness）
+    - セッション管理しない (Cookie等)
 
 ## html status code
 
@@ -91,6 +91,9 @@ URIの設計は覚えやすく、どんな機能を持つURIなのかがひと�
 | /resource/{id}/resource | 特定のリソースの中の一つが持つリソース |
 
 
+
+
+
 ## API Action
 API Actionはおおむね次の８種類に分類。必要に応じて拡張する。
 
@@ -104,6 +107,9 @@ API Actionはおおむね次の８種類に分類。必要に応じて拡張す�
 | 5           | Delete      | リソースを削除する操作。                                           | なし   | 要     | DELETE      |                                    |
 | 6           | Task        | その他、上記に分類できない複雑な更新や計算などの操作。             | なし   | 不要   | POST        | バッチ処理要求など                 |
 | 7           | Query       | 特定の問い合わせ処理を要求する。検索結果などをレスポンスに含める。 | あり   | 要     | POST        | CQRSのQuery部                      |
+
+- 安全性：リソースの状態を変化させない読み取り専用であること
+- 冪等性：ある操作を1回行っても複数回行っても結果(状態)が同じになる性質
 
 ### /users/query としない
 - users has a query に見える
@@ -202,60 +208,17 @@ ProcessName = ResouceNameActionName
 ## Recouse
 3桁のコードで示すこと
 
-## URIサンプル
+## 設計のステップ
+1. データの洗い出し
+1. データをリソースに分割
+1. リソースにURIを割り当てる
+1. リソースにIFを割り当てる
+1. クライアントに送受信するメディアタイプを決める
+1. 接続性を高める
+1. 正常系を考える
+1. 例外処理を考える
 
-search
-search/user
-
-
-
+[REST API設計について整理してみた](https://pepese.github.io/design-rest-api/)
 
 <!-- <-------------------------------------------->
 
-## CRUDに対するCQRSの導入
-
-```mermaid
-graph LR
-    Actor
-    Create
-    Read
-    Update
-    Delete
-
-    Actor --> Create
-    Actor --> Read
-    Actor --> Update
-    Actor --> Delete
-```
-
-この内、Readについてはユースケースの限定が難しくDDDの文脈で取り扱うのが困難な場合がある。
-
-- 検索条件
-- ページネーション
-- ソートなど前提条件
-
-そこで、データに対する操作をコマンドとクエリに分けて考える。
-
-```mermaid
-graph LR
-    Actor
-    subgraph "Command"
-        Create
-        Update
-        Delete
-    end
-
-    subgraph "Query"
-        Read
-    end
-
-    Actor --> Create
-    Actor --> Read
-    Actor --> Update
-    Actor --> Delete
-```
-
-このような設計思想をCQRS（command query responsibility segregation）と呼ぶ。
-
-## RDB
-- Web API: The Good Parts だとテーブル名複数形

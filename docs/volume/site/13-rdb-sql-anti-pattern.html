@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="http://0.0.0.0/mkdocs/20-api.html">
+        <link rel="canonical" href="http://0.0.0.0/mkdocs/13-rdb-sql-anti-pattern.html">
       
       
-        <link rel="prev" href="10-design.html">
+        <link rel="prev" href="12-rdb.html">
       
       
-        <link rel="next" href="21-ddd-cqrs.html">
+        <link rel="next" href="14-rdb-orm-prisma.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>API設計 - Nuxt3 Master</title>
+        <title>SQLアンチパターン - Nuxt3 Master</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api" class="md-skip">
+        <a href="#sql" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API設計
+              SQLアンチパターン
             
           </span>
         </div>
@@ -229,7 +229,7 @@
   
     <li class="md-nav__item">
       <a href="01-project-management.html" class="md-nav__link">
-        プロジェクトマネジメント
+        （途中）プロジェクトマネジメント
       </a>
     </li>
   
@@ -244,7 +244,22 @@
   
     <li class="md-nav__item">
       <a href="10-design.html" class="md-nav__link">
-        デザイン
+        （途中）デザイン
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12-rdb.html" class="md-nav__link">
+        （途中）RDB設計
       </a>
     </li>
   
@@ -268,12 +283,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          API設計
+          SQLアンチパターン
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="20-api.html" class="md-nav__link md-nav__link--active">
-        API設計
+      <a href="13-rdb-sql-anti-pattern.html" class="md-nav__link md-nav__link--active">
+        SQLアンチパターン
       </a>
       
         
@@ -294,30 +309,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-code" class="md-nav__link">
-    API Code
+  <a href="#1-jaywalking" class="md-nav__link">
+    1. Jaywalking（信号無視）
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#html-status-code" class="md-nav__link">
-    html status code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uri-uniformed-resource-identifier" class="md-nav__link">
-    URI (Uniformed Resource Identifier)
-  </a>
-  
-    <nav class="md-nav" aria-label="URI (Uniformed Resource Identifier)">
+    <nav class="md-nav" aria-label="1. Jaywalking（信号無視）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#http" class="md-nav__link">
-    HTTP メソッド操作例
+  <a href="#_1" class="md-nav__link">
+    解決策：交差テーブルを作成
   </a>
   
 </li>
@@ -328,7 +329,47 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#5-eav-entity-attribute-value" class="md-nav__link">
+    5. EAV (Entity Attribute Value)
+  </a>
+  
+    <nav class="md-nav" aria-label="5. EAV (Entity Attribute Value)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    解決策：サブタイプでのモデリングを行う
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-multi-column-attribute" class="md-nav__link">
+    7. Multi Column Attribute
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Multi Column Attribute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    解決策：交差テーブルを作成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     参考
   </a>
   
@@ -350,8 +391,83 @@
   
   
     <li class="md-nav__item">
-      <a href="21-ddd-cqrs.html" class="md-nav__link">
-        DDD + CQRS
+      <a href="14-rdb-orm-prisma.html" class="md-nav__link">
+        （途中）スキーマ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20-architecte.html" class="md-nav__link">
+        設計
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="21-architecte-api.html" class="md-nav__link">
+        （記述中）API設計
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="22-architecte-ddd-cqrs.html" class="md-nav__link">
+        （途中）DDD + CQRS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="30-typescript-ddd.html" class="md-nav__link">
+        typescriptでDDD構築
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="60-test.html" class="md-nav__link">
+        テスト
       </a>
     </li>
   
@@ -402,6 +518,71 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_16" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+          99 コラム
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          99 コラム
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="99-article/00-architect.html" class="md-nav__link">
+        設計ガイドライン作成に際して
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="99-article/memo.html" class="md-nav__link">
+        メモ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -431,30 +612,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-code" class="md-nav__link">
-    API Code
+  <a href="#1-jaywalking" class="md-nav__link">
+    1. Jaywalking（信号無視）
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#html-status-code" class="md-nav__link">
-    html status code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uri-uniformed-resource-identifier" class="md-nav__link">
-    URI (Uniformed Resource Identifier)
-  </a>
-  
-    <nav class="md-nav" aria-label="URI (Uniformed Resource Identifier)">
+    <nav class="md-nav" aria-label="1. Jaywalking（信号無視）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#http" class="md-nav__link">
-    HTTP メソッド操作例
+  <a href="#_1" class="md-nav__link">
+    解決策：交差テーブルを作成
   </a>
   
 </li>
@@ -465,7 +632,47 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#5-eav-entity-attribute-value" class="md-nav__link">
+    5. EAV (Entity Attribute Value)
+  </a>
+  
+    <nav class="md-nav" aria-label="5. EAV (Entity Attribute Value)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    解決策：サブタイプでのモデリングを行う
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-multi-column-attribute" class="md-nav__link">
+    7. Multi Column Attribute
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Multi Column Attribute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    解決策：交差テーブルを作成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     参考
   </a>
   
@@ -486,142 +693,347 @@
                   
 
 
-<h1 id="api">API設計<a class="headerlink" href="#api" title="Permanent link">&para;</a></h1>
-<p>REST(REpresentational State Transfer) API として設計することを目指す。</p>
-<ul>
-<li>統一インターフェース</li>
-<li>アドレス可能性</li>
-<li>接続性</li>
-<li>ステートレス性</li>
-</ul>
-<h2 id="api-code">API Code<a class="headerlink" href="#api-code" title="Permanent link">&para;</a></h2>
-<h2 id="html-status-code">html status code<a class="headerlink" href="#html-status-code" title="Permanent link">&para;</a></h2>
-<p>4xx Client Error
-5xx Server Error</p>
+<h1 id="sql">SQLアンチパターン<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h1>
+<p>SQLに関するアンチパターンをまとめたもの。
+自分が関わったことのある設計について記載。</p>
+<h2 id="1-jaywalking">1. Jaywalking（信号無視）<a class="headerlink" href="#1-jaywalking" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>開発者はよく、「多対多」の関連を表現する交差テーブルの作成を避けるために、カンマ区切りのリストを使います。
+私はこのアンチパターンをJaywalkingと名づけました。どちらも、"intersection"を避けようとする行為だからです。</p>
+</blockquote>
+<p>カンマ区切りの値を入れること。半構造データみたいになる。</p>
 <table>
 <thead>
 <tr>
-<th>HTTPステータスコード</th>
-<th>説明</th>
+<th>book_id</th>
+<th>book_name</th>
+<th>book_tags</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>400 Bad Request</td>
-<td>一般的なクライアントエラー</td>
+<td>1</td>
+<td>Spring MVC</td>
+<td>Java,Spring,SpringMVC</td>
 </tr>
 <tr>
-<td>401 Unauthorized</td>
-<td>アクセス権が無い、または認証に失敗</td>
-</tr>
-<tr>
-<td>403 Forbidden</td>
-<td>閲覧権限が無い</td>
-</tr>
-<tr>
-<td>404 Not Found</td>
-<td>見つからない</td>
-</tr>
-<tr>
-<td>500 Internal Server Error</td>
-<td>何らかのサーバ内で起きたエラー</td>
+<td>2</td>
+<td>はじめてのScala</td>
+<td>Scala,入門</td>
 </tr>
 </tbody>
 </table>
-<h2 id="uri-uniformed-resource-identifier">URI (Uniformed Resource Identifier)<a class="headerlink" href="#uri-uniformed-resource-identifier" title="Permanent link">&para;</a></h2>
-<p>覚えやすく、どんな機能を持つURIなのかがひと目でわかるルールに統一されていることが望ましい</p>
-<ul>
-<li>短くて入力しやすい<ul>
-<li>長い場合、不要な情報があったり、重複するものがあったりするかも</li>
-</ul>
-</li>
-<li>名詞を用いる</li>
-<li>バージョン番号が含まれている<ul>
-<li>hostname/api/{version}/collection</li>
-</ul>
-</li>
-<li>命名規則（ケース）は特に決まっていない<ul>
-<li>開発言語に寄せるのがシンプル</li>
-<li><a href="https://developers.google.com/youtube/v3/docs?hl=ja">youtube data apiはキャメルケース</a></li>
-</ul>
-</li>
-<li>クエリやタスクはどうするか？</li>
-</ul>
-<p>リソースを示す構成は概ね下記のようなパターン</p>
+<h3 id="_1">解決策：交差テーブルを作成<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>リソース</th>
-<th>説明</th>
+<th>book_id</th>
+<th>book_name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>/collection</td>
-<td>特定のコレクション</td>
+<td>1</td>
+<td>Spring MVC</td>
 </tr>
 <tr>
-<td>/collection/{id}</td>
-<td>特定のコレクションの中の一つ</td>
-</tr>
-<tr>
-<td>/collection/{id}/collection</td>
-<td>特定のコレクションの中の一つが持つコレクション</td>
+<td>2</td>
+<td>はじめてのScala</td>
 </tr>
 </tbody>
 </table>
-<h3 id="http">HTTP メソッド操作例<a class="headerlink" href="#http" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>リソース</th>
-<th>POST</th>
-<th>GET</th>
-<th>PUT</th>
-<th>DELETE</th>
+<th>book_tag_id</th>
+<th>book_tag_name</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>/user</td>
-<td>新しいユーザを作成</td>
-<td>すべてのユーザを取得</td>
-<td>ユーザを一括更新</td>
-<td>すべてのユーザを削除</td>
+<td>1</td>
+<td>Java</td>
 </tr>
 <tr>
-<td>/user/1</td>
-<td>エラー</td>
-<td>ユーザ 1 の詳細を取得</td>
-<td>ユーザ 1 の詳細を更新 (顧客 1 が存在する場合)</td>
-<td>ユーザ 1 を削除</td>
+<td>2</td>
+<td>Spring</td>
 </tr>
 <tr>
-<td>/user/1/order</td>
-<td>ユーザ 1 の新しい注文を作成</td>
-<td>ユーザ 1 のすべての注文を取得</td>
-<td>ユーザ1 の注文を一括更新</td>
-<td>ユーザ 1 のすべての注文を削除</td>
+<td>3</td>
+<td>SpringMVC</td>
 </tr>
 <tr>
-<td>/order</td>
-<td>新しい注文を作成</td>
-<td>すべての注文を取得</td>
-<td>注文を一括更新</td>
-<td>すべての注文を削除</td>
+<td>4</td>
+<td>Scala</td>
 </tr>
 <tr>
-<td>/order/1</td>
-<td>エラー</td>
-<td>注文 1 の詳細を取得</td>
-<td>注文 1 の詳細を更新</td>
-<td>注文 1 を削除</td>
+<td>5</td>
+<td>入門</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>book_id</th>
+<th>book_tag_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-eav-entity-attribute-value">5. EAV (Entity Attribute Value)<a class="headerlink" href="#5-eav-entity-attribute-value" title="Permanent link">&para;</a></h2>
+<p>Entity Attribute Value（以下EAV）では次のような項目を持ったテーブルが設計される。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entity</td>
+<td>親テーブルに対応した外部キーを格納</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>カラム名に相当する属性名を指定</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>属性の値</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>book_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>book_id</th>
+<th>attribute</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>name</td>
+<td>本名</td>
+</tr>
+<tr>
+<td>1</td>
+<td>release_date</td>
+<td>2020/9/24</td>
+</tr>
+<tr>
+<td>1</td>
+<td>price</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><a href="https://learn.microsoft.com/ja-jp/azure/architecture/best-practices/api-design#define-api-operations-in-terms-of-http-methods">HTTP メソッドに関する API 操作の定義</a></li>
+<li>メリット<ul>
+<li>テーブルの列数を削減できる</li>
+<li>新規の属性を追加する際に列数を増加しなくて良い</li>
+<li>属性が存在しない列にNULLが入りNULLだらけのテーブルにならない</li>
+<li>データベースの構造は単純になる</li>
+</ul>
+</li>
+<li>デメリット<ul>
+<li>データの取得が冗長化する</li>
+<li>特定の属性にNOT NULL制約を設定できない</li>
+<li>データ型を使用できない</li>
+<li>外部制約キーを使用できない</li>
+<li>動的に属性名が増えるため整合性が担保しづらい</li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">解決策：サブタイプでのモデリングを行う<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<!-- ![](https://camo.qiitausercontent.com/3b3c8cf3b4a65cca1fd47f5765fd6c6209e4b40b/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f3233363534322f62643133646131332d613063312d636234302d626365662d3434373662343830396333382e706e67) -->
+
+<p>大きく分けて4種類の継承方法がある。</p>
+<ul>
+<li>シングルテーブル継承</li>
+<li>具象テーブル継承</li>
+<li>クラステーブル継承</li>
+<li>半構造化データ</li>
+</ul>
+<h4 id="_3">シングルテーブル継承で作成する場合<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>book_id</th>
+<th>book_name</th>
+<th>book_release_date</th>
+<th>book_price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>本名</td>
+<td>2020/9/24</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-multi-column-attribute">7. Multi Column Attribute<a class="headerlink" href="#7-multi-column-attribute" title="Permanent link">&para;</a></h2>
+<p>複数列属性を持つようなアンチデザインパターン。Jaywalkingに似ている。</p>
+<ul>
+<li>属性の検索が複雑になる</li>
+<li>属性の追加・削除がしにくい</li>
+<li>属性の一意性を保証できない</li>
+<li>属性列の増加が起こりうる</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>book_id</th>
+<th>book_name</th>
+<th>book_tag_1</th>
+<th>book_tag_2</th>
+<th>book_tag_3</th>
+<th>book_tag_4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Spring MVC</td>
+<td>Java</td>
+<td>Spring</td>
+<td>SpringMVC</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>はじめてのScala</td>
+<td>Scala</td>
+<td>入門</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">解決策：交差テーブルを作成<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>同じ意味を持つ値は、1つの列に格納して別テーブルとし、1:nやn:nのリレーションを作成すれば良い。</p>
+<table>
+<thead>
+<tr>
+<th>book_id</th>
+<th>book_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Spring MVC</td>
+</tr>
+<tr>
+<td>2</td>
+<td>はじめてのScala</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>book_tag_id</th>
+<th>book_tag_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Spring</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SpringMVC</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Scala</td>
+</tr>
+<tr>
+<td>5</td>
+<td>入門</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>book_id</th>
+<th>book_tag_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">参考<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://qiita.com/skyc_lin/items/37365a36416d0dc42431">SQLアンチパターン勉強会　第五回：EAV(エンティティ・アトリビュート・バリュー)</a></li>
+<li><a href="https://qiita.com/taiteam/items/33aebded2842808e0391">「SQLアンチパターン」まとめ</a></li>
+<li><a href="https://tech-blog.tsukaby.com/archives/857">ITエンジニアはSQLアンチパターンを読むべし！ 軽いまとめ</a></li>
+<li><a href="https://qiita.com/fktnkit/items/0ff462640e00deecfc6d">SQLアンチパターン　Entity Attribute Value</a></li>
 </ul>
 
 

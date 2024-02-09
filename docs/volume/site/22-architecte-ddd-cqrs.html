@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="http://0.0.0.0/mkdocs/21-ddd-cqrs.html">
+        <link rel="canonical" href="http://0.0.0.0/mkdocs/22-architecte-ddd-cqrs.html">
       
       
-        <link rel="prev" href="20-api.html">
+        <link rel="prev" href="21-architecte-api.html">
       
       
-        <link rel="next" href="90-construction.html">
+        <link rel="next" href="30-typescript-ddd.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>DDD + CQRS - Nuxt3 Master</title>
+        <title>（途中）DDD + CQRS - Nuxt3 Master</title>
       
     
     
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DDD + CQRS
+              （途中）DDD + CQRS
             
           </span>
         </div>
@@ -229,7 +229,7 @@
   
     <li class="md-nav__item">
       <a href="01-project-management.html" class="md-nav__link">
-        プロジェクトマネジメント
+        （途中）プロジェクトマネジメント
       </a>
     </li>
   
@@ -244,7 +244,7 @@
   
     <li class="md-nav__item">
       <a href="10-design.html" class="md-nav__link">
-        デザイン
+        （途中）デザイン
       </a>
     </li>
   
@@ -258,8 +258,68 @@
   
   
     <li class="md-nav__item">
-      <a href="20-api.html" class="md-nav__link">
-        API設計
+      <a href="12-rdb.html" class="md-nav__link">
+        （途中）RDB設計
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="13-rdb-sql-anti-pattern.html" class="md-nav__link">
+        SQLアンチパターン
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14-rdb-orm-prisma.html" class="md-nav__link">
+        （途中）スキーマ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20-architecte.html" class="md-nav__link">
+        設計
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="21-architecte-api.html" class="md-nav__link">
+        （記述中）API設計
       </a>
     </li>
   
@@ -283,12 +343,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          DDD + CQRS
+          （途中）DDD + CQRS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="21-ddd-cqrs.html" class="md-nav__link md-nav__link--active">
-        DDD + CQRS
+      <a href="22-architecte-ddd-cqrs.html" class="md-nav__link md-nav__link--active">
+        （途中）DDD + CQRS
       </a>
       
         
@@ -316,8 +376,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cqrs" class="md-nav__link">
-    CQRS
+  <a href="#cqrscommand-query-responsibility-segregation" class="md-nav__link">
+    CQRS（command query responsibility segregation）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ddd-cqrs_1" class="md-nav__link">
+    DDD と CQRS の併用
   </a>
   
 </li>
@@ -326,6 +393,36 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="30-typescript-ddd.html" class="md-nav__link">
+        typescriptでDDD構築
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="60-test.html" class="md-nav__link">
+        テスト
+      </a>
     </li>
   
 
@@ -375,6 +472,71 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_16" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+          99 コラム
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          99 コラム
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="99-article/00-architect.html" class="md-nav__link">
+        設計ガイドライン作成に際して
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="99-article/memo.html" class="md-nav__link">
+        メモ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -411,8 +573,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cqrs" class="md-nav__link">
-    CQRS
+  <a href="#cqrscommand-query-responsibility-segregation" class="md-nav__link">
+    CQRS（command query responsibility segregation）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ddd-cqrs_1" class="md-nav__link">
+    DDD と CQRS の併用
   </a>
   
 </li>
@@ -432,9 +601,8 @@
                   
 
 
-<h1 id="ddd-cqrs">DDD + CQRS<a class="headerlink" href="#ddd-cqrs" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="21-ddd-cqrs.dio.png" /></p>
-<p>DDD(Domain Driven Design)とはドメインモデルを中心としたソフトウェア設計手法のことである。<br />
+<h1 id="ddd-cqrs">（途中）DDD + CQRS<a class="headerlink" href="#ddd-cqrs" title="Permanent link">&para;</a></h1>
+<p>DDD(Domain Driven Design)とは<strong>ドメインモデル</strong>を中心としたソフトウェア設計手法のことである。<br />
 いくつか派生があるが、概ね下記のような特徴がある。</p>
 <ul>
 <li>モデル、サービス、アプリケーション、プレゼンテーションのような層を持つ構造であること<ul>
@@ -450,24 +618,164 @@
 </ul>
 </li>
 </ul>
-<p>本実装では制約のバランスが良いオニオンアーキテクチャを採用する。<br />
+<p>本実装のバックエンドでは制約のバランスが良いオニオンアーキテクチャを採用する。<br />
 また、更新系についてDDDはよく機能するが、参照系に対して実装に悩む場面が多い。<br />
 そこで、CQRS(コマンドクエリ責務分離)を用いて参照系の実装の仕組みと分離することとした。  </p>
 <h2 id="_1">オニオンアーキテクチャ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>DDDの派生の中でオニオンアーキテクチャを利用するものとする。</p>
-<p><img alt="" src="21-ddd-cqrs-onion.dio.png" /></p>
+<p>DDDの派生の中でオニオンアーキテクチャを利用するものとする。<br />
+よく円形の図が用いられており、その見た目からオニオンアーキテクチャと呼ばれている模様。</p>
+<p><img alt="" src="21-architecte-ddd-cqrs/onion-architecture.dio.png" /></p>
 <ul>
-<li>presentation</li>
-<li>usecase</li>
-<li>domain<ul>
-<li>domain service</li>
-<li>domain model</li>
+<li>Presentation<ul>
+<li>エンドポイント提供</li>
+<li>Http Requestで渡された値とUseCaseに渡す値のマッピング</li>
 </ul>
 </li>
-<li>infrastructure</li>
+<li>UseCase<ul>
+<li>ユースケースの実現</li>
+<li>Presentationで利用するDataTransferObjectの定義</li>
+<li>Value Object, Entityの生成、仕様、永続化の依頼</li>
 </ul>
-<h2 id="cqrs">CQRS<a class="headerlink" href="#cqrs" title="Permanent link">&para;</a></h2>
-<p>CQRSは「情報の参照に使用するモデルと更新に使用するモデルに異なるものを使用する」アーキテクチャを指す。</p>
+</li>
+<li>Domain<ul>
+<li>RepositoryのInterface</li>
+<li>Value Object, Entity, Domain Serviceの定義</li>
+</ul>
+</li>
+<li>Infrastructure<ul>
+<li>RepositoryのImplement</li>
+<li>ORMの定義</li>
+</ul>
+</li>
+</ul>
+<h2 id="cqrscommand-query-responsibility-segregation">CQRS（command query responsibility segregation）<a class="headerlink" href="#cqrscommand-query-responsibility-segregation" title="Permanent link">&para;</a></h2>
+<p>CQRSは<strong>情報の参照に使用するモデルと更新に使用するモデルに異なるものを使用する</strong>アーキテクチャを指す。</p>
+<p><a href="https://qiita.com/ledmonster/items/22b00c65208dffeff7e4">参考：DDDで設計するならCQRSの利用を検討すべき</a></p>
+<pre class="mermaid"><code>graph LR
+    Actor
+    Create
+    Read
+    Update
+    Delete
+
+    Actor --&gt; Create
+    Actor --&gt; Read
+    Actor --&gt; Update
+    Actor --&gt; Delete</code></pre>
+<p>CURDにおいて、Readについては複雑さの方向性が異なり、DDDの文脈で取り扱うのが困難な場合がある。</p>
+<p>そこで、データに対する操作をCommand（命令）とQuery（問い合わせ）に分けて考える。</p>
+<ul>
+<li>Commandではトランザクショナルな書き込みや複雑な権限の整合性を担保</li>
+<li>Queryでは条件や出力方式の複雑さに対応<ul>
+<li>検索条件</li>
+<li>ページネーション</li>
+<li>ソートなど前提条件</li>
+</ul>
+</li>
+</ul>
+<pre class="mermaid"><code>graph LR
+    Actor
+    subgraph "Command"
+        Create
+        Update
+        Delete
+    end
+
+    subgraph "Query"
+        Read
+    end
+
+    Actor --&gt; Create
+    Actor --&gt; Read
+    Actor --&gt; Update
+    Actor --&gt; Delete</code></pre>
+<table>
+<thead>
+<tr>
+<th>性質</th>
+<th>整合性</th>
+<th>書き込み</th>
+<th>網羅性</th>
+<th>自由な検索</th>
+<th>結合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td>o</td>
+<td>o</td>
+<td>o</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Query</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>o</td>
+<td>o</td>
+</tr>
+</tbody>
+</table>
+<p>このような設計思想はCQRS（command query responsibility segregation）と呼ばれている。</p>
+<p>RDB内でクエリ処理を完結させるほか、RDBと検索エンジンの間で非同期にデータ同期を行い、利用シーンに応じて使い分けるような使い方もある。</p>
+<pre class="mermaid"><code>graph LR
+    Actor
+
+    subgraph "User Interface"
+        subgraph "Command"
+            Create
+            Update
+            Delete
+        end
+
+        subgraph "Query"
+            Read
+        end
+    end
+
+    subgraph "Infrastructure"
+        RDB
+        SearchEngine
+    end
+
+    subgraph "Service"
+        SyncProceccer
+    end
+
+    Query --&gt; RDB
+    Query --&gt; SearchEngine
+
+    Command --&gt; RDB
+    Command --&gt;|1. event| SyncProceccer
+    SyncProceccer --&gt;|2. fetch records| RDB
+    SyncProceccer --&gt;|3. upsert index| SearchEngine
+
+    Actor --&gt; Create
+    Actor --&gt; Read
+    Actor --&gt; Update
+    Actor --&gt; Delete
+
+</code></pre>
+<p>また、Queryにおいてはバックエンドindexへの入出力は素直に露出させると使いやすい。</p>
+<h2 id="ddd-cqrs_1">DDD と CQRS の併用<a class="headerlink" href="#ddd-cqrs_1" title="Permanent link">&para;</a></h2>
+<p>以上を踏まえて、DDD＋CQRSの全体構造を示す。<br />
+CommandとQueryを完全に分ける意図で下記は明示的に分割した。</p>
+<ul>
+<li>DTO<ul>
+<li>Command DTO</li>
+<li>Query DTO</li>
+</ul>
+</li>
+<li>Domain Model<ul>
+<li>Write Model</li>
+<li>Read Model</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="21-architecte-ddd-cqrs/ddd-cqrs.dio.png" /></p>
 
 
 

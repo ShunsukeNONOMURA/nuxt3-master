@@ -147,3 +147,4 @@ drop table app.m_user_role;
 ## メモ
 SQLインジェクション
 
+- Web API: The Good Parts だとテーブル名複数形

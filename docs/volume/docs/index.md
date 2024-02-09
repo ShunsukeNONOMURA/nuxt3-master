@@ -9,19 +9,17 @@
 | pm gantt chart                   |      |
 | typescript                       |      |
 | nuxt                             |      |
-|                                  |      |
+| design                           |      |
 | design ia                        |      |
 | design ia 構造                   |      |
-|                                  |      |
+| desing component design          |      |
+| desing component design vue3     |      |
+| architect                        |      |
+| architect ddd cqrs               |      |
+| architect api                    |      |
 | sql 命名規則 DDL, schema         |      |
 | sql anti pattern                 | o    |
 | sql orm prisma                   |      |
-| architect ddd onion architecture |      |
-| architect cqrs                   |      |
-| api uri rest cqrs                |      |
-| design                           |      |
-| desing component design          |      |
-| desing component design vue3     |      |
 | test                             |      |
 | test static ESlint               |      |
 | test integration test vitest     |      |
