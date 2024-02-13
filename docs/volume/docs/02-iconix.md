@@ -48,13 +48,23 @@ ITプロジェクトが失敗する80%は要件分析・要件定義が不適切
 - [アジャイルソフトウェア開発宣言](https://agilemanifesto.org/iso/ja/manifesto.html)
 - [アジャイル開発とは？　特徴とメリット・デメリット、スクラムまで徹底解説](https://monstar-lab.com/dx/solution/about-agile_methods/)
 
-## ICONIX全体像
-![](./02-iconix/iconix-overview.dio.png)
+## 開発戦略全体像（ICONIX + Ajile）
+![](./02-iconix/development-strategy-overview.dio.png)
 
 
-ドメインモデルは要求定義の時点で完全には作られないので、反復的に修正する必要がある。
+ドメインモデルは要求定義の時点では不完全な前提。後続プロセスで修正される。
+
+
+## ロバストネス図
+| 要素         | 概要                                                 |
+| ------------ | ---------------------------------------------------- |
+| バウンダリ   | アクターが相互作用する画面やボタン                   |
+| エンティティ | ソフトウェアシステム内部で半永久的に管理するデータ   |
+| コントロール | バウンダリとエンティティをつないでシステムが行う処理 |
 
 ## 参考
 - [ユースケース駆動開発実践ガイドのまとめ 〜ICONIXプロセスとはなんなのか〜](https://zenn.dev/tomoeine/articles/2babb554aa0478)
 - [DDD時代に考えたいICONIXプロセス](https://logmi.jp/tech/articles/323010)
 - [「ユースケース駆動開発実践ガイド」（2007年, 翔泳社） ](https://www.amazon.co.jp/%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9%E9%A7%86%E5%8B%95%E9%96%8B%E7%99%BA%E5%AE%9F%E8%B7%B5%E3%82%AC%E3%82%A4%E3%83%89-OOP-Foundations-%E3%83%80%E3%82%B0%E3%83%BB%E3%83%AD%E3%83%BC%E3%82%BC%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B0/dp/4798114456)
+- [明日から使えるDDDのためのユースケース駆動開発（ICONIXプロセス）](https://qiita.com/hirodragon/items/e2330edc1d1a329d17f5)
+- [DDDとICONIXとアジャイルを複合したシステム開発構想](https://github.com/JORI-RT/SystemDevelopmentMethod?tab=readme-ov-file)
