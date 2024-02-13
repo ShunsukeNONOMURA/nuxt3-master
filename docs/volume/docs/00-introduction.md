@@ -2,7 +2,7 @@
 nuxt3を用いてwebアプリケーションを構築してサーバーレスデプロイするためのベースとするもの
 
 ## 基本方針
-![](./00-servers.dio.png)
+![](./00-introduction/servers.dio.png)
 
 - コンテナ環境において開発作業する
     - SPA構成を取りSSRしない
