@@ -278,10 +278,10 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    よく使う コマンド チートシート
+    よく使うコマンドチートシート
   </a>
   
-    <nav class="md-nav" aria-label="よく使う コマンド チートシート">
+    <nav class="md-nav" aria-label="よく使うコマンドチートシート">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -348,8 +348,8 @@
   
   
     <li class="md-nav__item">
-      <a href="02-iconix.html" class="md-nav__link">
-        ICONIX
+      <a href="02-development-strategy-agile-iconix.html" class="md-nav__link">
+        開発戦略
       </a>
     </li>
   
@@ -468,8 +468,8 @@
   
   
     <li class="md-nav__item">
-      <a href="30-typescript-ddd.html" class="md-nav__link">
-        typescriptでDDD構築
+      <a href="22-development-tactics-log.html" class="md-nav__link">
+        （勉強中）ログ設計戦略
       </a>
     </li>
   
@@ -483,8 +483,68 @@
   
   
     <li class="md-nav__item">
-      <a href="60-test.html" class="md-nav__link">
-        テスト
+      <a href="22-development-tactics-test.html" class="md-nav__link">
+        （勉強中）テスト戦術
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="22-development-tactics-ui.html" class="md-nav__link">
+        （整理中）UI開発戦術
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="60-document-openapi.html" class="md-nav__link">
+        OpenAPI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="71-lib-nuxt-plotly.html" class="md-nav__link">
+        nuxt-plotly
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="80-typescript-ddd.html" class="md-nav__link">
+        typescriptでDDD構築
       </a>
     </li>
   
@@ -542,6 +602,36 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="glossary.html" class="md-nav__link">
+        用語集
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="role.html" class="md-nav__link">
+        ロール
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -550,17 +640,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_17" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_23" >
       
       
       
-        <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
           99 コラム
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_17">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_23">
           <span class="md-nav__icon md-icon"></span>
           99 コラム
         </label>
@@ -658,10 +748,10 @@
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    よく使う コマンド チートシート
+    よく使うコマンドチートシート
   </a>
   
-    <nav class="md-nav" aria-label="よく使う コマンド チートシート">
+    <nav class="md-nav" aria-label="よく使うコマンドチートシート">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -807,7 +897,7 @@ server</p>
 <p>tests</p>
 <p>plugins
 prisma</p>
-<h2 id="_5">よく使う コマンド チートシート<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_5">よく使うコマンドチートシート<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <h3 id="host">host環境<a class="headerlink" href="#host" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -854,23 +944,23 @@ prisma</p>
 <tbody>
 <tr>
 <td>yarn install</td>
-<td></td>
+<td>package.jsonのライブラリをinstall</td>
 </tr>
 <tr>
 <td libname="libname">yarn add -D</td>
-<td></td>
+<td>ライブラリを開発環境に追加</td>
 </tr>
 <tr>
 <td libname="libname">yarn remove</td>
-<td></td>
+<td>ライブラリを削除</td>
 </tr>
 <tr>
 <td>yarn prisma format</td>
-<td></td>
+<td>.prismaファイルの整形</td>
 </tr>
 <tr>
 <td>yarn prisma migrate reset</td>
-<td></td>
+<td><strong>取り扱い注意：RDB初期化（警告は出る）</strong></td>
 </tr>
 <tr>
 <td>yarn prisma migrate dev --name init</td>
@@ -878,7 +968,7 @@ prisma</p>
 </tr>
 <tr>
 <td>yarn prisma generate</td>
-<td></td>
+<td>typeとer図生成</td>
 </tr>
 <tr>
 <td>yarn prisma studio</td>
@@ -886,7 +976,7 @@ prisma</p>
 </tr>
 <tr>
 <td>yarn dev</td>
-<td></td>
+<td>nuxt開発環境立ち上げ</td>
 </tr>
 <tr>
 <td>yarn nuxi typecheck</td>
@@ -894,15 +984,15 @@ prisma</p>
 </tr>
 <tr>
 <td>yarn vitest</td>
-<td></td>
+<td>test実行</td>
 </tr>
 <tr>
 <td>yarn vitest run --coverage</td>
-<td></td>
+<td>test実行（カバレッジ出力）</td>
 </tr>
 <tr>
 <td>yarn build</td>
-<td></td>
+<td>ビルド実行</td>
 </tr>
 <tr>
 <td>yarn generate</td>
@@ -910,11 +1000,11 @@ prisma</p>
 </tr>
 <tr>
 <td>yarn sls plugin install</td>
-<td></td>
+<td>slsのプラグインinstall</td>
 </tr>
 <tr>
 <td>yarn sls invoke local</td>
-<td></td>
+<td>slsのlocal実行</td>
 </tr>
 <tr>
 <td>yarn sls deploy</td>

@@ -2,6 +2,9 @@ import { PrismaClient } from '@prisma/client'
 
 import { ValueObject } from './core'
 
+// export type UserId = string
+export type User = any
+
 const UserRoleId = {
   admin: '00',
   guest: '99',
@@ -46,7 +49,7 @@ export class UserRepository {
     return deleteUser
   }
 
-  static async store(user) {
+  static async store(user: User) {
     const createdUser = await this.prisma.tUser.create({
       data: user,
     })
@@ -57,12 +60,12 @@ export class UserRepository {
 export class UserService {
   static prisma = new PrismaClient()
 
-  static async query(where, limit, offset, orderBy) {
+  static async query(where: any, limit: number, offset: number, orderBy: any) {
     const [items, total, aggs] = await Promise.all([
       this.prisma.tUser.findMany({
         where,
         include: { 
-          userRole: {
+          mUserRole: {
             select:{
               userRoleName:true
             }
@@ -73,11 +76,34 @@ export class UserService {
         orderBy,
       }),
       this.prisma.tUser.count({ where }),
-      this.prisma.tUser.groupBy({
-        by: ['userRoleId'],
-        where,
-        _count: true,
-      }),
+
+      // user 集計 ////////////////////////////////////
+      // this.prisma.tUser.groupBy({
+      //   by: ['userRoleId'],
+      //   where,
+      //   _count: true,
+      //   orderBy: {
+      //     _count: {
+      //       userRoleId: 'desc',
+      //       // select: {
+      //       //   userRoleName: true,
+      //       // }
+      //     }
+      //   },
+      //   // skip: 1,
+      //   // take: 1,
+      // }),
+      this.prisma.mUserRole.findMany({
+        include: {
+          // _count: true
+          _count: { select: { tUser: true} }
+        },
+        orderBy: {
+          tUser: {
+            _count: 'desc'
+          },
+        },
+      })
     ])
     return [items, total, aggs]
   }

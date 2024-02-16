@@ -27,7 +27,7 @@ test('adds 1 + 2 to equal 3', () => {
 
   const uid1 = new UserId('1')
   const uid12 = new UserId('1')
-  const uid2 = new UserId(2)
+  const uid2 = new UserId('2')
 
   // console.log(uid1 === uid1)
   console.log(uid1.equals(uid12))

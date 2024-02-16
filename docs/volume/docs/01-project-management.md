@@ -115,5 +115,8 @@ ER図を作成してデータの関係性を明示化する。
 
 # アジャイル開発
 
+# ガントチャート
+
+
 ## 参考
 - [MVP（Minimum Viable Product）の意味を理解する。そして、なぜ私はEarliest Testable / Usable / Lovableを好むのか。](https://www.ankr.design/designtips/making-sense-of-mvp)

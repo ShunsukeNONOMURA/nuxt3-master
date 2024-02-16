@@ -3,7 +3,8 @@ nuxt-plotly(
   :data='pieChart.data',
   :layout='pieChart.layout',
   :config='pieChart.config',
-  style='width: 100%'
+  style='width: 100%',
+  @on-ready="userGraphOnReady"
 )
 </template>
 
@@ -17,10 +18,14 @@ nuxt-plotly(
   //     },
   // ];
 
-  const config0 = { scrollZoom: true, displayModeBar: true }
+  const config0 = { 
+    scrollZoom: true, // zoom
+    displayModeBar: false, // menu bar
+  }
 
   const layout0 = {
-    title: '[layout0] Pie Chart on `PieChart.client.vue`',
+    title: 'title',
+    showlegend: false,
   }
 
   const pieChart = reactive({
@@ -31,4 +36,21 @@ nuxt-plotly(
     changeLayoutNo: 1,
     layout: layout0,
   })
+
+  const userGraphOnReady = (plotlyHTMLElement: any) => {
+    // console.log({ plotlyHTMLElement });
+
+    // plotlyHTMLElement.on?.("plotly_afterplot", function () {
+    //   console.log("done plotting");
+    // });
+
+    // クリック時の挙動追加
+    plotlyHTMLElement.on?.("plotly_click", function (d:any) {
+      const point = d.points[0]
+      const info = {
+        label: point.label
+      }
+      console.log(point)
+    });
+  }
 </script>

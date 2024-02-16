@@ -14,7 +14,7 @@
         <link rel="prev" href="91-construction-error-note.html">
       
       
-        <link rel="next" href="99-article/00-architect.html">
+        <link rel="next" href="glossary.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
@@ -243,8 +243,8 @@
   
   
     <li class="md-nav__item">
-      <a href="02-iconix.html" class="md-nav__link">
-        ICONIX
+      <a href="02-development-strategy-agile-iconix.html" class="md-nav__link">
+        開発戦略
       </a>
     </li>
   
@@ -363,8 +363,8 @@
   
   
     <li class="md-nav__item">
-      <a href="30-typescript-ddd.html" class="md-nav__link">
-        typescriptでDDD構築
+      <a href="22-development-tactics-log.html" class="md-nav__link">
+        （勉強中）ログ設計戦略
       </a>
     </li>
   
@@ -378,8 +378,68 @@
   
   
     <li class="md-nav__item">
-      <a href="60-test.html" class="md-nav__link">
-        テスト
+      <a href="22-development-tactics-test.html" class="md-nav__link">
+        （勉強中）テスト戦術
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="22-development-tactics-ui.html" class="md-nav__link">
+        （整理中）UI開発戦術
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="60-document-openapi.html" class="md-nav__link">
+        OpenAPI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="71-lib-nuxt-plotly.html" class="md-nav__link">
+        nuxt-plotly
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="80-typescript-ddd.html" class="md-nav__link">
+        typescriptでDDD構築
       </a>
     </li>
   
@@ -495,6 +555,13 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    ロバストネス図
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     メモ
   </a>
   
@@ -522,6 +589,36 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="glossary.html" class="md-nav__link">
+        用語集
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="role.html" class="md-nav__link">
+        ロール
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -530,17 +627,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_17" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_23" >
       
       
       
-        <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
           99 コラム
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_17">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_23">
           <span class="md-nav__icon md-icon"></span>
           99 コラム
         </label>
@@ -645,6 +742,13 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    ロバストネス図
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     メモ
   </a>
   
@@ -673,6 +777,9 @@
 
 
 <h1 id="_1">一時メモ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>フィジビリティスタディ（F/S）
+「実行可能性調査」「企業化調査」「投資調査」「採算性調査」</p>
+<p>バックログの単位</p>
 <p>opensearch JavaScript client
 <a href="https://opensearch.org/docs/latest/clients/javascript/index/">https://opensearch.org/docs/latest/clients/javascript/index/</a>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>yarn add @opensearch-project/opensearch
@@ -689,14 +796,39 @@
 <p>url = xxx&amp;connection_limit=1</p>
 <h2 id="_2">参考資料<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
+<li>typescript ddd<ul>
 <li><a href="https://zenn.dev/yamachan0625/books/ddd-hands-on">【DDD入門】TypeScript × ドメイン駆動設計ハンズオン</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="lodash">Lodashインポート時のファイルサイズを削減<a class="headerlink" href="#lodash" title="Permanent link">&para;</a></h2>
 <p><a href="https://qiita.com/ykhirao/items/c3f35373267798447dba">Lodashインポート時のファイルサイズを削減する</a>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>import get from &quot;lodash/get
 </code></pre></div></td></tr></table></div></p>
-<h2 id="_3">メモ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>なんちゃってアジャイル</p>
+<h2 id="_3">ロバストネス図<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>バウンダリ</td>
+<td>アクターが相互作用する画面やボタン</td>
+</tr>
+<tr>
+<td>エンティティ</td>
+<td>ソフトウェアシステム内部で半永久的に管理するデータ</td>
+</tr>
+<tr>
+<td>コントロール</td>
+<td>バウンダリとエンティティをつないでシステムが行う処理</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h2 id="vuetify-invalid-prop-custom-validator-check-failed-for-prop">Vuetify: Invalid prop: custom validator check failed for prop<a class="headerlink" href="#vuetify-invalid-prop-custom-validator-check-failed-for-prop" title="Permanent link">&para;</a></h2>
 <p><a href="https://qiita.com/Sicut_study/items/ed41eb541cb6a8eef410">Vuetify: Invalid prop: custom validator check failed for prop "value"エラーが発生する</a></p>
 <h1 id="minio">minIO<a class="headerlink" href="#minio" title="Permanent link">&para;</a></h1>

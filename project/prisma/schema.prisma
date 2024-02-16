@@ -24,7 +24,11 @@ model TUser {
   userCreationDatetime DateTime @default(now()) @map("user_creation_datetime")
   userUpdateDatetime   DateTime @default(now()) @map("user_update_datetime")
 
-  userRole MUserRole @relation(fields: [userRoleId], references: [userRoleId])
+  // TUser n <-> 1 MUserRole
+  mUserRole MUserRole @relation(fields: [userRoleId], references: [userRoleId])
+
+  // TChatMessage n <-> 1 TUser
+  tChatMessage TChatMessage[]
 
   @@map("t_user")
 }
@@ -36,4 +40,17 @@ model MUserRole {
   tUser TUser[]
 
   @@map("m_user_role")
+}
+
+model TChatMessage {
+  chatMessageId        String   @id @map("chat_message_id")
+  chatMessageContext   String   @map("chat_message")
+  chatMessageCreatedAt DateTime @default(now()) @map("chat_message_created_at")
+  chatMessageModifyAt  DateTime @default(now()) @map("chat_message_modify_at")
+  userId               String   @map("chat_message_user_id")
+
+  // TChatMessage n <-> 1 TUser
+  tUser TUser @relation(fields: [userId], references: [userId])
+
+  @@map("t_chat_message")
 }

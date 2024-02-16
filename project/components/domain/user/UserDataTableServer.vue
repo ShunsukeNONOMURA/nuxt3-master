@@ -7,6 +7,7 @@ v-data-table-server(:headers='userHeaders')
 </template>
 
 <script setup lang="ts">
+  import type { User } from '~/apps';
   const { t } = useI18n()
   const userHeaders = [
     {
@@ -37,7 +38,7 @@ v-data-table-server(:headers='userHeaders')
     (e: 'deleteUser', v: null): void
   }
   const emits = defineEmits<Emits>()
-  const deleteUser = (user) => {
+  const deleteUser = (user: User) => {
     // console.log(user)
     // this.$emit('deleteUser', user)
     emits('deleteUser', user)

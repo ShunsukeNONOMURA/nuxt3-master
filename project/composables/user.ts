@@ -1,3 +1,5 @@
+import type { User } from "~/apps"
+
 export const userStore = () => {
   const user: Ref<any> = ref({})
   const users: Ref<any> = ref({
@@ -14,7 +16,7 @@ export const userStore = () => {
   ])
 
   // query user
-  const queryUser = async (limit, offset) => {
+  const queryUser = async (limit: number, offset: number) => {
     // users.value = {
     //   loading: false,
     //   items: [{}],
@@ -39,8 +41,8 @@ export const userStore = () => {
 
     userAggs.value = [
       {
-        values: aggs.map((i) => i._count),
-        labels: aggs.map((i) => i.userRoleId),
+        values: aggs.map((i) => i._count.tUser),
+        labels: aggs.map((i) => i.userRoleName),
         type: 'pie',
       },
     ]
@@ -53,7 +55,7 @@ export const userStore = () => {
   }
 
   // create 1 user
-  const createUser = async (user) => {
+  const createUser = async (user: User) => {
     // console.log(user)
     const { data } = await useFetch('/api/user', {
       method: 'POST',
@@ -66,7 +68,7 @@ export const userStore = () => {
   }
 
   // delete 1 user
-  const deleteUser = async (user) => {
+  const deleteUser = async (user: User) => {
     console.log(user)
     // 削除
     const { data } = await useFetch(`/api/user/${user.userId}`, {

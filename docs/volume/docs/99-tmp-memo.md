@@ -1,5 +1,10 @@
 # 一時メモ
 
+フィジビリティスタディ（F/S）
+「実行可能性調査」「企業化調査」「投資調査」「採算性調査」
+
+バックログの単位
+
 opensearch JavaScript client
 https://opensearch.org/docs/latest/clients/javascript/index/
 ```
@@ -22,7 +27,8 @@ https://www.prisma.io/docs/orm/prisma-client/setup-and-configuration/databases-c
 url = xxx&connection_limit=1
 
 ## 参考資料
-- [【DDD入門】TypeScript × ドメイン駆動設計ハンズオン](https://zenn.dev/yamachan0625/books/ddd-hands-on)
+- typescript ddd
+    - [【DDD入門】TypeScript × ドメイン駆動設計ハンズオン](https://zenn.dev/yamachan0625/books/ddd-hands-on)
 
 ## Lodashインポート時のファイルサイズを削減
 [Lodashインポート時のファイルサイズを削減する](https://qiita.com/ykhirao/items/c3f35373267798447dba)
@@ -30,8 +36,14 @@ url = xxx&connection_limit=1
 import get from "lodash/get
 ```
 
+## ロバストネス図
+| 要素         | 概要                                                 |
+| ------------ | ---------------------------------------------------- |
+| バウンダリ   | アクターが相互作用する画面やボタン                   |
+| エンティティ | ソフトウェアシステム内部で半永久的に管理するデータ   |
+| コントロール | バウンダリとエンティティをつないでシステムが行う処理 |
+
 ## メモ
-なんちゃってアジャイル
 
 ## Vuetify: Invalid prop: custom validator check failed for prop
 [Vuetify: Invalid prop: custom validator check failed for prop "value"エラーが発生する](https://qiita.com/Sicut_study/items/ed41eb541cb6a8eef410)

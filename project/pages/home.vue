@@ -23,10 +23,12 @@ div
 </template>
 
 <script setup lang="ts">
+  import type { User } from '~/apps';
+
   const { users, userAggs, queryUser, createUser, deleteUser } = userStore()
 
   // 取得
-  const onUpdateUser = ({ page, itemsPerPage, sortBy }) => {
+  const onUpdateUser = ({ page, itemsPerPage, sortBy }: any) => {
     const offset = (page - 1) * itemsPerPage
     console.log(sortBy)
     queryUser(itemsPerPage, offset)
@@ -39,7 +41,7 @@ div
   }
 
   // 削除
-  const onDeleteUser = (user) => {
+  const onDeleteUser = (user: User) => {
     // console.log(user)
     deleteUser(user)
   }

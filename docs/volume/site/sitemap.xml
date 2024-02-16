@@ -2,92 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://0.0.0.0/mkdocs/index.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/00-introduction.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/01-project-management.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://0.0.0.0/mkdocs/02-iconix.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <loc>http://0.0.0.0/mkdocs/02-development-strategy-agile-iconix.html</loc>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/10-design.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/12-rdb.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/13-rdb-sql-anti-pattern.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/14-rdb-orm-prisma.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/20-architecte.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/21-architecte-api.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/22-architecte-ddd-cqrs.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://0.0.0.0/mkdocs/30-typescript-ddd.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <loc>http://0.0.0.0/mkdocs/22-development-tactics-log.html</loc>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://0.0.0.0/mkdocs/60-test.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <loc>http://0.0.0.0/mkdocs/22-development-tactics-test.html</loc>
+         <lastmod>2024-02-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://0.0.0.0/mkdocs/22-development-tactics-ui.html</loc>
+         <lastmod>2024-02-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://0.0.0.0/mkdocs/60-document-openapi.html</loc>
+         <lastmod>2024-02-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://0.0.0.0/mkdocs/71-lib-nuxt-plotly.html</loc>
+         <lastmod>2024-02-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://0.0.0.0/mkdocs/80-typescript-ddd.html</loc>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/90-construction.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/91-construction-error-note.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/99-tmp-memo.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://0.0.0.0/mkdocs/glossary.html</loc>
+         <lastmod>2024-02-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://0.0.0.0/mkdocs/role.html</loc>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/99-article/00-architect.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://0.0.0.0/mkdocs/99-article/memo.html</loc>
-         <lastmod>2024-02-13</lastmod>
+         <lastmod>2024-02-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

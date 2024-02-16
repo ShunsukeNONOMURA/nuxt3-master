@@ -33,6 +33,8 @@ DDDの派生の中でオニオンアーキテクチャを利用するものと�
     - RepositoryのImplement
     - ORMの定義
 
+[Onion Architecture](https://medium.com/expedia-group-tech/onion-architecture-deed8a554423)に一通り実例が載っているので参考になる。
+
 ## CQRS（command query responsibility segregation）
 CQRSは**情報の参照に使用するモデルと更新に使用するモデルに異なるものを使用する**アーキテクチャを指す。
 

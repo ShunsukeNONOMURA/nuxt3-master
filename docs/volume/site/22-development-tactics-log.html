@@ -8,18 +8,20 @@
       
       
       
-        <link rel="canonical" href="http://0.0.0.0/mkdocs/index.html">
+        <link rel="canonical" href="http://0.0.0.0/mkdocs/22-development-tactics-log.html">
       
       
+        <link rel="prev" href="22-architecte-ddd-cqrs.html">
       
-        <link rel="next" href="00-introduction.html">
+      
+        <link rel="next" href="22-development-tactics-test.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>Nuxt3 Master</title>
+        <title>（勉強中）ログ設計戦略 - Nuxt3 Master</title>
       
     
     
@@ -106,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              はじめに
+              （勉強中）ログ設計戦略
             
           </span>
         </div>
@@ -194,61 +196,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          はじめに
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         はじめに
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#todo-memo" class="md-nav__link">
-    todo memo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    リンク
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -409,11 +361,110 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="22-development-tactics-log.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          （勉強中）ログ設計戦略
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="22-development-tactics-log.html" class="md-nav__link md-nav__link--active">
         （勉強中）ログ設計戦略
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ログ出力の目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ログレベル
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    出力場所
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    フォーマット
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ログのセキュリティ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ログと変更履歴
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -662,15 +713,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#todo-memo" class="md-nav__link">
-    todo memo
+  <a href="#_2" class="md-nav__link">
+    ログ出力の目的
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    リンク
+  <a href="#_3" class="md-nav__link">
+    ログレベル
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    出力場所
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    フォーマット
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ログのセキュリティ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ログと変更履歴
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    参考
   </a>
   
 </li>
@@ -690,143 +790,116 @@
                   
 
 
-<h1 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/ShunsukeNONOMURA/nuxt3-master">Nuxt3環境のGithub Repository</a>にまつわるドキュメントを記載していくページ。
-本indexページは作業が一段落するまでは作業項目メモの置き場とする。</p>
+<h1 id="_1">（勉強中）ログ設計戦略<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">ログ出力の目的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li>開発戦略と開発戦術がなくては具体的な開発計画は立てれない</li>
-<li>開発戦術の具体例がなくて正しい行動に移せない</li>
+<li>障害解析</li>
+<li>ユーザーの利用状況分析</li>
 </ul>
-<p>5W1hの観点で開発を定義し、QCDを担保する。</p>
+<h2 id="_3">ログレベル<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Log4j</p>
 <table>
 <thead>
 <tr>
-<th align="left">5W1H</th>
-<th>要素</th>
+<th align="left">レベル</th>
+<th align="left">概要</th>
+<th align="left">説明</th>
+<th align="left">出力先</th>
+<th align="left">運用時の対応</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">なんのために（Why）</td>
-<td>ビジネス戦略</td>
+<td align="left">FATAL</td>
+<td align="left">致命的なエラー</td>
+<td align="left">プログラムの異常終了を伴うようなもの。コンソール等に即時出力することを想定</td>
+<td align="left">コンソール, ファイル</td>
+<td align="left">即時対応が必要</td>
 </tr>
 <tr>
-<td align="left">何を（What）</td>
-<td>要件定義</td>
+<td align="left">ERROR</td>
+<td align="left">エラー</td>
+<td align="left">予期しないその他の実行時エラー。コンソール等に即時出力することを想定</td>
+<td align="left">コンソール, ファイル</td>
+<td align="left">営業時間内のみ対応</td>
 </tr>
 <tr>
-<td align="left">誰が（Who）</td>
-<td>ロール</td>
+<td align="left">WARN</td>
+<td align="left">警告</td>
+<td align="left">廃要素となったAPIの使用、APIの不適切な使用、エラーに近い事象など。実行時に生じた異常とは言い切れないが正常とも異なる何らかの予期しない問題</td>
+<td align="left">コンソール, ファイル</td>
+<td align="left">次回リリースまでに対応</td>
 </tr>
 <tr>
-<td align="left">どこで（Where）</td>
-<td>開発環境</td>
+<td align="left">INFO</td>
+<td align="left">情報</td>
+<td align="left">実行時の何らかの注目すべき事象（開始や終了など）。メッセージ内容は簡潔に止めるべき</td>
+<td align="left">コンソール, ファイル</td>
+<td align="left">対応不要</td>
 </tr>
 <tr>
-<td align="left">どうやって（How）</td>
-<td>開発戦略、開発戦術</td>
+<td align="left">DEBUG</td>
+<td align="left">デバッグ情報</td>
+<td align="left">システムの動作状況に関する詳細な情報</td>
+<td align="left">ファイル</td>
+<td align="left">出力しない</td>
 </tr>
 <tr>
-<td align="left">いつまでに（When）</td>
-<td>開発計画</td>
+<td align="left">TRACE</td>
+<td align="left">トレース情報</td>
+<td align="left">デバッグ情報よりも、更に詳細な情報</td>
+<td align="left">ファイル</td>
+<td align="left">出力しない</td>
 </tr>
 </tbody>
 </table>
-<h2 id="todo-memo">todo memo<a class="headerlink" href="#todo-memo" title="Permanent link">&para;</a></h2>
+<h2 id="_4">出力場所<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>作業（ドキュメント作成 or 実装）</th>
-<th>状態</th>
+<th>出力場所</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>introduction</td>
-<td></td>
+<td>標準出力</td>
+<td>主にバッチアプリケーションなど、コンソールから起動する場合で、途中経過を出力する場合などに使用する。</td>
 </tr>
 <tr>
-<td>02-development-strategy-agile-iconix</td>
-<td>一旦完了</td>
+<td>標準エラー出力</td>
+<td>主にバッチアプリケーションなど、コンソールから起動する場合で、エラーが発生した場合などに使用する。標準出力に実行結果を出力する場合は、途中経過などに使用される場合もある。</td>
 </tr>
 <tr>
-<td>pm gantt chart</td>
-<td></td>
+<td>ファイル</td>
+<td>主にコンソール以外で起動されるアプリケーションに使用する</td>
 </tr>
 <tr>
-<td>typescript</td>
-<td></td>
-</tr>
-<tr>
-<td>nuxt</td>
-<td></td>
-</tr>
-<tr>
-<td>design</td>
-<td></td>
-</tr>
-<tr>
-<td>design ia</td>
-<td></td>
-</tr>
-<tr>
-<td>design ia 構造</td>
-<td></td>
-</tr>
-<tr>
-<td>desing component design</td>
-<td></td>
-</tr>
-<tr>
-<td>desing component design vue3</td>
-<td></td>
-</tr>
-<tr>
-<td>architect</td>
-<td></td>
-</tr>
-<tr>
-<td>architect ddd cqrs</td>
-<td></td>
-</tr>
-<tr>
-<td>architect api</td>
-<td></td>
-</tr>
-<tr>
-<td>sql 命名規則 DDL, schema</td>
-<td></td>
-</tr>
-<tr>
-<td>sql anti pattern</td>
-<td>o</td>
-</tr>
-<tr>
-<td>sql orm prisma</td>
-<td></td>
-</tr>
-<tr>
-<td>test</td>
-<td></td>
-</tr>
-<tr>
-<td>test static ESlint</td>
-<td></td>
-</tr>
-<tr>
-<td>test integration test vitest</td>
-<td></td>
-</tr>
-<tr>
-<td>test e2e Playwright</td>
+<td>- 不特定多数のユーザーがアクセス可能な場所に出力しない</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h2 id="_2">リンク<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_5">内容<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">フォーマット<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>[LOG_LEVEL] [timestamp] [request_id] [function_name] message
+</code></pre></div></td></tr></table></div>
+<h2 id="_7"><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_8">ログのセキュリティ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>各プロジェクトの個人情報保護指針に準拠すること。</p>
 <ul>
-<li><a href="https://github.com/ShunsukeNONOMURA/nuxt3-master">Github Repository</a></li>
-<li><a href="https://shunsukenonomura.github.io/nuxt3-master/project/coverage/index.html">vitest coverage</a></li>
+<li>例<ul>
+<li>個人情報は出力せずにマスク処理をかける。</li>
+<li>識別性が必要な場合はハッシュ関数を使用する。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_9">ログと変更履歴<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_10">参考<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://qiita.com/tadashiro_ninomiya/items/19c774898c68add6185e">今さら聞けないログの基本と設計指針</a></li>
+<li><a href="https://qiita.com/nanasess/items/350e59b29cceb2f122b3">ログ設計指針</a></li>
+<li><a href="https://zenn.dev/sungvalley/articles/a73e53a56beb09">Webアプリケーションログ出力の基本</a></li>
 </ul>
 
 

@@ -49,7 +49,7 @@ tests
 plugins
 prisma
 
-## よく使う コマンド チートシート
+## よく使うコマンドチートシート
 ### host環境
 | コマンド                          | 動作 |
 | --------------------------------- | ---- |
@@ -61,27 +61,27 @@ prisma
 | git push                          |      |
 
 ### コンテナ環境
-| コマンド                            | 動作 |
-| ----------------------------------- | ---- |
-| yarn install                        |      |
-| yarn add -D {libname}               |      |
-| yarn remove {libname}               |      |
-| yarn prisma format                  |      |
-| yarn prisma migrate reset           |      |
-| yarn prisma migrate dev --name init |      |
-| yarn prisma generate                |      |
-| yarn prisma studio                  |      |
-| yarn dev                            |      |
-| yarn nuxi typecheck                 |      |
-| yarn vitest                         |      |
-| yarn vitest run --coverage          |      |
-| yarn build                          |      |
-| yarn generate                       |      |
-| yarn sls plugin install             |      |
-| yarn sls invoke local               |      |
-| yarn sls deploy                     |      |
-| yarn sls deploy list                |      |
-| yarn sls remove                     |      |
+| コマンド                            | 動作                                      |
+| ----------------------------------- | ----------------------------------------- |
+| yarn install                        | package.jsonのライブラリをinstall         |
+| yarn add -D {libname}               | ライブラリを開発環境に追加                |
+| yarn remove {libname}               | ライブラリを削除                          |
+| yarn prisma format                  | .prismaファイルの整形                     |
+| yarn prisma migrate reset           | **取り扱い注意：RDB初期化（警告は出る）** |
+| yarn prisma migrate dev --name init |                                           |
+| yarn prisma generate                | typeとer図生成                            |
+| yarn prisma studio                  |                                           |
+| yarn dev                            | nuxt開発環境立ち上げ                      |
+| yarn nuxi typecheck                 |                                           |
+| yarn vitest                         | test実行                                  |
+| yarn vitest run --coverage          | test実行（カバレッジ出力）                |
+| yarn build                          | ビルド実行                                |
+| yarn generate                       |                                           |
+| yarn sls plugin install             | slsのプラグインinstall                    |
+| yarn sls invoke local               | slsのlocal実行                            |
+| yarn sls deploy                     |                                           |
+| yarn sls deploy list                |                                           |
+| yarn sls remove                     |                                           |
 
 
 ## ガイド
