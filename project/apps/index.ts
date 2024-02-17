@@ -70,6 +70,21 @@ export class UserService {
               userRoleName:true
             }
           },
+          tUserUserTagMap: {
+            // select : {
+            //   tUserTag: true,
+            // },
+            select:{
+              tUserTag: {
+                select:{
+                  userTagId:true,
+                  userTagName:true,
+                },
+              },
+            },
+            take: 10,
+            // skip: 0,
+          }
         },
         take: limit,
         skip: offset,

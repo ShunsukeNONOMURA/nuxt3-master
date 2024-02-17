@@ -39,22 +39,28 @@ RDB設計についての勘所についてまとめるページ
 - 略称利用ルール設定
     - 略称多用は可読性に悪影響
 - テーブル名の役割プレフィックス
+    - 用途説明とドメインモデルの名称と強く区別するために記述
     - 例
         - m:マスタ
         - t:トランザクション 
         - h:ヒストリ 
         - v:ビュー 
         - mv:マテビュー
+- テーブル名の役割サフィックス
+    - テーブル間の関係性を記述
+    - 例
+        - map:中間テーブル
 - カラム名のプレフィックスに（テーブル名の役割プレフィックスを省略して）テーブル名をつける
     - データベース内でカラム名がほとんど重複しない
     - 例
+        - t_merchandise.merchandise_id (テーブル名の役割プレフィックスを省略)
         - t_merchandise.t_merchandise_id
         - t_merchandise.t_merchandise_m_merchandise_category_id
-        - t_merchandise.merchandise_id (テーブル名の役割プレフィックスを省略)
 - カラム名予約
     - よく使う情報についてはあらかじめ共通名を付けておく
     - 例
         - created_at : 作成時刻
+        - updated_at : 更新時刻
 
 <!-- examlple -------------------------------------------- -->
 
@@ -143,6 +149,9 @@ drop table app.m_user_role;
 ## 参考
 - [【データベース設計】 テーブル名、カラム名の名前の付け方（命名規則）](https://www.softel.co.jp/blogs/tech/archives/627)
 - [データベースの命名規則](https://avinton.com/academy/database-naming-conventions/)
+
+- [Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
+    - [Naming N:N connectivity tables](https://stackoverflow.com/questions/2253374/naming-nn-connectivity-tables)
 
 ## メモ
 SQLインジェクション

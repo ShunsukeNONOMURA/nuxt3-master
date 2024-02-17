@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="http://0.0.0.0/mkdocs/12-rdb.html">
+        <link rel="canonical" href="http://0.0.0.0/mkdocs/22-development-tactics-rdb.html">
       
       
-        <link rel="prev" href="10-design.html">
+        <link rel="prev" href="22-development-tactics-log.html">
       
       
-        <link rel="next" href="13-rdb-sql-anti-pattern.html">
+        <link rel="next" href="22-development-tactics-test.html">
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
@@ -271,6 +271,96 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="13-rdb-sql-anti-pattern.html" class="md-nav__link">
+        SQLアンチパターン
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="14-rdb-orm-prisma.html" class="md-nav__link">
+        （途中）スキーマ
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20-architecte.html" class="md-nav__link">
+        設計
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="22-development-tactics-api.html" class="md-nav__link">
+        （記述中）API設計
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="22-development-tactics-ddd-cqrs.html" class="md-nav__link">
+        （途中）DDD + CQRS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="22-development-tactics-log.html" class="md-nav__link">
+        （勉強中）ログ設計戦略
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -287,7 +377,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="12-rdb.html" class="md-nav__link md-nav__link--active">
+      <a href="22-development-tactics-rdb.html" class="md-nav__link md-nav__link--active">
         （途中）RDB設計
       </a>
       
@@ -414,96 +504,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="13-rdb-sql-anti-pattern.html" class="md-nav__link">
-        SQLアンチパターン
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="14-rdb-orm-prisma.html" class="md-nav__link">
-        （途中）スキーマ
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="20-architecte.html" class="md-nav__link">
-        設計
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="21-architecte-api.html" class="md-nav__link">
-        （記述中）API設計
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="22-architecte-ddd-cqrs.html" class="md-nav__link">
-        （途中）DDD + CQRS
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="22-development-tactics-log.html" class="md-nav__link">
-        （勉強中）ログ設計戦略
-      </a>
     </li>
   
 
@@ -924,6 +924,7 @@
 </ul>
 </li>
 <li>テーブル名の役割プレフィックス<ul>
+<li>用途説明とドメインモデルの名称と強く区別するために記述</li>
 <li>例<ul>
 <li>m:マスタ</li>
 <li>t:トランザクション </li>
@@ -934,12 +935,20 @@
 </li>
 </ul>
 </li>
+<li>テーブル名の役割サフィックス<ul>
+<li>テーブル間の関係性を記述</li>
+<li>例<ul>
+<li>map:中間テーブル</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>カラム名のプレフィックスに（テーブル名の役割プレフィックスを省略して）テーブル名をつける<ul>
 <li>データベース内でカラム名がほとんど重複しない</li>
 <li>例<ul>
+<li>t_merchandise.merchandise_id (テーブル名の役割プレフィックスを省略)</li>
 <li>t_merchandise.t_merchandise_id</li>
 <li>t_merchandise.t_merchandise_m_merchandise_category_id</li>
-<li>t_merchandise.merchandise_id (テーブル名の役割プレフィックスを省略)</li>
 </ul>
 </li>
 </ul>
@@ -948,6 +957,7 @@
 <li>よく使う情報についてはあらかじめ共通名を付けておく</li>
 <li>例<ul>
 <li>created_at : 作成時刻</li>
+<li>updated_at : 更新時刻</li>
 </ul>
 </li>
 </ul>
@@ -1085,7 +1095,15 @@
 <h2 id="_10">参考<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.softel.co.jp/blogs/tech/archives/627">【データベース設計】 テーブル名、カラム名の名前の付け方（命名規則）</a></li>
-<li><a href="https://avinton.com/academy/database-naming-conventions/">データベースの命名規則</a></li>
+<li>
+<p><a href="https://avinton.com/academy/database-naming-conventions/">データベースの命名規則</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Associative_entity">Associative entity</a></p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/2253374/naming-nn-connectivity-tables">Naming N:N connectivity tables</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="_11">メモ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <p>SQLインジェクション</p>
