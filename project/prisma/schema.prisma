@@ -1,10 +1,20 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+generator dbml {
+  provider = "prisma-dbml-generator"
+  output   = "./dbml"
+}
+
 generator erd {
-  provider = "prisma-erd-generator"
-  output   = "./erd.md" // mermaid形式
+  provider                  = "prisma-erd-generator"
+  output                    = "./erd.md" // mermaid形式
   //output   = "./erd.svg" // svg形式（エラー出るので不可）
+  //theme = "forest"
+  //includeRelationFromFields = true
+  //erdDebug = true
+  //tableOnly = true
+  includeRelationFromFields = true
 }
 
 generator client {
@@ -17,6 +27,8 @@ datasource db {
   //url      = env("DATABASE_URL")
   url      = "file:./dev.db?connection_limit=1"
 }
+
+//////////////////////////////////////////////////////
 
 model TUser {
   userId        String   @id @map("user_id")
@@ -43,7 +55,7 @@ model MUserRole {
 }
 
 model TUserTag {
-  userTagId        String   @id @map("user_tag_id") @default(cuid())
+  userTagId        String   @id @default(cuid()) @map("user_tag_id")
   userTagName      String   @map("user_tag_name")
   userTagCreatedAt DateTime @default(now()) @map("user_tag_created_at")
   userTagUpdatedAt DateTime @default(now()) @map("user_tag_updated_at")
@@ -78,7 +90,7 @@ model TChat {
 
 model TChatMessage {
   chatMessageId        String   @id @default(cuid()) @map("chat_message_id")
-  chatMessageContext   String   @map("chat_message")
+  chatMessageContext   String   @map("chat_message_context")
   chatMessageCreatedAt DateTime @default(now()) @map("chat_message_created_at")
   chatMessageUpdatedAt DateTime @default(now()) @map("chat_message_updated_at")
   userId               String   @map("user_id")
@@ -90,15 +102,19 @@ model TChatMessage {
   @@map("t_chat_message")
 }
 
-model Actor {
-  actorId String @id
+model TActor {
+  actorId String @id @map("actor_id")
 
-  film Film[]
+  tFilm TFilm[]
+
+  @@map("t_actor")
 }
 
-model Film {
-  filmId  String @id
-  actorId String
+model TFilm {
+  filmId  String @id @map("film_id")
+  actorId String @map("actor_id")
 
-  actor Actor @relation(fields: [actorId], references: [actorId])
+  tActor TActor @relation(fields: [actorId], references: [actorId])
+
+  @@map("t_film")
 }

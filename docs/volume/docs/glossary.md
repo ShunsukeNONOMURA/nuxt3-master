@@ -13,6 +13,8 @@
 <!-- 
 フィジビリティスタディ（F/S）
 
+UML
+
 開発戦略
 ウォーターフォール開発
 アジャイル開発
@@ -62,6 +64,8 @@ vite
 nuxt3
 orm
 prisma
+
+Playwrite
 
 OpenAPI
 

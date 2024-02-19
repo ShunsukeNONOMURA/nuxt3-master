@@ -1,0 +1,1936 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://0.0.0.0/mkdocs/900-report-construction.html">
+      
+      
+        <link rel="prev" href="800-typescript-ddd.html">
+      
+      
+        <link rel="next" href="901-report-construction-error.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+    
+    
+      
+        <title>レポート：構築記録 - Nuxt3 Master</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="index.html" title="Nuxt3 Master" class="md-header__button md-logo" aria-label="Nuxt3 Master" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nuxt3 Master
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              レポート：構築記録
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Nuxt3 Master" class="md-nav__button md-logo" aria-label="Nuxt3 Master" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Nuxt3 Master
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    はじめに
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="000-introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    このgitリポジトリについて
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="001-strategy-ux.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）戦略：UX設計戦略
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="002-strategy-agile-iconix.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    戦略：Agile ICONIX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="210-requirement-domain-model.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）要件定義：ドメインモデリング
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="211-requirement-usecase.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）要件定義：ユースケース
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="220-requirement-robustness-analysis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）分析：ロバストネス分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="300-design-api.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）設計：API設計
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="300-design-test.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）設計：テスト設計
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="300-design-ui.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）設計：UI設計
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="350-design-ddd-cqrs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）設計：（DDD + CQRS）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="370-design-rdb.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）設計：RDB設計
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="371-design-rdb-sql-anti-pattern.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    設計：SQLアンチパターン
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="380-design-log.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）設計：ログ設計
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="500-framework-nuxt3.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）nuxt3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="500-project-management.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）プロジェクトマネジメント
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="600-document-openapi.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）OpenAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="601-document-license.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）ライセンス
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="710-lib-nuxt-plotly.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）ライブラリ：nuxt-plotly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="710-lib-playwright.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）ライブラリ：Playwright
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="710-lib-prisma.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）ライブラリ：prisma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="800-security-cvss.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    （記述中）セキュリティ：CVSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="800-typescript-ddd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    typescriptでDDD構築
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    レポート：構築記録
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="900-report-construction.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    レポート：構築記録
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nuxt3" class="md-nav__link">
+    <span class="md-ellipsis">
+      nuxt3プロジェクトの作成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vuetify" class="md-nav__link">
+    <span class="md-ellipsis">
+      vuetify導入
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vuetify導入">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vuetify3vdatepicker" class="md-nav__link">
+    <span class="md-ellipsis">
+      vuetify3のVDatePickerの日本語化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-data-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      v-data-table系の日本語化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pug" class="md-nav__link">
+    <span class="md-ellipsis">
+      pugの追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescripttypecheck" class="md-nav__link">
+    <span class="md-ellipsis">
+      typescriptとtypecheckの追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverless-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      serverless framework の追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prisma" class="md-nav__link">
+    <span class="md-ellipsis">
+      prismaを追加
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="prismaを追加">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#er" class="md-nav__link">
+    <span class="md-ellipsis">
+      ER図出力
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      i18n追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eslintprettier" class="md-nav__link">
+    <span class="md-ellipsis">
+      eslint/prettier 追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vitest" class="md-nav__link">
+    <span class="md-ellipsis">
+      vitest 追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lodash" class="md-nav__link">
+    <span class="md-ellipsis">
+      lodash 追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuxt-plotly" class="md-nav__link">
+    <span class="md-ellipsis">
+      nuxt-plotly 追加
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="901-report-construction-error.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    レポート：構築時に詰まったこと
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="command.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    コマンドラインチートシート
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    用語集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="role.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ロール
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_29" >
+        
+          
+          <label class="md-nav__link" for="__nav_29" id="__nav_29_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    999 一時作成
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_29">
+            <span class="md-nav__icon md-icon"></span>
+            999 一時作成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="999-tmp/00-architect.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    設計ガイドライン作成に際して
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="999-tmp/100-memo-planning.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    企画
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="999-tmp/200-memo-dev.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    メモ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="999-tmp/999-tmp-memo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一時メモ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nuxt3" class="md-nav__link">
+    <span class="md-ellipsis">
+      nuxt3プロジェクトの作成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vuetify" class="md-nav__link">
+    <span class="md-ellipsis">
+      vuetify導入
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vuetify導入">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vuetify3vdatepicker" class="md-nav__link">
+    <span class="md-ellipsis">
+      vuetify3のVDatePickerの日本語化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-data-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      v-data-table系の日本語化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pug" class="md-nav__link">
+    <span class="md-ellipsis">
+      pugの追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescripttypecheck" class="md-nav__link">
+    <span class="md-ellipsis">
+      typescriptとtypecheckの追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serverless-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      serverless framework の追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prisma" class="md-nav__link">
+    <span class="md-ellipsis">
+      prismaを追加
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="prismaを追加">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#er" class="md-nav__link">
+    <span class="md-ellipsis">
+      ER図出力
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      i18n追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eslintprettier" class="md-nav__link">
+    <span class="md-ellipsis">
+      eslint/prettier 追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vitest" class="md-nav__link">
+    <span class="md-ellipsis">
+      vitest 追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lodash" class="md-nav__link">
+    <span class="md-ellipsis">
+      lodash 追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuxt-plotly" class="md-nav__link">
+    <span class="md-ellipsis">
+      nuxt-plotly 追加
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">レポート：構築記録<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>このリポジトリを作成したときの手順についての記録。<br />
+作業を羅列的に記述するに留める。</p>
+<h2 id="nuxt3">nuxt3プロジェクトの作成<a class="headerlink" href="#nuxt3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>// 初期化
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>npx nuxi@latest init project
+</code></pre></div></td></tr></table></div>
+<p>nuxt.config.tsの設定を更新
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineNuxtConfig</span><span class="p">({</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="c1">// nuxt設定</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nx">vite</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">      </span><span class="c1">// env</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">      </span><span class="nx">define</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">          </span><span class="s2">&quot;process.env.DEBUG&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">      </span><span class="c1">// Hot Module Reload</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">      </span><span class="nx">server</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">          </span><span class="nx">watch</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">              </span><span class="nx">usePolling</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">      </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;~/components&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">      </span><span class="nx">pathPrefix</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// pathによるprefixを使用するか</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div></p>
+<p>参考：<a href="https://qiita.com/mml/items/9936471c551ee3f15218">https://qiita.com/mml/items/9936471c551ee3f15218</a></p>
+<h2 id="vuetify">vuetify導入<a class="headerlink" href="#vuetify" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>// vuetify
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>yarn add -D vuetify sass vite-plugin-vuetify
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>yarn add @mdi/font
+</code></pre></div></td></tr></table></div>
+<p>plugins/nuxt.config.tsを作成。必要に応じて適宜設定する。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span>
+<span class="normal"><a href="#__codelineno-3-34">34</a></span>
+<span class="normal"><a href="#__codelineno-3-35">35</a></span>
+<span class="normal"><a href="#__codelineno-3-36">36</a></span>
+<span class="normal"><a href="#__codelineno-3-37">37</a></span>
+<span class="normal"><a href="#__codelineno-3-38">38</a></span>
+<span class="normal"><a href="#__codelineno-3-39">39</a></span>
+<span class="normal"><a href="#__codelineno-3-40">40</a></span>
+<span class="normal"><a href="#__codelineno-3-41">41</a></span>
+<span class="normal"><a href="#__codelineno-3-42">42</a></span>
+<span class="normal"><a href="#__codelineno-3-43">43</a></span>
+<span class="normal"><a href="#__codelineno-3-44">44</a></span>
+<span class="normal"><a href="#__codelineno-3-45">45</a></span>
+<span class="normal"><a href="#__codelineno-3-46">46</a></span>
+<span class="normal"><a href="#__codelineno-3-47">47</a></span>
+<span class="normal"><a href="#__codelineno-3-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createVuetify</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vuetify&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">components</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vuetify/components&#39;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">// theme</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">MAIN_THEME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;mainTheme&#39;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">mainTheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="nx">dark</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="nx">background</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="nx">surface</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="nx">primary</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4f46e5&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="nx">secondary</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#9333ea&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#ef4444&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">        </span><span class="nx">info</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#3b82f6&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#22c55e&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">        </span><span class="nx">warning</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#f59e0b&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="p">}</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="c1">// default</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="kd">const</span><span class="w"> </span><span class="nx">defaults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="c1">// VAppBar: {</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">    </span><span class="c1">//   flat: true,</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">    </span><span class="c1">//   color: &#39;primary&#39;,</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">    </span><span class="c1">// },</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="p">}</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineNuxtPlugin</span><span class="p">(</span><span class="w"> </span><span class="nx">nuxtApp</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">vuetify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createVuetify</span><span class="p">({</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">        </span><span class="nx">ssr</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">        </span><span class="nx">defaults</span><span class="p">,</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">        </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">            </span><span class="nx">defaultTheme</span><span class="o">:</span><span class="w"> </span><span class="kt">MAIN_THEME</span><span class="p">,</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">            </span><span class="nx">themes</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">                </span><span class="nx">mainTheme</span><span class="p">,</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">            </span><span class="c1">// primary-darken-9 primary-lighten-9 までできるようにする</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">            </span><span class="nx">variations</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">                </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;primary&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;secondary&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;accent&#39;</span><span class="p">],</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">                </span><span class="nx">lighten</span><span class="o">:</span><span class="w"> </span><span class="kt">9</span><span class="p">,</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="w">                </span><span class="nx">darken</span><span class="o">:</span><span class="w"> </span><span class="kt">9</span><span class="p">,</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">            </span><span class="p">},</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">        </span><span class="nx">components</span><span class="p">,</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46"></a>
+<a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">    </span><span class="nx">nuxtApp</span><span class="p">.</span><span class="nx">vueApp</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="w"> </span><span class="nx">vuetify</span><span class="w"> </span><span class="p">);</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<p>nuxt.config.tsを編集
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// https://nuxt.com/docs/api/configuration/nuxt-config</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineNuxtConfig</span><span class="p">({</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="c1">// vuetify設定</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="nx">css</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="s2">&quot;vuetify/lib/styles/main.sass&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="s2">&quot;@mdi/font/css/materialdesignicons.css&quot;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span><span class="nx">build</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">      </span><span class="nx">transpile</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;vuetify&quot;</span><span class="p">]</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="vuetify3vdatepicker">vuetify3のVDatePickerの日本語化<a class="headerlink" href="#vuetify3vdatepicker" title="Permanent link">&para;</a></h3>
+<p><a href="https://zenn.dev/iandcinc/articles/0a9cffe7012711">Vuetify3のVDatePickerの日本語化</a>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>yarn add @date-io/date-fns date-fns
+</code></pre></div></td></tr></table></div></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">DateFnsAdapter</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@date-io/date-fns&#39;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ja</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;date-fns/locale&#39;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineNuxtPlugin</span><span class="p">((</span><span class="nx">nuxtApp</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">vuetify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createVuetify</span><span class="p">({</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="nx">date</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">      </span><span class="nx">adapter</span><span class="o">:</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span><span class="nx">DateFnsAdapter</span><span class="p">({</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="nx">formats</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">          </span><span class="nx">year</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;yyyy年&#39;</span><span class="p">,</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">          </span><span class="nx">monthAndYear</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;yyyy年M月&#39;</span><span class="p">,</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">          </span><span class="nx">normalDateWithWeekday</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;M月d日(E)&#39;</span><span class="p">,</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">        </span><span class="nx">locale</span><span class="o">:</span><span class="w"> </span><span class="kt">ja</span><span class="p">,</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">      </span><span class="p">}),</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">  </span><span class="nx">nuxtApp</span><span class="p">.</span><span class="nx">vueApp</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">vuetify</span><span class="p">)</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="v-data-table">v-data-table系の日本語化<a class="headerlink" href="#v-data-table" title="Permanent link">&para;</a></h3>
+<p>createVuetifyする際に下記のようなdefaultを指定する。</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">defaults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="nx">VDataTableServer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="nx">noDataText</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;データがありません。&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="nx">itemsPerPageText</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1ページあたりの表示数&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="nx">itemsPerPageOptions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">5</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;5件&#39;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">10</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;10件&#39;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">25</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;25件&#39;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">50</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;50件&#39;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">100</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;100件&#39;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">      </span><span class="c1">// { value: -1, title: &#39;すべて&#39; }</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="nx">pageText</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;{0}-{1} 件 / {2} 件中&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="pug">pugの追加<a class="headerlink" href="#pug" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>yarn add -D pug
+</code></pre></div></td></tr></table></div>
+<h2 id="typescripttypecheck">typescriptとtypecheckの追加<a class="headerlink" href="#typescripttypecheck" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>yarn add -D typescript vue-tsc
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>npx nuxi typecheck
+</code></pre></div></td></tr></table></div>
+<p>下記のコマンドからtypecheck可能
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>yarn nuxi typecheck
+</code></pre></div></td></tr></table></div></p>
+<h2 id="serverless-framework">serverless framework の追加<a class="headerlink" href="#serverless-framework" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>yarn add -D serverless
+</code></pre></div></td></tr></table></div>
+<p>nuxt.config.tsを編集してaws用にビルドタイプ変更。ついでにopenAPIを表示するように設定。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TypeScript</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1">// https://nuxt.com/docs/api/configuration/nuxt-config</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineNuxtConfig</span><span class="p">({</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">  </span><span class="c1">// sls設定</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="nx">nitro</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="nx">preset</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;aws-lambda&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// lambda用のビルド指定</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="nx">serveStatic</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span><span class="w"> </span><span class="c1">// lambdaからバイナリを直接払い出す指定</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="nx">experimental</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">        </span><span class="nx">openAPI</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="w"> </span><span class="c1">// swagger</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">  </span><span class="nx">ssr</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="p">})</span>
+</code></pre></div></td></tr></table></div></p>
+<p>serverless.ymlを作成
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span>
+<span class="normal"><a href="#__codelineno-13-27">27</a></span>
+<span class="normal"><a href="#__codelineno-13-28">28</a></span>
+<span class="normal"><a href="#__codelineno-13-29">29</a></span>
+<span class="normal"><a href="#__codelineno-13-30">30</a></span>
+<span class="normal"><a href="#__codelineno-13-31">31</a></span>
+<span class="normal"><a href="#__codelineno-13-32">32</a></span>
+<span class="normal"><a href="#__codelineno-13-33">33</a></span>
+<span class="normal"><a href="#__codelineno-13-34">34</a></span>
+<span class="normal"><a href="#__codelineno-13-35">35</a></span>
+<span class="normal"><a href="#__codelineno-13-36">36</a></span>
+<span class="normal"><a href="#__codelineno-13-37">37</a></span>
+<span class="normal"><a href="#__codelineno-13-38">38</a></span>
+<span class="normal"><a href="#__codelineno-13-39">39</a></span>
+<span class="normal"><a href="#__codelineno-13-40">40</a></span>
+<span class="normal"><a href="#__codelineno-13-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>service: nonomura-lambda-ssr-nuxt3
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>frameworkVersion: &#39;3&#39;
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>custom:
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>  author: ${opt:author, &quot;nonomura&quot;}
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>  stage: ${opt:stage, &quot;dev&quot;}
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>  region: ${opt:region, &quot;ap-northeast-1&quot;}
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>provider:
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>  name: aws
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>  runtime: nodejs20.x
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>  stage: ${self:custom.stage}
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>  region: ${self:custom.region}
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a>  versionFunctions: false
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>  logRetentionInDays: 3 # Cloudwatchのログ保存期間日数
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a>package:
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a>  patterns:
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>    - &#39;!**&#39;
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>    - &#39;.output/**&#39;
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a>    # - &#39;.output/server/**&#39; # nuxt run buildの出力ディレクトリのサーバーサイドのみを指定
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a>functions:
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a>  NuxtSsrCore:
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a>    name: ${self:custom.author}-nuxt-${self:custom.stage}
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a>    handler: &#39;.output/server/index.handler&#39;
+<a id="__codelineno-13-27" name="__codelineno-13-27"></a>    url: true
+<a id="__codelineno-13-28" name="__codelineno-13-28"></a>    events:
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a>      # - http: # REST API
+<a id="__codelineno-13-30" name="__codelineno-13-30"></a>      #     method: ANY
+<a id="__codelineno-13-31" name="__codelineno-13-31"></a>      #     path: /{proxy+}
+<a id="__codelineno-13-32" name="__codelineno-13-32"></a>      - httpApi: # HTTP API
+<a id="__codelineno-13-33" name="__codelineno-13-33"></a>          method: ANY
+<a id="__codelineno-13-34" name="__codelineno-13-34"></a>          path: /{proxy+}
+<a id="__codelineno-13-35" name="__codelineno-13-35"></a>      # - schedule: 
+<a id="__codelineno-13-36" name="__codelineno-13-36"></a>      #     rate: rate(5 minutes) # 定期実行（コールド対策） 
+<a id="__codelineno-13-37" name="__codelineno-13-37"></a>      #     input: # health check
+<a id="__codelineno-13-38" name="__codelineno-13-38"></a>      #       resource: &quot;/{proxy+}&quot;
+<a id="__codelineno-13-39" name="__codelineno-13-39"></a>      #       path: &quot;/api/health&quot;
+<a id="__codelineno-13-40" name="__codelineno-13-40"></a>      #       httpMethod: &quot;GET&quot;
+<a id="__codelineno-13-41" name="__codelineno-13-41"></a>      #       requestContext: {}
+</code></pre></div></td></tr></table></div></p>
+<p>.aws/credentialsを編集してawsへの認証情報を追加
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>[default]
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>aws_access_key_id=XXX
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>aws_secret_access_key=XXX
+</code></pre></div></td></tr></table></div></p>
+<h2 id="prisma">prismaを追加<a class="headerlink" href="#prisma" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>yarn add -D prisma
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>yarn add @prisma/client
+</code></pre></div></td></tr></table></div>
+<p>初期フォルダ作成
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>yarn prisma init --datasource-provider sqlite
+</code></pre></div></td></tr></table></div></p>
+<p>prisma/schema.prismaを編集
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span>
+<span class="normal"><a href="#__codelineno-17-19">19</a></span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span>
+<span class="normal"><a href="#__codelineno-17-21">21</a></span>
+<span class="normal"><a href="#__codelineno-17-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>// This is your Prisma schema file,
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>// learn more about it in the docs: https://pris.ly/d/prisma-schema
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>generator client {
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>  provider = &quot;prisma-client-js&quot;
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>  binaryTargets   = [&quot;native&quot;, &quot;rhel-openssl-3.0.x&quot;] // lambda用にrhelを追加
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>}
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>datasource db {
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>  provider = &quot;sqlite&quot;
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a>  //url      = env(&quot;DATABASE_URL&quot;)
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a>  url = &quot;file:./dev.db?connection_limit=1&quot;
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>}
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a>model TUser {
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a>  userId String @id @map(&quot;user_id&quot;)
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a>  userName String @map(&quot;user_name&quot;)
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a>  userRoleId String @map(&quot;user_role_id&quot;)
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a>  userCreationDatetime DateTime @default(now()) @map(&quot;user_creation_datetime&quot;)
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a>  userUpdateDatetime DateTime @default(now()) @map(&quot;user_update_datetime&quot;)
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a>  @@map(&quot;t_user&quot;)
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a>}
+</code></pre></div></td></tr></table></div></p>
+<p>sqliteを初期化
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>yarn prisma migrate reset
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>yarn prisma migrate dev --name init
+</code></pre></div></td></tr></table></div></p>
+<p>参考：<a href="https://note.com/shift_tech/n/n800e789c6984">https://note.com/shift_tech/n/n800e789c6984</a></p>
+<h3 id="er">ER図出力<a class="headerlink" href="#er" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>yarn add -D prisma-erd-generator @mermaid-js/mermaid-cli
+</code></pre></div></td></tr></table></div>
+<p>schema.prisma に追記
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>generator erd {
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>  provider = &quot;prisma-erd-generator&quot;
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>}
+</code></pre></div></td></tr></table></div></p>
+<h2 id="i18n">i18n追加<a class="headerlink" href="#i18n" title="Permanent link">&para;</a></h2>
+<p><a href="https://nuxt.com/modules/i18n">https://nuxt.com/modules/i18n</a>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>yarn add -D @nuxtjs/i18n@next
+</code></pre></div></td></tr></table></div></p>
+<p>locales/ja.yml追加
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>domain:
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>    welcome: ようこそ
+</code></pre></div></td></tr></table></div></p>
+<p>nuxt.config.ts更新
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span>
+<span class="normal"><a href="#__codelineno-23-16">16</a></span>
+<span class="normal"><a href="#__codelineno-23-17">17</a></span>
+<span class="normal"><a href="#__codelineno-23-18">18</a></span>
+<span class="normal"><a href="#__codelineno-23-19">19</a></span>
+<span class="normal"><a href="#__codelineno-23-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>export default defineNuxtConfig({
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>  modules: [
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>    // i18n
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>    [
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>      &quot;@nuxtjs/i18n&quot;,
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a>      {
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>        // デフォルト言語を除くすべてのルートにロケールプレフィックスを追加
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a>        strategy: &#39;prefix_except_default&#39;,
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a>        // 使用する言語
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a>        locales: [
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a>          { code: &#39;ja&#39;, file: &#39;ja.yml&#39;, iso: &#39;ja-JP&#39; },
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a>        ],
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a>        // デフォルトの言語
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a>        defaultLocale: &#39;ja&#39;,
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a>        // 翻訳ファイルの置き場所
+<a id="__codelineno-23-16" name="__codelineno-23-16"></a>        langDir: &#39;locales/&#39;,
+<a id="__codelineno-23-17" name="__codelineno-23-17"></a>      }
+<a id="__codelineno-23-18" name="__codelineno-23-18"></a>    ]
+<a id="__codelineno-23-19" name="__codelineno-23-19"></a>  ],
+<a id="__codelineno-23-20" name="__codelineno-23-20"></a>})
+</code></pre></div></td></tr></table></div></p>
+<h2 id="eslintprettier">eslint/prettier 追加<a class="headerlink" href="#eslintprettier" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>yarn add -D @nuxtjs/eslint-config-typescript eslint
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>yarn add -D eslint-plugin-vue eslint-plugin-vue-pug
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>yarn add -D prettier eslint-config-prettier @vue/eslint-config-prettier
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>yarn add -D @prettier/plugin-pug
+</code></pre></div></td></tr></table></div>
+<p>.eslintrc.ymlを作成
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span>
+<span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span>
+<span class="normal"><a href="#__codelineno-25-13">13</a></span>
+<span class="normal"><a href="#__codelineno-25-14">14</a></span>
+<span class="normal"><a href="#__codelineno-25-15">15</a></span>
+<span class="normal"><a href="#__codelineno-25-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>root: true
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>env: { node: true, es2021: true }
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>extends:
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>  - &#39;eslint:recommended&#39;
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>  - &#39;@nuxtjs/eslint-config-typescript&#39;
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a>  - &#39;plugin:vue-pug/vue3-recommended&#39;
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>  - &#39;prettier&#39;
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a>  - &#39;@vue/prettier&#39;
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a>parserOptions: { ecmaVersion: &#39;latest&#39;, sourceType: &#39;module&#39; }
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a>plugins: [&#39;vue&#39;, &#39;@typescript-eslint&#39;]
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a>rules: {
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a>    # コンソールログの出力に関して
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a>    no-console: off,
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a>    # 複合語のみコンポーネント名とするか
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a>    vue/multi-word-component-names: off,
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a>  }
+</code></pre></div></td></tr></table></div></p>
+<p>.prettierrc.ymlを作成
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span>
+<span class="normal"><a href="#__codelineno-26-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>singleQuote: true
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>semi: false
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>tabWidth: 2
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>vueIndentScriptAndStyle: true
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>trailingComma: &#39;es5&#39;
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a>plugins: [&#39;@prettier/plugin-pug&#39;]
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li><a href="https://diary-shoone.hatenablog.com/entry/nuxt3">Nuxt3系プロジェクトセットアップ手順</a></li>
+<li><a href="https://zenn.dev/rescuenow/articles/c07dd571dfe10f#vueindentscriptandstyle-script%E3%82%BF%E3%82%B0%E3%81%A8style%E3%82%BF%E3%82%B0%E3%81%AE%E3%82%A4%E3%83%B3%E3%83%87%E3%83%B3%E3%83%88">Prettierの設定オプションについてまとめてみた</a></li>
+<li><a href="https://prettier.github.io/plugin-pug/guide/">Prettier Plugin Pug Guide</a></li>
+</ul>
+<h2 id="vitest">vitest 追加<a class="headerlink" href="#vitest" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>yarn add -D @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>yarn add -D @vitest/coverage-v8
+</code></pre></div></td></tr></table></div>
+参考：<a href="https://nuxt.com/docs/getting-started/testing">https://nuxt.com/docs/getting-started/testing</a></p>
+<h2 id="lodash">lodash 追加<a class="headerlink" href="#lodash" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>yarn add -D nuxt-lodash
+</code></pre></div></td></tr></table></div>
+<p>nuxt.config.ts を更新
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span>
+<span class="normal"><a href="#__codelineno-29-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>export default defineNuxtConfig({
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a>  modules: [&quot;nuxt-lodash&quot;],
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a>});
+</code></pre></div></td></tr></table></div></p>
+<p><a href="https://nuxt.com/modules/lodash">nuxt lodash</a></p>
+<h2 id="nuxt-plotly">nuxt-plotly 追加<a class="headerlink" href="#nuxt-plotly" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>yarn add -D nuxt-plotly
+</code></pre></div></td></tr></table></div>
+<p>nuxt.config.ts を編集
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-31-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-31-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-31-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-31-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-31-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-31-10">10</a></span>
+<span class="normal"><a href="#__codelineno-31-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>export default defineNuxtConfig({
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a>  /**
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a>   * Add nuxt-plotly module
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a>   */
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a>  modules: [&quot;nuxt-plotly&quot;],
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a>  vite: {
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a>    optimizeDeps: {
+<a id="__codelineno-31-8" name="__codelineno-31-8"></a>      include: [&quot;plotly.js-dist-min&quot;],
+<a id="__codelineno-31-9" name="__codelineno-31-9"></a>    },
+<a id="__codelineno-31-10" name="__codelineno-31-10"></a>  },
+<a id="__codelineno-31-11" name="__codelineno-31-11"></a>});
+</code></pre></div></td></tr></table></div></p>
+<p><a href="https://nuxt.com/modules/nuxt-plotly">https://nuxt.com/modules/nuxt-plotly</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 shunsuke_nonomura
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ShunsukeNONOMURA" target="_blank" rel="noopener" title="shunsuke_nonomura on Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.top", "header.autohide", "search.suggest", "search.highlight", "content.tabs.link"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": 1.0}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

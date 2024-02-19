@@ -122,4 +122,4 @@ copyright: Copyright &copy; 2023 shunsuke_nonomura
 # ローカル環境で表示する場合はfalse、Webサーバー経由ならTrue。リソース参照のタグが変わるので気を付ける。
 use_directory_urls: false
 # 公開するページのPort番号を指定
-dev_addr: '0.0.0.0:48000'
+dev_addr: '0.0.0.0:48080'

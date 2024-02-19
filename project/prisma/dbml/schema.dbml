@@ -1,0 +1,82 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table t_user {
+  userId String [pk]
+  userName String [not null]
+  userRoleId String [not null]
+  userCreatedAt DateTime [default: `now()`, not null]
+  userUpdatedAt DateTime [default: `now()`, not null]
+  mUserRole m_user_role [not null]
+  tUserUserTagMap t_user_user_tag_map [not null]
+  tChatMessage t_chat_message [not null]
+}
+
+Table m_user_role {
+  userRoleId String [pk]
+  userRoleName String [not null]
+  tUser t_user [not null]
+}
+
+Table t_user_tag {
+  userTagId String [pk]
+  userTagName String [not null]
+  userTagCreatedAt DateTime [default: `now()`, not null]
+  userTagUpdatedAt DateTime [default: `now()`, not null]
+  tUserUserTagMap t_user_user_tag_map [not null]
+}
+
+Table t_user_user_tag_map {
+  userId String [not null]
+  userTagId String [not null]
+  userUserTagMapCreatedAt DateTime [default: `now()`, not null]
+  tUser t_user [not null]
+  tUserTag t_user_tag [not null]
+
+  indexes {
+    (userId, userTagId) [pk]
+  }
+}
+
+Table t_chat {
+  chatId String [pk]
+  chatTitle String [not null]
+  chatCreatedAt DateTime [default: `now()`, not null]
+  chatUpdatedAt DateTime [default: `now()`, not null]
+  tChatMessage t_chat_message [not null]
+}
+
+Table t_chat_message {
+  chatMessageId String [pk]
+  chatMessageContext String [not null]
+  chatMessageCreatedAt DateTime [default: `now()`, not null]
+  chatMessageUpdatedAt DateTime [default: `now()`, not null]
+  userId String [not null]
+  chatId String [not null]
+  tUser t_user [not null]
+  tChat t_chat [not null]
+}
+
+Table t_actor {
+  actorId String [pk]
+  tFilm t_film [not null]
+}
+
+Table t_film {
+  filmId String [pk]
+  actorId String [not null]
+  tActor t_actor [not null]
+}
+
+Ref: t_user.userRoleId > m_user_role.userRoleId
+
+Ref: t_user_user_tag_map.userId > t_user.userId
+
+Ref: t_user_user_tag_map.userTagId > t_user_tag.userTagId
+
+Ref: t_chat_message.userId > t_user.userId
+
+Ref: t_chat_message.chatId > t_chat.chatId
+
+Ref: t_film.actorId > t_actor.actorId
