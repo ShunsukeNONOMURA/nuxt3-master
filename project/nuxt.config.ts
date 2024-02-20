@@ -3,6 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   // modules
   modules: [
+    // test
+    '@nuxt/test-utils/module',
     // plotly
     'nuxt-plotly',
     // lodash

@@ -6,21 +6,21 @@ import { expect, test } from 'vitest'
 import isEqual from 'lodash/isEqual'
 import { UserId } from '../apps'
 
-export class BookId {
-  private readonly _value: string
+// export class BookId {
+//   private readonly _value: string
 
-  constructor(value: string) {
-    this._value = value
-  }
+//   constructor(value: string) {
+//     this._value = value
+//   }
 
-  equals(other: BookId): boolean {
-    return isEqual(this._value, other._value)
-  }
+//   equals(other: BookId): boolean {
+//     return isEqual(this._value, other._value)
+//   }
 
-  get value(): string {
-    return this._value
-  }
-}
+//   get value(): string {
+//     return this._value
+//   }
+// }
 
 test('adds 1 + 2 to equal 3', () => {
   expect(1 + 2).toBe(3)
@@ -34,9 +34,9 @@ test('adds 1 + 2 to equal 3', () => {
   console.log(uid1.value)
   console.log(uid2)
 
-  const bi1 = new BookId('9784167158057')
-  const bi2 = new BookId('9784167158057')
+  // const bi1 = new BookId('9784167158057')
+  // const bi2 = new BookId('9784167158057')
 
-  console.log(bi1.equals(bi2))
-  console.log(bi1)
+  // console.log(bi1.equals(bi2))
+  // console.log(bi1)
 })

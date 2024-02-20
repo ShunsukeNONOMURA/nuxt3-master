@@ -24,3 +24,39 @@
 ## 参考
 - [【Vue 3】Composition API の基本](https://b1san-blog.com/post/vue/vue-3-composition-api/)
 - [Vue コンポーザブル](https://ja.vuejs.org/guide/reusability/composables)
+
+
+
+## components
+
+## composables
+- useXXXという名前
+- テスト対象に置くとコンポーネントテスト
+- 単体 or 検索
+
+## middleware
+
+## layouts
+
+## locals
+
+## env
+必須じゃないはず
+
+## tests
+- vitests
+- praywright
+
+https://vuejs.org/guide/scaling-up/testing
+https://nuxt.com/docs/getting-started/testing
+
+- 評価項目
+    - 変更が難しい
+- テスト対象
+    - バックエンドのAPI単位
+    - storybook : コンポーネントの単体テスト
+    - コンポーザブル：結合テスト
+        - 検索条件単位　→　検索結果を受ける　：　
+    - E2E
+        - praywrite
+
