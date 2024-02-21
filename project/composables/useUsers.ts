@@ -34,10 +34,10 @@ export const useUsers = () => {
       },
     })
     // console.log(users.value)
-    // console.log(data.value.data.user)
-    users.value = data.value.data.user
+    // console.log(data.value.body.user)
+    users.value = data.value.body.user
 
-    const aggs = data.value?.data.user.aggs
+    const aggs = data.value?.body.user.aggs
 
     userAggs.value = [
       {
@@ -51,7 +51,7 @@ export const useUsers = () => {
   // get 1 user
   const getUser = async (userId) => {
     const { data } = await useFetch(`/api/users/${userId}`)
-    user.value = data.value.data.user
+    user.value = data.value.body.user
   }
 
   // create 1 user

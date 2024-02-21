@@ -12,6 +12,6 @@ export default defineEventHandler(async (event) => {
   // const deletedUser = await UserRepository.delete(userId)
 
   return {
-    data: { deletedUser },
+    body: { deletedUser },
   }
 })

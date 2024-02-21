@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     head: {
       status: 'ok',
     },
-    data: {
+    body: {
       user: {
         total,
         items,

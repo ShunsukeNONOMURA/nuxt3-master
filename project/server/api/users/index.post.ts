@@ -1,8 +1,8 @@
 import { UserFactory, UserRepository } from '~/apps'
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event)
-  const userProps = body.user
+  const eventBody = await readBody(event)
+  const userProps = eventBody.user
 
   const userDB = await UserRepository.find(userProps.userId)
 
@@ -13,10 +13,10 @@ export default defineEventHandler(async (event) => {
 
   const user = UserFactory.create(userProps)
   const head = {}
-  const data = await UserRepository.store(user)
+  const body = await UserRepository.store(user)
 
   return {
     head,
-    data,
+    body,
   }
 })

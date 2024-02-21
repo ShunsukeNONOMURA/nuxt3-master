@@ -14,6 +14,6 @@ export default defineEventHandler(() => {
     head: {
       status: 'ok',
     },
-    data: {},
+    body: {},
   }
 })

@@ -5,7 +5,7 @@ export const useUser = (userId: string) => {
 
   const getUser = async (userId: string) => {
     const { data } = await useFetch(`/api/users/${userId}`)
-    user.value = data.value.data.user
+    user.value = data.value.body.user
   }
 
   onMounted(() => getUser(userId))
