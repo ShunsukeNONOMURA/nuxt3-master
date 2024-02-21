@@ -5,13 +5,12 @@ div {{ user }}
 <script setup lang="ts">
 
   const route = useRoute()
-  const userId = route.params.userId // パスパラメータ[id]の取得
+  const userId = route.params.userId as string // パスパラメータ[id]の取得
 
   // const user = {
   //     userId,
   //     userName: `user ${userId}`
   // }
 
-  const { user, getUser } = useUser()
-  getUser(userId)
+  const { user } = useUser(userId)
 </script>

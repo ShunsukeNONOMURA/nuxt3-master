@@ -5,6 +5,7 @@ export default defineEventHandler(async (event) => {
   const user = await UserRepository.find(userId)
   if (user == null) {
     console.log('user not found')
+    return { data: { user: { userId: 'not found'} }}
   }
 
   return {

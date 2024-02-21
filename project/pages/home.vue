@@ -25,7 +25,7 @@ div
 <script setup lang="ts">
   import type { User } from '~/apps';
 
-  const { users, userAggs, queryUser, createUser, deleteUser } = useUser()
+  const { users, userAggs, queryUser, createUser, deleteUser } = useUsers()
 
   // 取得
   const onUpdateUser = ({ page, itemsPerPage, sortBy }: any) => {
