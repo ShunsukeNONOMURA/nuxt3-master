@@ -22,13 +22,17 @@ async function main() {
       userRoleId: '00',
     },
   })
-  await prisma.TUser.create({
-    data: {
-      userId: '999',
-      userName: 'guest',
-      userRoleId: '99',
-    },
-  })
+
+  for (let i = 100; i < 120; i++) {
+    // console.log(i);
+    await prisma.TUser.create({
+      data: {
+        userId: String(i),
+        userName: `guest${i}`,
+        userRoleId: '99',
+      },
+    })
+  }
   // const userTagId = cuid()
   const tUserTag = await prisma.TUserTag.create({
     data: {
@@ -38,7 +42,7 @@ async function main() {
   })
   await prisma.TUserUserTagMap.create({
     data: {
-      userId: '999',
+      userId: '000',
       userTagId: tUserTag.userTagId,
     },
   })

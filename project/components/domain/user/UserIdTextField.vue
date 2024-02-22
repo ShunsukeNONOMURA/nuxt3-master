@@ -1,8 +1,7 @@
 <template lang="pug">
-div logout
+v-text-field(:label="$t('domain.user.userId')")
 </template>
 
 <script setup lang="ts">
-const { currentUser, logout } = useAuth()
-logout()
+
 </script>

@@ -1,6 +1,6 @@
 <template lang="pug">
 v-app
-  v-app-bar(app)
+  v-app-bar(app v-if="currentUser")
     v-app-bar-nav-icon(@click='drawer = !drawer')
     router-link(to='/')
       v-btn title
@@ -10,7 +10,7 @@ v-app
       template(#activator='{ props }')
         v-btn(v-bind='props', icon='mdi-account')
       v-list(nav)
-        v-list-item hoge
+        v-list-item {{ currentUser }}
         v-divider
         v-list-item(prepend-icon='mdi-logout', title='logout', to='/logout')
         v-list-item(prepend-icon='mdi-cog', title='setting', to='/setting')
@@ -37,6 +37,8 @@ v-app
 </template>
 
 <script setup lang="ts">
+  const { currentUser } = useAuth()
+
   import { ref } from 'vue'
   const drawer = ref(false)
 
