@@ -74,13 +74,9 @@
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a>
-<a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -98,17 +94,15 @@ div {{ user }}
 &lt;/template&gt;
 &nbsp;
 &lt;script setup lang="ts"&gt;
-&nbsp;
   const route = useRoute()
-  const userId = route.params.userId // パスパラメータ[id]の取得
+  const userId = route.params.userId as string // パスパラメータ[id]の取得
 &nbsp;
   // const user = {
   //     userId,
   //     userName: `user ${userId}`
   // }
 &nbsp;
-  const { user, getUser } = useUser()
-  getUser(userId)
+  const { user } = useUser(userId)
 &lt;/script&gt;
 &nbsp;</pre></td></tr></table></pre>
 
@@ -124,7 +118,7 @@ div {{ user }}
         rel="noopener noreferrer"
         >istanbul</a
       >
-      at 2024-02-20T02:35:07.402Z
+      at 2024-02-22T12:47:17.368Z
     </div>
     <script src="../../../prettify.js"></script>
     <script>

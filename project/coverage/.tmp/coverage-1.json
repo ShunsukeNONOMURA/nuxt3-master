@@ -1,7 +1,7 @@
 {
   "result": [
     {
-      "scriptId": "1136",
+      "scriptId": "1139",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/paths.mjs",
       "functions": [
         {
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "scriptId": "1137",
+      "scriptId": "1140",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/nitro.client.mjs",
       "functions": [
         {
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "scriptId": "1138",
+      "scriptId": "1141",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/fetch.mjs",
       "functions": [
         {
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "scriptId": "1139",
+      "scriptId": "1142",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/css.mjs",
       "functions": [
         {
@@ -124,7 +124,7 @@
       ]
     },
     {
-      "scriptId": "1142",
+      "scriptId": "1145",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/plugins/client.mjs",
       "functions": [
         {
@@ -140,7 +140,7 @@
       ]
     },
     {
-      "scriptId": "1160",
+      "scriptId": "1164",
       "url": "file:///project/.nuxt/app.config.mjs",
       "functions": [
         {
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "scriptId": "1161",
+      "scriptId": "1165",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/nuxt.config.mjs",
       "functions": [
         {
@@ -201,8 +201,8 @@
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 1267, "endOffset": 1300, "count": 0 }],
-          "isBlockCoverage": false
+          "ranges": [{ "startOffset": 1267, "endOffset": 1300, "count": 3 }],
+          "isBlockCoverage": true
         },
         {
           "functionName": "get",
@@ -231,12 +231,12 @@
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 2258, "endOffset": 2291, "count": 0 }],
-          "isBlockCoverage": false
+          "ranges": [{ "startOffset": 2258, "endOffset": 2291, "count": 1 }],
+          "isBlockCoverage": true
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 2420, "endOffset": 2447, "count": 3 }],
+          "ranges": [{ "startOffset": 2420, "endOffset": 2447, "count": 6 }],
           "isBlockCoverage": true
         },
         {
@@ -282,7 +282,7 @@
       ]
     },
     {
-      "scriptId": "1163",
+      "scriptId": "1169",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/unhead-plugins.mjs",
       "functions": [
         {
@@ -298,7 +298,7 @@
       ]
     },
     {
-      "scriptId": "1165",
+      "scriptId": "1171",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/vue-router-stub.mjs",
       "functions": [
         {
@@ -314,122 +314,134 @@
       ]
     },
     {
-      "scriptId": "1193",
+      "scriptId": "1199",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/routes.mjs",
       "functions": [
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 21812, "count": 1 }],
+          "ranges": [{ "startOffset": 0, "endOffset": 23962, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "",
           "ranges": [
-            { "startOffset": 13, "endOffset": 21812, "count": 1 },
-            { "startOffset": 1497, "endOffset": 1503, "count": 0 },
-            { "startOffset": 1559, "endOffset": 1565, "count": 0 },
-            { "startOffset": 1665, "endOffset": 1672, "count": 0 },
-            { "startOffset": 1723, "endOffset": 1733, "count": 0 },
-            { "startOffset": 1890, "endOffset": 1896, "count": 0 },
-            { "startOffset": 1953, "endOffset": 1959, "count": 0 },
-            { "startOffset": 2055, "endOffset": 2062, "count": 0 },
-            { "startOffset": 2113, "endOffset": 2123, "count": 0 },
-            { "startOffset": 2416, "endOffset": 2421, "count": 0 },
-            { "startOffset": 2695, "endOffset": 2701, "count": 0 },
-            { "startOffset": 2759, "endOffset": 2765, "count": 0 },
-            { "startOffset": 2867, "endOffset": 2874, "count": 0 },
-            { "startOffset": 2925, "endOffset": 2935, "count": 0 },
-            { "startOffset": 3219, "endOffset": 3224, "count": 0 },
-            { "startOffset": 3493, "endOffset": 3499, "count": 0 },
-            { "startOffset": 3561, "endOffset": 3567, "count": 0 },
-            { "startOffset": 3673, "endOffset": 3680, "count": 0 },
-            { "startOffset": 3731, "endOffset": 3741, "count": 0 },
-            { "startOffset": 3904, "endOffset": 3910, "count": 0 },
-            { "startOffset": 3985, "endOffset": 3991, "count": 0 },
-            { "startOffset": 4050, "endOffset": 4056, "count": 0 },
-            { "startOffset": 4151, "endOffset": 4158, "count": 0 },
-            { "startOffset": 4209, "endOffset": 4219, "count": 0 },
-            { "startOffset": 4385, "endOffset": 4391, "count": 0 },
-            { "startOffset": 4454, "endOffset": 4460, "count": 0 },
-            { "startOffset": 4558, "endOffset": 4565, "count": 0 },
-            { "startOffset": 4616, "endOffset": 4626, "count": 0 },
-            { "startOffset": 4788, "endOffset": 4794, "count": 0 },
-            { "startOffset": 4896, "endOffset": 4903, "count": 0 },
-            { "startOffset": 4954, "endOffset": 4964, "count": 0 },
-            { "startOffset": 5124, "endOffset": 5130, "count": 0 },
-            { "startOffset": 5193, "endOffset": 5199, "count": 0 },
-            { "startOffset": 5309, "endOffset": 5316, "count": 0 },
-            { "startOffset": 5367, "endOffset": 5377, "count": 0 }
+            { "startOffset": 13, "endOffset": 23962, "count": 1 },
+            { "startOffset": 1619, "endOffset": 1625, "count": 0 },
+            { "startOffset": 1681, "endOffset": 1687, "count": 0 },
+            { "startOffset": 1787, "endOffset": 1794, "count": 0 },
+            { "startOffset": 1845, "endOffset": 1855, "count": 0 },
+            { "startOffset": 2012, "endOffset": 2018, "count": 0 },
+            { "startOffset": 2075, "endOffset": 2081, "count": 0 },
+            { "startOffset": 2177, "endOffset": 2184, "count": 0 },
+            { "startOffset": 2235, "endOffset": 2245, "count": 0 },
+            { "startOffset": 2538, "endOffset": 2543, "count": 0 },
+            { "startOffset": 2817, "endOffset": 2823, "count": 0 },
+            { "startOffset": 2880, "endOffset": 2886, "count": 0 },
+            { "startOffset": 2987, "endOffset": 2994, "count": 0 },
+            { "startOffset": 3045, "endOffset": 3055, "count": 0 },
+            { "startOffset": 3213, "endOffset": 3219, "count": 0 },
+            { "startOffset": 3277, "endOffset": 3283, "count": 0 },
+            { "startOffset": 3385, "endOffset": 3392, "count": 0 },
+            { "startOffset": 3443, "endOffset": 3453, "count": 0 },
+            { "startOffset": 3737, "endOffset": 3742, "count": 0 },
+            { "startOffset": 4011, "endOffset": 4017, "count": 0 },
+            { "startOffset": 4080, "endOffset": 4086, "count": 0 },
+            { "startOffset": 4193, "endOffset": 4200, "count": 0 },
+            { "startOffset": 4251, "endOffset": 4261, "count": 0 },
+            { "startOffset": 4425, "endOffset": 4431, "count": 0 },
+            { "startOffset": 4506, "endOffset": 4512, "count": 0 },
+            { "startOffset": 4571, "endOffset": 4577, "count": 0 },
+            { "startOffset": 4672, "endOffset": 4679, "count": 0 },
+            { "startOffset": 4730, "endOffset": 4740, "count": 0 },
+            { "startOffset": 4906, "endOffset": 4912, "count": 0 },
+            { "startOffset": 4975, "endOffset": 4981, "count": 0 },
+            { "startOffset": 5079, "endOffset": 5086, "count": 0 },
+            { "startOffset": 5137, "endOffset": 5147, "count": 0 },
+            { "startOffset": 5309, "endOffset": 5315, "count": 0 },
+            { "startOffset": 5417, "endOffset": 5424, "count": 0 },
+            { "startOffset": 5475, "endOffset": 5485, "count": 0 },
+            { "startOffset": 5646, "endOffset": 5652, "count": 0 },
+            { "startOffset": 5716, "endOffset": 5722, "count": 0 },
+            { "startOffset": 5834, "endOffset": 5841, "count": 0 },
+            { "startOffset": 5893, "endOffset": 5903, "count": 0 }
           ],
           "isBlockCoverage": true
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 1763, "endOffset": 1841, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 1821, "endOffset": 1840, "count": 0 }],
+          "ranges": [{ "startOffset": 1885, "endOffset": 1963, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 2153, "endOffset": 2232, "count": 1 }],
+          "ranges": [{ "startOffset": 2275, "endOffset": 2354, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "",
           "ranges": [
-            { "startOffset": 2212, "endOffset": 2231, "count": 1 },
-            { "startOffset": 2227, "endOffset": 2231, "count": 0 }
+            { "startOffset": 2334, "endOffset": 2353, "count": 1 },
+            { "startOffset": 2349, "endOffset": 2353, "count": 0 }
           ],
           "isBlockCoverage": true
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 2561, "endOffset": 2646, "count": 0 }],
+          "ranges": [{ "startOffset": 2683, "endOffset": 2768, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 2965, "endOffset": 3045, "count": 0 }],
+          "ranges": [{ "startOffset": 3085, "endOffset": 3164, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            { "startOffset": 3144, "endOffset": 3163, "count": 1 },
+            { "startOffset": 3159, "endOffset": 3163, "count": 0 }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "component",
+          "ranges": [{ "startOffset": 3483, "endOffset": 3563, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 3364, "endOffset": 3444, "count": 0 }],
+          "ranges": [{ "startOffset": 3882, "endOffset": 3962, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 3771, "endOffset": 3855, "count": 0 }],
+          "ranges": [{ "startOffset": 4291, "endOffset": 4376, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 4249, "endOffset": 4336, "count": 0 }],
+          "ranges": [{ "startOffset": 4770, "endOffset": 4857, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 4656, "endOffset": 4741, "count": 0 }],
+          "ranges": [{ "startOffset": 5177, "endOffset": 5262, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 4994, "endOffset": 5075, "count": 0 }],
+          "ranges": [{ "startOffset": 5515, "endOffset": 5596, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "component",
-          "ranges": [{ "startOffset": 5407, "endOffset": 5494, "count": 0 }],
+          "ranges": [{ "startOffset": 5933, "endOffset": 6020, "count": 0 }],
           "isBlockCoverage": false
         }
       ]
     },
     {
-      "scriptId": "1194",
+      "scriptId": "1200",
       "url": "file:///project/pages/home.vue",
       "functions": [
         {
@@ -445,7 +457,7 @@
       ]
     },
     {
-      "scriptId": "1195",
+      "scriptId": "1201",
       "url": "file:///project/pages/index.vue",
       "functions": [
         {
@@ -461,7 +473,7 @@
       ]
     },
     {
-      "scriptId": "1196",
+      "scriptId": "1202",
       "url": "file:///project/pages/information.vue",
       "functions": [
         {
@@ -477,7 +489,23 @@
       ]
     },
     {
-      "scriptId": "1197",
+      "scriptId": "1203",
+      "url": "file:///project/pages/login.vue",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 679, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 679, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "1204",
       "url": "file:///project/pages/logout.vue",
       "functions": [
         {
@@ -493,7 +521,7 @@
       ]
     },
     {
-      "scriptId": "1198",
+      "scriptId": "1205",
       "url": "file:///project/pages/manual.vue",
       "functions": [
         {
@@ -509,23 +537,23 @@
       ]
     },
     {
-      "scriptId": "1199",
-      "url": "file:///project/pages/SampleHoge.vue",
+      "scriptId": "1206",
+      "url": "file:///project/pages/sample-hoge.vue",
       "functions": [
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 683, "count": 1 }],
+          "ranges": [{ "startOffset": 0, "endOffset": 687, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 683, "count": 1 }],
+          "ranges": [{ "startOffset": 13, "endOffset": 687, "count": 1 }],
           "isBlockCoverage": true
         }
       ]
     },
     {
-      "scriptId": "1200",
+      "scriptId": "1207",
       "url": "file:///project/pages/setting/index.vue",
       "functions": [
         {
@@ -541,7 +569,7 @@
       ]
     },
     {
-      "scriptId": "1201",
+      "scriptId": "1208",
       "url": "file:///project/pages/setting/tmp.vue",
       "functions": [
         {
@@ -557,7 +585,7 @@
       ]
     },
     {
-      "scriptId": "1202",
+      "scriptId": "1209",
       "url": "file:///project/pages/setting.vue",
       "functions": [
         {
@@ -573,7 +601,7 @@
       ]
     },
     {
-      "scriptId": "1203",
+      "scriptId": "1210",
       "url": "file:///project/pages/user/[userId].vue",
       "functions": [
         {
@@ -589,7 +617,7 @@
       ]
     },
     {
-      "scriptId": "1204",
+      "scriptId": "1211",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/router.options.mjs",
       "functions": [
         {
@@ -605,7 +633,7 @@
       ]
     },
     {
-      "scriptId": "1207",
+      "scriptId": "1214",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/pages.mjs",
       "functions": [
         {
@@ -620,8 +648,8 @@
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 447, "endOffset": 499, "count": 0 }],
-          "isBlockCoverage": false
+          "ranges": [{ "startOffset": 447, "endOffset": 499, "count": 1 }],
+          "isBlockCoverage": true
         },
         {
           "functionName": "get",
@@ -631,33 +659,116 @@
       ]
     },
     {
-      "scriptId": "1208",
+      "scriptId": "1215",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/middleware.mjs",
       "functions": [
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 2008, "count": 1 }],
+          "ranges": [{ "startOffset": 0, "endOffset": 2308, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 2008, "count": 1 }],
+          "ranges": [{ "startOffset": 13, "endOffset": 2308, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 832, "endOffset": 864, "count": 2 }],
+          "ranges": [{ "startOffset": 984, "endOffset": 1016, "count": 3 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 998, "endOffset": 1029, "count": 0 }],
+          "ranges": [{ "startOffset": 1150, "endOffset": 1181, "count": 0 }],
           "isBlockCoverage": false
         }
       ]
     },
     {
-      "scriptId": "1210",
+      "scriptId": "1217",
+      "url": "file:///project/middleware/auth.global.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 1574, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 1574, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            { "startOffset": 553, "endOffset": 760, "count": 3 },
+            { "startOffset": 697, "endOffset": 758, "count": 2 }
+          ],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "1218",
+      "url": "file:///project/composables/useAuth.ts",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 4188, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 4188, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "useAuth",
+          "ranges": [{ "startOffset": 621, "endOffset": 1537, "count": 4 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "default",
+          "ranges": [{ "startOffset": 707, "endOffset": 717, "count": 4 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "default",
+          "ranges": [{ "startOffset": 808, "endOffset": 816, "count": 4 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "login",
+          "ranges": [{ "startOffset": 904, "endOffset": 1212, "count": 4 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            { "startOffset": 919, "endOffset": 1212, "count": 1 },
+            { "startOffset": 1153, "endOffset": 1159, "count": 0 }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "logout",
+          "ranges": [{ "startOffset": 1231, "endOffset": 1388, "count": 4 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 1246, "endOffset": 1388, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 1634, "endOffset": 1657, "count": 4 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "1223",
       "url": "file:///project/middleware/route.global.ts",
       "functions": [
         {
@@ -673,15 +784,15 @@
         {
           "functionName": "",
           "ranges": [
-            { "startOffset": 437, "endOffset": 531, "count": 2 },
-            { "startOffset": 470, "endOffset": 529, "count": 1 }
+            { "startOffset": 437, "endOffset": 531, "count": 1 },
+            { "startOffset": 470, "endOffset": 529, "count": 0 }
           ],
           "isBlockCoverage": true
         }
       ]
     },
     {
-      "scriptId": "1216",
+      "scriptId": "1229",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/components.plugin.mjs",
       "functions": [
         {
@@ -697,7 +808,7 @@
       ]
     },
     {
-      "scriptId": "1218",
+      "scriptId": "1231",
       "url": "file:///project/virtual:nuxt:/project/.nuxt/layouts.mjs",
       "functions": [
         {
@@ -718,7 +829,7 @@
       ]
     },
     {
-      "scriptId": "1230",
+      "scriptId": "1243",
       "url": "file:///project/.nuxt/i18n.options.mjs",
       "functions": [
         {
@@ -784,23 +895,23 @@
       ]
     },
     {
-      "scriptId": "1231",
+      "scriptId": "1244",
       "url": "file:///project/locales/ja.yml",
       "functions": [
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 23208, "count": 1 }],
+          "ranges": [{ "startOffset": 0, "endOffset": 29147, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 23208, "count": 1 }],
+          "ranges": [{ "startOffset": 13, "endOffset": 29147, "count": 1 }],
           "isBlockCoverage": true
         }
       ]
     },
     {
-      "scriptId": "1245",
+      "scriptId": "1254",
       "url": "file:///project/plugins/vuetify.ts",
       "functions": [
         {
@@ -831,7 +942,7 @@
       ]
     },
     {
-      "scriptId": "2385",
+      "scriptId": "2394",
       "url": "file:///project/pages/index.vue",
       "functions": [
         {
@@ -847,7 +958,7 @@
       ]
     },
     {
-      "scriptId": "2386",
+      "scriptId": "2395",
       "url": "file:///project/pages/index.vue",
       "functions": [
         {
@@ -873,7 +984,7 @@
       ]
     },
     {
-      "scriptId": "2387",
+      "scriptId": "2396",
       "url": "file:///project/%00plugin-vue:export-helper",
       "functions": [
         {
@@ -889,369 +1000,235 @@
         {
           "functionName": "__vite_ssr_exports__.default",
           "ranges": [
-            { "startOffset": 217, "endOffset": 355, "count": 3 },
-            { "startOffset": 308, "endOffset": 336, "count": 6 }
+            { "startOffset": 217, "endOffset": 355, "count": 6 },
+            { "startOffset": 308, "endOffset": 336, "count": 12 }
           ],
-          "isBlockCoverage": true
-        }
-      ]
-    },
-    {
-      "scriptId": "2388",
-      "url": "file:///project/pages/home.vue",
-      "functions": [
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 5211, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [
-            { "startOffset": 13, "endOffset": 5211, "count": 1 },
-            { "startOffset": 673, "endOffset": 5210, "count": 0 }
-          ],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "setup",
-          "ranges": [{ "startOffset": 899, "endOffset": 1873, "count": 0 }],
-          "isBlockCoverage": false
-        }
-      ]
-    },
-    {
-      "scriptId": "2389",
-      "url": "file:///project/composables/useUser.ts",
-      "functions": [
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 6600, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 6600, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "useUser",
-          "ranges": [{ "startOffset": 459, "endOffset": 2037, "count": 0 }],
-          "isBlockCoverage": false
-        },
-        {
-          "functionName": "get",
-          "ranges": [{ "startOffset": 2134, "endOffset": 2157, "count": 0 }],
-          "isBlockCoverage": false
-        }
-      ]
-    },
-    {
-      "scriptId": "2392",
-      "url": "file:///project/pages/home.vue",
-      "functions": [
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 13584, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [
-            { "startOffset": 13, "endOffset": 13584, "count": 1 },
-            { "startOffset": 452, "endOffset": 13583, "count": 0 }
-          ],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "render",
-          "ranges": [{ "startOffset": 699, "endOffset": 3272, "count": 0 }],
-          "isBlockCoverage": false
-        },
-        {
-          "functionName": "get",
-          "ranges": [{ "startOffset": 3367, "endOffset": 3389, "count": 0 }],
-          "isBlockCoverage": false
-        }
-      ]
-    },
-    {
-      "scriptId": "2393",
-      "url": "file:///project/components/domain/user/UserDataTableServer.vue",
-      "functions": [
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 4459, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 4459, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "setup",
-          "ranges": [{ "startOffset": 872, "endOffset": 1769, "count": 0 }],
-          "isBlockCoverage": false
-        }
-      ]
-    },
-    {
-      "scriptId": "2394",
-      "url": "file:///project/components/domain/user/UserDataTableServer.vue",
-      "functions": [
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 8129, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 8129, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "render",
-          "ranges": [{ "startOffset": 538, "endOffset": 1957, "count": 0 }],
-          "isBlockCoverage": false
-        },
-        {
-          "functionName": "get",
-          "ranges": [{ "startOffset": 2052, "endOffset": 2074, "count": 1 }],
-          "isBlockCoverage": true
-        }
-      ]
-    },
-    {
-      "scriptId": "2395",
-      "url": "file:///project/components/case/delete/DeleteIconButton.vue",
-      "functions": [
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 1784, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 1784, "count": 1 }],
-          "isBlockCoverage": true
-        }
-      ]
-    },
-    {
-      "scriptId": "2396",
-      "url": "file:///project/components/case/delete/DeleteIconButton.vue",
-      "functions": [
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 2131, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 2131, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "render",
-          "ranges": [{ "startOffset": 341, "endOffset": 615, "count": 0 }],
-          "isBlockCoverage": false
-        },
-        {
-          "functionName": "get",
-          "ranges": [{ "startOffset": 710, "endOffset": 732, "count": 1 }],
           "isBlockCoverage": true
         }
       ]
     },
     {
       "scriptId": "2397",
-      "url": "file:///project/components/domain/user/UserGraph.vue",
+      "url": "file:///project/pages/login.vue",
       "functions": [
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 4495, "count": 1 }],
+          "ranges": [{ "startOffset": 0, "endOffset": 3484, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "",
-          "ranges": [
-            { "startOffset": 13, "endOffset": 4495, "count": 1 },
-            { "startOffset": 585, "endOffset": 4494, "count": 0 }
-          ],
+          "ranges": [{ "startOffset": 13, "endOffset": 3484, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "setup",
-          "ranges": [{ "startOffset": 815, "endOffset": 1715, "count": 0 }],
+          "ranges": [{ "startOffset": 901, "endOffset": 1529, "count": 0 }],
           "isBlockCoverage": false
         }
       ]
     },
     {
       "scriptId": "2398",
-      "url": "file:///project/components/domain/user/UserGraph.vue",
+      "url": "file:///project/pages/login.vue",
       "functions": [
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 3459, "count": 1 }],
+          "ranges": [{ "startOffset": 0, "endOffset": 10093, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "",
-          "ranges": [
-            { "startOffset": 13, "endOffset": 3459, "count": 1 },
-            { "startOffset": 341, "endOffset": 3458, "count": 0 }
-          ],
+          "ranges": [{ "startOffset": 13, "endOffset": 10093, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "render",
-          "ranges": [{ "startOffset": 499, "endOffset": 963, "count": 0 }],
+          "ranges": [{ "startOffset": 576, "endOffset": 2429, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 1058, "endOffset": 1080, "count": 0 }],
-          "isBlockCoverage": false
-        }
-      ]
-    },
-    {
-      "scriptId": "2417",
-      "url": "file:///project/tests/sum.test.ts",
-      "functions": [
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 2620, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 2620, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "",
-          "ranges": [{ "startOffset": 476, "endOffset": 778, "count": 1 }],
+          "ranges": [{ "startOffset": 2524, "endOffset": 2546, "count": 1 }],
           "isBlockCoverage": true
         }
       ]
     },
     {
-      "scriptId": "2419",
-      "url": "file:///project/apps/index.ts",
+      "scriptId": "2399",
+      "url": "file:///project/components/domain/user/UserIdTextField.vue",
       "functions": [
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 9507, "count": 1 }],
+          "ranges": [{ "startOffset": 0, "endOffset": 1774, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 9507, "count": 1 }],
+          "ranges": [{ "startOffset": 13, "endOffset": 1774, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "2400",
+      "url": "file:///project/components/domain/user/UserIdTextField.vue",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 2265, "count": 1 }],
           "isBlockCoverage": true
         },
         {
-          "functionName": "validate",
-          "ranges": [{ "startOffset": 636, "endOffset": 652, "count": 3 }],
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 2265, "count": 1 }],
           "isBlockCoverage": true
         },
         {
-          "functionName": "get",
-          "ranges": [{ "startOffset": 749, "endOffset": 771, "count": 3 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "create",
-          "ranges": [{ "startOffset": 804, "endOffset": 872, "count": 0 }],
-          "isBlockCoverage": false
-        },
-        {
-          "functionName": "get",
-          "ranges": [{ "startOffset": 974, "endOffset": 1001, "count": 0 }],
-          "isBlockCoverage": false
-        },
-        {
-          "functionName": "<static_initializer>",
-          "ranges": [{ "startOffset": 1030, "endOffset": 1086, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "find",
-          "ranges": [{ "startOffset": 1097, "endOffset": 1238, "count": 0 }],
-          "isBlockCoverage": false
-        },
-        {
-          "functionName": "delete",
-          "ranges": [{ "startOffset": 1248, "endOffset": 1455, "count": 0 }],
-          "isBlockCoverage": false
-        },
-        {
-          "functionName": "store",
-          "ranges": [{ "startOffset": 1465, "endOffset": 1594, "count": 0 }],
+          "functionName": "render",
+          "ranges": [{ "startOffset": 341, "endOffset": 649, "count": 0 }],
           "isBlockCoverage": false
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 1699, "endOffset": 1729, "count": 0 }],
-          "isBlockCoverage": false
-        },
+          "ranges": [{ "startOffset": 744, "endOffset": 766, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "2401",
+      "url": "file:///project/tests/auth.test.ts",
+      "functions": [
         {
-          "functionName": "<static_initializer>",
-          "ranges": [{ "startOffset": 1755, "endOffset": 1811, "count": 1 }],
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 3591, "count": 1 }],
           "isBlockCoverage": true
         },
         {
-          "functionName": "query",
-          "ranges": [{ "startOffset": 1822, "endOffset": 3275, "count": 0 }],
-          "isBlockCoverage": false
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 3591, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 663, "endOffset": 873, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 915, "endOffset": 1369, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 974, "endOffset": 1365, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "2412",
+      "url": "file:///project/virtual:nuxt:/project/.nuxt/root-component.mjs",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 813, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 813, "count": 1 }],
+          "isBlockCoverage": true
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 3377, "endOffset": 3404, "count": 0 }],
+          "ranges": [{ "startOffset": 425, "endOffset": 470, "count": 0 }],
           "isBlockCoverage": false
         }
       ]
     },
     {
-      "scriptId": "2424",
-      "url": "file:///project/apps/core.ts",
+      "scriptId": "2414",
+      "url": "file:///project/virtual:nuxt:/project/.nuxt/app-component.mjs",
       "functions": [
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 0, "endOffset": 1878, "count": 1 }],
+          "ranges": [{ "startOffset": 0, "endOffset": 709, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "",
-          "ranges": [{ "startOffset": 13, "endOffset": 1878, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "<instance_members_initializer>",
-          "ranges": [{ "startOffset": 309, "endOffset": 584, "count": 3 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "ValueObject",
-          "ranges": [{ "startOffset": 372, "endOffset": 447, "count": 3 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "get value",
-          "ranges": [{ "startOffset": 450, "endOffset": 491, "count": 1 }],
-          "isBlockCoverage": true
-        },
-        {
-          "functionName": "equals",
-          "ranges": [{ "startOffset": 494, "endOffset": 582, "count": 1 }],
+          "ranges": [{ "startOffset": 13, "endOffset": 709, "count": 1 }],
           "isBlockCoverage": true
         },
         {
           "functionName": "get",
-          "ranges": [{ "startOffset": 684, "endOffset": 711, "count": 1 }],
+          "ranges": [{ "startOffset": 381, "endOffset": 426, "count": 0 }],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "2415",
+      "url": "file:///project/app.vue",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 1556, "count": 1 }],
           "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 1556, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "2416",
+      "url": "file:///project/app.vue",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 3215, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 3215, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "render",
+          "ranges": [{ "startOffset": 649, "endOffset": 1063, "count": 0 }],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 1158, "endOffset": 1180, "count": 1 }],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "2420",
+      "url": "file:///project/virtual:nuxt:/project/.nuxt/error-component.mjs",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 0, "endOffset": 827, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [{ "startOffset": 13, "endOffset": 827, "count": 1 }],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "get",
+          "ranges": [{ "startOffset": 431, "endOffset": 476, "count": 0 }],
+          "isBlockCoverage": false
         }
       ]
     }

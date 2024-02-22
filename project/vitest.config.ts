@@ -13,5 +13,8 @@ export default defineVitestConfig({
     //       }
     //     }
     // }
+    coverage: {
+      exclude: ['**/.nuxt/', '**/prisma/', '**/node_modules/', '**/tests/'],
+    },
   },
 })

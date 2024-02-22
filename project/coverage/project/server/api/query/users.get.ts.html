@@ -1,15 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Code coverage report for project/apps/core.ts</title>
+    <title>
+      Code coverage report for project/server/api/query/users.get.ts
+    </title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../../../../favicon.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type="text/css">
       .coverage-summary .sorter {
-        background-image: url(../../sort-arrow-sprite.png);
+        background-image: url(../../../../sort-arrow-sprite.png);
       }
     </style>
   </head>
@@ -18,14 +24,14 @@
     <div class="wrapper">
       <div class="pad1">
         <h1>
-          <a href="../../index.html">All files</a> /
-          <a href="index.html">project/apps</a> core.ts
+          <a href="../../../../index.html">All files</a> /
+          <a href="index.html">project/server/api/query</a> users.get.ts
         </h1>
         <div class="clearfix">
           <div class="fl pad1y space-right2">
             <span class="strong">0% </span>
             <span class="quiet">Statements</span>
-            <span class="fraction">0/22</span>
+            <span class="fraction">0/31</span>
           </div>
 
           <div class="fl pad1y space-right2">
@@ -43,7 +49,7 @@
           <div class="fl pad1y space-right2">
             <span class="strong">0% </span>
             <span class="quiet">Lines</span>
-            <span class="fraction">0/22</span>
+            <span class="fraction">0/31</span>
           </div>
         </div>
         <p class="quiet">
@@ -81,7 +87,16 @@
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -103,28 +118,46 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import isEqual from 'lodash/isEqual'</span></span></span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { UserService } from '~/apps'</span></span></span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export abstract class ValueObject&lt;T, U&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  // @ts-expect-error</span>
-<span class="cstat-no" title="statement not covered" >  private _type: U</span>
-<span class="cstat-no" title="statement not covered" >  protected readonly _value: T</span>
+<span class="cstat-no" title="statement not covered" >export default defineEventHandler(async (event) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  const query: any = getQuery(event)</span>
+<span class="cstat-no" title="statement not covered" >  const limit = parseInt(query.limit)</span>
+<span class="cstat-no" title="statement not covered" >  const offset = parseInt(query.offset)</span>
+<span class="cstat-no" title="statement not covered" >  const where = {}</span>
+<span class="cstat-no" title="statement not covered" >  const orderBy = {}</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  constructor(value: T) {</span>
-<span class="cstat-no" title="statement not covered" >    this.validate(value)</span>
-<span class="cstat-no" title="statement not covered" >    this._value = value</span>
+<span class="cstat-no" title="statement not covered" >  const [items, total, aggs] = await UserService.query(</span>
+<span class="cstat-no" title="statement not covered" >    where,</span>
+<span class="cstat-no" title="statement not covered" >    limit,</span>
+<span class="cstat-no" title="statement not covered" >    offset,</span>
+<span class="cstat-no" title="statement not covered" >    orderBy</span>
+<span class="cstat-no" title="statement not covered" >  )</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
+<span class="cstat-no" title="statement not covered" >    head: {</span>
+<span class="cstat-no" title="statement not covered" >      status: 'ok',</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+<span class="cstat-no" title="statement not covered" >    body: {</span>
+<span class="cstat-no" title="statement not covered" >      user: {</span>
+<span class="cstat-no" title="statement not covered" >        total,</span>
+<span class="cstat-no" title="statement not covered" >        items,</span>
+<span class="cstat-no" title="statement not covered" >        // limit,</span>
+<span class="cstat-no" title="statement not covered" >        // offset,</span>
+<span class="cstat-no" title="statement not covered" >        aggs,</span>
+<span class="cstat-no" title="statement not covered" >      },</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  protected abstract validate(value: T): void</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  get value(): T {</span>
-<span class="cstat-no" title="statement not covered" >    return this._value</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  equals(other: ValueObject&lt;T, U&gt;): boolean {</span>
-<span class="cstat-no" title="statement not covered" >    return isEqual(this._value, other._value)</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" >})</span>
 &nbsp;</pre></td></tr></table></pre>
 
       <div class="push"></div>
@@ -141,13 +174,13 @@
       >
       at 2024-02-22T12:47:17.368Z
     </div>
-    <script src="../../prettify.js"></script>
+    <script src="../../../../prettify.js"></script>
     <script>
       window.onload = function () {
         prettyPrint()
       }
     </script>
-    <script src="../../sorter.js"></script>
-    <script src="../../block-navigation.js"></script>
+    <script src="../../../../sorter.js"></script>
+    <script src="../../../../block-navigation.js"></script>
   </body>
 </html>

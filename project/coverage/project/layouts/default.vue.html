@@ -25,7 +25,7 @@
           <div class="fl pad1y space-right2">
             <span class="strong">0% </span>
             <span class="quiet">Statements</span>
-            <span class="fraction">0/65</span>
+            <span class="fraction">0/67</span>
           </div>
 
           <div class="fl pad1y space-right2">
@@ -43,7 +43,7 @@
           <div class="fl pad1y space-right2">
             <span class="strong">0% </span>
             <span class="quiet">Lines</span>
-            <span class="fraction">0/65</span>
+            <span class="fraction">0/67</span>
           </div>
         </div>
         <p class="quiet">
@@ -124,7 +124,11 @@
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -191,7 +195,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >&lt;template lang="pug"&gt;</span></span></span>
 <span class="cstat-no" title="statement not covered" >v-app</span>
-<span class="cstat-no" title="statement not covered" >  v-app-bar(app)</span>
+<span class="cstat-no" title="statement not covered" >  v-app-bar(v-if='authUser', app)</span>
 <span class="cstat-no" title="statement not covered" >    v-app-bar-nav-icon(@click='drawer = !drawer')</span>
 <span class="cstat-no" title="statement not covered" >    router-link(to='/')</span>
 <span class="cstat-no" title="statement not covered" >      v-btn title</span>
@@ -201,7 +205,7 @@
 <span class="cstat-no" title="statement not covered" >      template(#activator='{ props }')</span>
 <span class="cstat-no" title="statement not covered" >        v-btn(v-bind='props', icon='mdi-account')</span>
 <span class="cstat-no" title="statement not covered" >      v-list(nav)</span>
-<span class="cstat-no" title="statement not covered" >        v-list-item hoge</span>
+<span class="cstat-no" title="statement not covered" >        v-list-item {{ authUser.userId }} {{ authUser.userName }}</span>
 <span class="cstat-no" title="statement not covered" >        v-divider</span>
 <span class="cstat-no" title="statement not covered" >        v-list-item(prepend-icon='mdi-logout', title='logout', to='/logout')</span>
 <span class="cstat-no" title="statement not covered" >        v-list-item(prepend-icon='mdi-cog', title='setting', to='/setting')</span>
@@ -211,7 +215,7 @@
 <span class="cstat-no" title="statement not covered" >          title='information',</span>
 <span class="cstat-no" title="statement not covered" >          to='/information'</span>
 <span class="cstat-no" title="statement not covered" >        )</span>
-<span class="cstat-no" title="statement not covered" >  v-navigation-drawer(v-model='drawer')</span>
+<span class="cstat-no" title="statement not covered" >  v-navigation-drawer(v-model='drawer' v-if='authUser')</span>
 <span class="cstat-no" title="statement not covered" >    v-list(nav, density='compact')</span>
 <span class="cstat-no" title="statement not covered" >      v-list-item(</span>
 <span class="cstat-no" title="statement not covered" >        v-for='(value, key) in drawerList',</span>
@@ -229,6 +233,8 @@
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >&lt;script setup lang="ts"&gt;</span>
 <span class="cstat-no" title="statement not covered" >  import { ref } from 'vue'</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const { authUser } = useAuth()</span>
 <span class="cstat-no" title="statement not covered" >  const drawer = ref(false)</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  const drawerList = [</span>
@@ -268,7 +274,7 @@
         rel="noopener noreferrer"
         >istanbul</a
       >
-      at 2024-02-20T02:35:07.402Z
+      at 2024-02-22T12:47:17.368Z
     </div>
     <script src="../../prettify.js"></script>
     <script>

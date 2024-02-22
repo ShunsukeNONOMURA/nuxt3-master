@@ -1,21 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>
-      Code coverage report for project/server/api/user/[userId].get.ts
-    </title>
+    <title>Code coverage report for project/server/middleware/log.ts</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../../prettify.css" />
-    <link rel="stylesheet" href="../../../../base.css" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="../../../../favicon.png"
-    />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type="text/css">
       .coverage-summary .sorter {
-        background-image: url(../../../../sort-arrow-sprite.png);
+        background-image: url(../../../sort-arrow-sprite.png);
       }
     </style>
   </head>
@@ -24,14 +18,14 @@
     <div class="wrapper">
       <div class="pad1">
         <h1>
-          <a href="../../../../index.html">All files</a> /
-          <a href="index.html">project/server/api/user</a> [userId].get.ts
+          <a href="../../../index.html">All files</a> /
+          <a href="index.html">project/server/middleware</a> log.ts
         </h1>
         <div class="clearfix">
           <div class="fl pad1y space-right2">
             <span class="strong">0% </span>
             <span class="quiet">Statements</span>
-            <span class="fraction">0/15</span>
+            <span class="fraction">0/13</span>
           </div>
 
           <div class="fl pad1y space-right2">
@@ -49,7 +43,7 @@
           <div class="fl pad1y space-right2">
             <span class="strong">0% </span>
             <span class="quiet">Lines</span>
-            <span class="fraction">0/15</span>
+            <span class="fraction">0/13</span>
           </div>
         </div>
         <p class="quiet">
@@ -78,9 +72,7 @@
 <a name='L11'></a><a href='#L11'>11</a>
 <a name='L12'></a><a href='#L12'>12</a>
 <a name='L13'></a><a href='#L13'>13</a>
-<a name='L14'></a><a href='#L14'>14</a>
-<a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L14'></a><a href='#L14'>14</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -93,22 +85,18 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { UserRepository } from '~/apps'</span></span></span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { defineNuxtModule, useLogger } from '@nuxt/kit'</span></span></span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export default defineEventHandler(async (event) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  const userId = event.context.params.userId</span>
-<span class="cstat-no" title="statement not covered" >  const user = await UserRepository.find(userId)</span>
-<span class="cstat-no" title="statement not covered" >  if (user == null) {</span>
-<span class="cstat-no" title="statement not covered" >    console.log('user not found')</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  return {</span>
-<span class="cstat-no" title="statement not covered" >    data: {</span>
-<span class="cstat-no" title="statement not covered" >      user,</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >export default defineEventHandler((event) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  // const date = Date.now()</span>
+<span class="cstat-no" title="statement not covered" >  // console.log(date)</span>
+<span class="cstat-no" title="statement not covered" >  // console.log(date.toString());</span>
+<span class="cstat-no" title="statement not covered" >  // console.log('New request: ' + getRequestURL(event))</span>
+<span class="cstat-no" title="statement not covered" >  // console.log(event.context)</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const logger = useLogger('my-module')</span>
+<span class="cstat-no" title="statement not covered" >  logger.info('New request: ' + getRequestURL(event))</span>
 <span class="cstat-no" title="statement not covered" >})</span>
 &nbsp;</pre></td></tr></table></pre>
 
@@ -124,15 +112,15 @@
         rel="noopener noreferrer"
         >istanbul</a
       >
-      at 2024-02-20T02:35:07.402Z
+      at 2024-02-22T12:47:17.368Z
     </div>
-    <script src="../../../../prettify.js"></script>
+    <script src="../../../prettify.js"></script>
     <script>
       window.onload = function () {
         prettyPrint()
       }
     </script>
-    <script src="../../../../sorter.js"></script>
-    <script src="../../../../block-navigation.js"></script>
+    <script src="../../../sorter.js"></script>
+    <script src="../../../block-navigation.js"></script>
   </body>
 </html>

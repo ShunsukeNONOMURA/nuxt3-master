@@ -10,8 +10,8 @@ export const useAuth = () => {
 
   const login = (authUser: Ref<any>) => async (userInput: any) => {
     const user = (await $fetch(`/api/users/${userInput.userId}`)).body.user
-    authUser.value = user;
-    accessToken.value = user.userId;
+    authUser.value = user
+    accessToken.value = user.userId
 
     // middleware でログインページにリダイレクトした場合は redirectFrom に元のページが入っている
     const to = useRoute().redirectedFrom?.path || '/'

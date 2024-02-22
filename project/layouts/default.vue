@@ -20,7 +20,7 @@ v-app
           title='information',
           to='/information'
         )
-  v-navigation-drawer(v-model='drawer' v-if='authUser')
+  v-navigation-drawer(v-if='authUser', v-model='drawer')
     v-list(nav, density='compact')
       v-list-item(
         v-for='(value, key) in drawerList',

@@ -1,6 +1,5 @@
 import { defineNuxtModule, useLogger } from '@nuxt/kit'
 
-
 export default defineEventHandler((event) => {
   // const date = Date.now()
   // console.log(date)

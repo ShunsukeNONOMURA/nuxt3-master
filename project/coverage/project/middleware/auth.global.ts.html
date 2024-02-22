@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Code coverage report for project/pages/setting/index.vue</title>
+    <title>Code coverage report for project/middleware/auth.global.ts</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../prettify.css" />
-    <link rel="stylesheet" href="../../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type="text/css">
       .coverage-summary .sorter {
-        background-image: url(../../../sort-arrow-sprite.png);
+        background-image: url(../../sort-arrow-sprite.png);
       }
     </style>
   </head>
@@ -18,20 +18,20 @@
     <div class="wrapper">
       <div class="pad1">
         <h1>
-          <a href="../../../index.html">All files</a> /
-          <a href="index.html">project/pages/setting</a> index.vue
+          <a href="../../index.html">All files</a> /
+          <a href="index.html">project/middleware</a> auth.global.ts
         </h1>
         <div class="clearfix">
           <div class="fl pad1y space-right2">
             <span class="strong">100% </span>
             <span class="quiet">Statements</span>
-            <span class="fraction">3/3</span>
+            <span class="fraction">9/9</span>
           </div>
 
           <div class="fl pad1y space-right2">
             <span class="strong">100% </span>
             <span class="quiet">Branches</span>
-            <span class="fraction">0/0</span>
+            <span class="fraction">2/2</span>
           </div>
 
           <div class="fl pad1y space-right2">
@@ -43,7 +43,7 @@
           <div class="fl pad1y space-right2">
             <span class="strong">100% </span>
             <span class="quiet">Lines</span>
-            <span class="fraction">3/3</span>
+            <span class="fraction">9/9</span>
           </div>
         </div>
         <p class="quiet">
@@ -66,20 +66,26 @@
 <a name='L5'></a><a href='#L5'>5</a>
 <a name='L6'></a><a href='#L6'>6</a>
 <a name='L7'></a><a href='#L7'>7</a>
-<a name='L8'></a><a href='#L8'>8</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template lang="pug"&gt;
-div
-  div user
-  v-data-table-server
-&lt;/template&gt;
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export default defineNuxtRouteMiddleware((to) =&gt; {
+  const { authUser } = useAuth()
+  // console.log(currentUser)
 &nbsp;
-&lt;script setup lang="ts"&gt;&lt;/script&gt;
+  const pathLogin = '/login'
+  if (!authUser.value &amp;&amp; to.path !== pathLogin) {
+    return navigateTo(pathLogin)
+  }
+})
 &nbsp;</pre></td></tr></table></pre>
 
       <div class="push"></div>
@@ -96,13 +102,13 @@ div
       >
       at 2024-02-22T12:47:17.368Z
     </div>
-    <script src="../../../prettify.js"></script>
+    <script src="../../prettify.js"></script>
     <script>
       window.onload = function () {
         prettyPrint()
       }
     </script>
-    <script src="../../../sorter.js"></script>
-    <script src="../../../block-navigation.js"></script>
+    <script src="../../sorter.js"></script>
+    <script src="../../block-navigation.js"></script>
   </body>
 </html>
