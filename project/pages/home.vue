@@ -23,7 +23,7 @@ div
 </template>
 
 <script setup lang="ts">
-  import type { User } from '~/apps';
+  import type { User } from '~/apps'
 
   const { users, userAggs, queryUser, createUser, deleteUser } = useUsers()
 

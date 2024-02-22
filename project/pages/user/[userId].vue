@@ -3,7 +3,6 @@ div {{ user }}
 </template>
 
 <script setup lang="ts">
-
   const route = useRoute()
   const userId = route.params.userId as string // パスパラメータ[id]の取得
 

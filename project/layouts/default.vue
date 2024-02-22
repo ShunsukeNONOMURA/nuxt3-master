@@ -1,6 +1,6 @@
 <template lang="pug">
 v-app
-  v-app-bar(app v-if="currentUser")
+  v-app-bar(v-if='currentUser', app)
     v-app-bar-nav-icon(@click='drawer = !drawer')
     router-link(to='/')
       v-btn title
@@ -37,9 +37,9 @@ v-app
 </template>
 
 <script setup lang="ts">
-  const { currentUser } = useAuth()
-
   import { ref } from 'vue'
+
+  const { currentUser } = useAuth()
   const drawer = ref(false)
 
   const drawerList = [

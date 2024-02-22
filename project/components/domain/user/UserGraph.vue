@@ -4,7 +4,7 @@ nuxt-plotly(
   :layout='pieChart.layout',
   :config='pieChart.config',
   style='width: 100%',
-  @on-ready="userGraphOnReady"
+  @on-ready='userGraphOnReady'
 )
 </template>
 
@@ -18,7 +18,7 @@ nuxt-plotly(
   //     },
   // ];
 
-  const config0 = { 
+  const config0 = {
     scrollZoom: true, // zoom
     displayModeBar: false, // menu bar
   }
@@ -45,12 +45,12 @@ nuxt-plotly(
     // });
 
     // クリック時の挙動追加
-    plotlyHTMLElement.on?.("plotly_click", function (d:any) {
+    plotlyHTMLElement.on?.('plotly_click', function (d: any) {
       const point = d.points[0]
-      const info = {
-        label: point.label
-      }
+      // const info = {
+      //   label: point.label,
+      // }
       console.log(point)
-    });
+    })
   }
 </script>

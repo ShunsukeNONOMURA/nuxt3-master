@@ -3,6 +3,6 @@ div logout
 </template>
 
 <script setup lang="ts">
-const { currentUser, logout } = useAuth()
-logout()
+  const { logout } = useAuth()
+  logout()
 </script>

@@ -7,7 +7,7 @@
  *      responses:
  *          200:
  *              description: !!
-*/
+ */
 
 export default defineEventHandler(() => {
   return {

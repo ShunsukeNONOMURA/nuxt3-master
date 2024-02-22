@@ -1,4 +1,4 @@
-import type { User } from "~/apps"
+// import type { User } from '~/apps'
 
 export const useUser = (userId: string) => {
   const user: Ref<any> = ref({})

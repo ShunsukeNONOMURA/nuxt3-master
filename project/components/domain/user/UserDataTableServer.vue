@@ -7,7 +7,7 @@ v-data-table-server(:headers='userHeaders')
 </template>
 
 <script setup lang="ts">
-  import type { User } from '~/apps';
+  import type { User } from '~/apps'
   const { t } = useI18n()
   const userHeaders = [
     {

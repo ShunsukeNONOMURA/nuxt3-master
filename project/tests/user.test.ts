@@ -5,7 +5,7 @@ import { describe, expect, test } from 'vitest'
 import { $fetch, fetch, isDev } from '@nuxt/test-utils'
 
 describe('My test', async () => {
-  test('my test', async() => {
+  test('my test', async () => {
     const { count, increment } = useCounter()
     await increment()
     expect(count.value).toBe(1)
