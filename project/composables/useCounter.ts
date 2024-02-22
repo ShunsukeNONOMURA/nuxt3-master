@@ -4,7 +4,7 @@ export function useCounter() {
   const increment = () => count.value++
 
   return {
-    count,
+    count: readonly(count),
     increment
   }
 }

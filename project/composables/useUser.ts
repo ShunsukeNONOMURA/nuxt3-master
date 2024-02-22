@@ -11,6 +11,6 @@ export const useUser = (userId: string) => {
   onMounted(() => getUser(userId))
 
   return {
-    user,
+    user: readonly(user),
   }
 }
