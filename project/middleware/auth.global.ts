@@ -1,9 +1,9 @@
 export default defineNuxtRouteMiddleware((to) => {
-  const { currentUser } = useAuth()
+  const { authUser } = useAuth()
   // console.log(currentUser)
 
   const pathLogin = '/login'
-  if (!currentUser.value && to.path !== pathLogin) {
+  if (!authUser.value && to.path !== pathLogin) {
     return navigateTo(pathLogin)
   }
 })

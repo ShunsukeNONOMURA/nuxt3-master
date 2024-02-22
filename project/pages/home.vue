@@ -1,6 +1,5 @@
 <template lang="pug">
 div
-  div {{ $t('domain.welcome') }}
   user-data-table-server(
     :items='users.items',
     :items-length='users.total',

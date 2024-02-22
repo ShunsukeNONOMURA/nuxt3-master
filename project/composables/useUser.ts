@@ -3,14 +3,14 @@
 export const useUser = (userId: string) => {
   const user: Ref<any> = ref({})
 
-  const getUser = async (userId: string) => {
-    const { data } = await useFetch(`/api/users/${userId}`)
-    user.value = data.value.body.user
+  const fetchUser = async (userId: string) => {
+    user.value = (await $fetch(`/api/users/${userId}`)).body.user
   }
 
-  onMounted(() => getUser(userId))
+  onMounted(() => fetchUser(userId))
 
   return {
     user: readonly(user),
+    fetchUser,
   }
 }
