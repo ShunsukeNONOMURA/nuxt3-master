@@ -10,10 +10,6 @@ div
     @keyup.enter='userLogin'
   )
   v-btn(@click='userLogin') login
-  | {{ authUser }}
-  div {{ accessToken }}
-
-  v-btn(@click='addSnackbar') add
 </template>
 
 <script setup lang="ts">
@@ -26,15 +22,5 @@ div
   const showPassword = ref(false)
   const userLogin = () => {
     login(userInput.value)
-  }
-
-  const snackbar = useSnackbar();
-  const addSnackbar = () => {
-    snackbar.add({
-        // type: 'success',
-        type: 'error', // success, error, warning, info
-        text: `This is a snackbar message ${new Date()}`,
-        // duration: 0,
-    })
   }
 </script>

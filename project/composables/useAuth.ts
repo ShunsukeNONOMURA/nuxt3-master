@@ -19,6 +19,15 @@ export const useAuth = () => {
 
   const login = (authUser: Ref<any>) => async (userInput: any) => {
     const data = await $fetch(`/api/users/${userInput.userId}`)
+    const isUserAuthed = data.body.user === null
+    if (isUserAuthed) {
+      snackbar.add({
+        type: 'error',
+        text: `Login Failed ${new Date()}`,
+        // duration: 1000,
+      })
+      return
+    }
     const user = data.body.user
     authUser.value = user
     accessToken.value = user.userId
