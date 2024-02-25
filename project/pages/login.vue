@@ -12,20 +12,29 @@ div
   v-btn(@click='userLogin') login
   | {{ authUser }}
   div {{ accessToken }}
+
+  v-btn(@click='addSnackbar') add
 </template>
 
 <script setup lang="ts">
-  const { login, accessToken } = useAuth()
-  const { authUser } = useAuth()
+  const { login, accessToken, authUser } = useAuth()
+
   const userInput = ref({
     userId: '000',
     userPassword: '',
   })
   const showPassword = ref(false)
   const userLogin = () => {
-    // console.log(userInput.value)
-    // const { user, fetchUser } = useUser(userInput.value.userId)
-    // console.log(user)
     login(userInput.value)
+  }
+
+  const snackbar = useSnackbar();
+  const addSnackbar = () => {
+    snackbar.add({
+        // type: 'success',
+        type: 'error', // success, error, warning, info
+        text: `This is a snackbar message ${new Date()}`,
+        // duration: 0,
+    })
   }
 </script>

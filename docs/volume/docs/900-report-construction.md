@@ -424,3 +424,38 @@ export default defineNuxtConfig({
 ```
 
 https://nuxt.com/modules/nuxt-plotly
+
+## nuxt-snackbar
+内部的にはvue3-snackbarらしい
+
+```
+yarn add -D nuxt-snackbar
+```
+
+nuxt.config.ts を編集
+```
+export default defineNuxtConfig({
+  /**
+   * Add nuxt-plotly module
+   */
+  modules: ["nuxt-snackbar"],
+  snackbar: {
+    bottom: true,
+    right: true,
+    duration: 5000
+  },
+});
+```
+
+snackbar追加
+```vue
+<template lang="pug">
+  NuxtLayout
+    NuxtPage
+  NuxtSnackbar
+</template>
+
+<script setup lang="ts"></script>
+```
+
+https://nuxt.com/modules/snackbar

@@ -39,7 +39,9 @@ DDDの派生の中でオニオンアーキテクチャを利用するものと�
 CQRSは**情報の参照に使用するモデルと更新に使用するモデルに異なるものを使用する**アーキテクチャを指す。
 
 [参考：DDDで設計するならCQRSの利用を検討すべき](https://qiita.com/ledmonster/items/22b00c65208dffeff7e4)
-
+[CQRS実践入門 [ドメイン駆動設計]](https://little-hands.hatenablog.com/entry/2019/12/02/cqrs)
+[DDDでのDTOの使い所](https://zenn.dev/miya_tech/articles/5d1c7f8df08557)
+[DDDを実践するための手引き（概論・導入編）](https://zenn.dev/kohii/articles/b96634b9a14897)
 
 ```mermaid
 graph LR

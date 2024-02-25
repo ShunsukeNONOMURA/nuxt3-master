@@ -104,6 +104,6 @@ UX（User Experience）とは、「ユーザーがプロダクトを利用した
 
 ## 参考
 - [UXデザインの5段階モデルとは？ビジネスにおける必要性から具体的な進め方まで詳しく解説！](https://blog.nijibox.jp/article/5elements_of_ux/)
-
+- [デザイン思考とアジャイルの組み合わせが生むDXの進化](https://bluelogic.jp/design/designagile/)
 
 プロトタイピング

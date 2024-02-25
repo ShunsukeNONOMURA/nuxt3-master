@@ -5,6 +5,8 @@ export default defineNuxtConfig({
   modules: [
     // test
     '@nuxt/test-utils/module',
+    // nuxt-snackbar
+    'nuxt-snackbar',
     // plotly
     'nuxt-plotly',
     // lodash
@@ -46,6 +48,13 @@ export default defineNuxtConfig({
   ],
   build: {
     transpile: ['vuetify'],
+  },
+  // nuxt-snackbar
+  snackbar: {
+    bottom: true,
+    // right: true,
+    duration: 5000
+    // duration:100000000 // 約28時間
   },
   // nuxt設定
   vite: {
