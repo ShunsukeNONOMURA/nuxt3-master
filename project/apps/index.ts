@@ -64,6 +64,11 @@ export class UserService {
     const [items, total, aggs] = await Promise.all([
       this.prisma.tUser.findMany({
         where,
+        // where: {
+        //   userId: {
+        //     contains: '00'
+        //   }
+        // },
         include: {
           mUserRole: {
             select: {
@@ -109,9 +114,10 @@ export class UserService {
       //   // take: 1,
       // }),
       this.prisma.mUserRole.findMany({
+        // where,
         include: {
           // _count: true
-          _count: { select: { tUser: true } },
+          _count: { select: { tUser: true, } },
         },
         orderBy: {
           tUser: {

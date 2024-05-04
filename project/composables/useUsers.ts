@@ -14,21 +14,24 @@ export const useUsers = () => {
       type: 'pie',
     },
   ])
+  const query: Ref<any> = ref({})
 
   // query user
-  const queryUser = async (limit: number, offset: number) => {
+  const queryUser = async (limit: number, offset: number, query: any) => {
     // users.value = {
     //   loading: false,
     //   items: [{}],
     //   total: 1,
     // }
     // users.value.loading = true
+    console.log(query)
     const { data } = await useFetch('/api/query/users', {
       method: 'GET',
       // body: {
       //   user
       // },
       params: {
+        query: query.value.value,
         limit,
         offset,
       },

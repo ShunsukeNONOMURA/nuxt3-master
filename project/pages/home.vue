@@ -1,5 +1,8 @@
 <template lang="pug">
 div
+  user-id-text-field(
+    v-model='query.value'
+  )
   user-data-table-server(
     :items='users.items',
     :items-length='users.total',
@@ -8,8 +11,23 @@ div
     @update:options='onUpdateUser',
     @delete-user='onDeleteUser'
   )
-
-  user-graph(:data='userAggs')
+  
+  v-row 
+    v-col
+      user-graph(
+        :data='userAggs'
+        style="width: 100%"
+      )
+    v-col
+      user-graph(
+        :data='userAggs'
+        style="width: 100%"
+      )
+    v-col
+      user-graph(
+        :data='userAggs'
+        style="width: 100%"
+      )
 
   v-text-field(v-model='tmpUser.userId', label='userId')
   v-text-field(v-model='tmpUser.userName', label='userName')
@@ -26,11 +44,15 @@ div
 
   const { users, userAggs, queryUser, createUser, deleteUser } = useUsers()
 
+  const query = ref({
+    userName: ''
+  })
+
   // 取得
   const onUpdateUser = ({ page, itemsPerPage, sortBy }: any) => {
     const offset = (page - 1) * itemsPerPage
     console.log(sortBy)
-    queryUser(itemsPerPage, offset)
+    queryUser(itemsPerPage, offset, query)
   }
 
   // const tmpUser = {}
